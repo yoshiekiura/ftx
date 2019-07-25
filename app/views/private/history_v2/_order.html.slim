@@ -1,0 +1,11 @@
+tr
+  td = order.created_at
+  td = order.id
+  td = order.market.upcase
+  / td = side
+  td = t "private.history.order.#{order.kind}"
+  td = t "private.history.order.#{order.state}"
+  td = order.price
+  td = order.origin_volume
+  td = order.avg_price
+  td = order.origin_volume - order.volume

@@ -1,0 +1,28 @@
+#trades.feature
+  .column
+    .feature-header.split
+      .feature-title data-target="#trades-container" data-toggle="collapse"
+        i.fas.fa-chevron-up.mobile.mobile-sm
+        i.fas.fa-gavel
+        |&nbsp;
+        = t('private.trade.trades.trades.title').mb_chars.upcase
+      .header-pill
+        a.active.trades_market_open.all href='#!' = t('trade.markets')
+        a.trades_yours_open.my href='#!'= t('trade.yours')
+      .clearfix
+  /! feat-header
+  #trades-container.feature-container.collapse.in
+    .colum.trades_market
+      table#tb-trades
+        thead
+          tr.feature-subheader
+            th
+              = t('private.markets.market_trades.time').upcase
+              |&nbsp;(UTC-3)
+            th = t('private.markets.market_trades.price').mb_chars.upcase
+            th = t('private.markets.market_trades.amount').upcase
+
+      table.table.all-trades
+        tbody#trades_table1{style="table-row-group"}
+        table.table.my-trades
+          tbody#my_trades{style="display:none;table-row-group"}

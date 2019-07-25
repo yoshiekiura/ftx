@@ -1,0 +1,85 @@
+#settings.user-wrapper
+  = render 'shared/flash'
+  = render partial: "settings_menu"
+
+  .tab-content
+    .user-container
+      .settings-panel
+        .sp-content
+          h2
+            - if current_user.activated?
+              i.fas.fa-check-circle.positive
+            - else
+              i.fas.fa-times-circle.negative
+            |&nbsp;
+            = t('.email.title')
+          p.positive
+            = current_user.email
+            / = " - "
+            / = current_user.identity.client_uuid
+          p
+          - if current_user.activated?
+            = t('.email.description-activated')
+          - else
+            = t('.email.description')
+
+        - if !current_user.activated?
+          .sp-action
+            a.btn.btn-lg.btn-block.btn-dark href=new_activation_path
+              i.fas.fa-envelope-o
+              |&nbsp;
+              = t('.email.resend')
+
+      .settings-panel
+        .sp-content
+          h2
+            - if current_user.app_two_factor.activated?
+              i.fas.fa-check-circle.positive
+            - else
+              i.fas.fa-times-circle.negative
+            | &nbsp;
+            = t('.two_factor_auth.title')
+          p
+            = t('.two_factor_auth.description')
+        .sp-action
+          - if current_user.app_two_factor.activated?
+            a.btn.btn-lg.btn-block.btn-dark href=edit_verify_google_auth_path
+              i.fas.fa-mobile-alt
+              | &nbsp;
+              = t('.two_factor_auth.disable')
+          - else
+            a.btn.btn-lg.btn-block.btn-dark href=verify_google_auth_path
+              i.fas.fa-mobile-alt
+              | &nbsp;
+              = t('.two_factor_auth.enable')
+
+      .settings-panel
+        .sp-content
+          h2
+            = t('.passwords.title')
+          p
+            = t('.passwords.description')
+        .sp-action
+            - if current_user.identity
+              a.btn.btn-lg.btn-block.btn-dark href=edit_identity_path
+                i.fas.fa-key
+                | &nbsp;
+                = t('.passwords.go')
+            - else
+              a.btn.btn-lg.btn-block.btn-dark href=new_authentications_identity_path
+                i.fas.fa-key
+                | &nbsp;
+                = t('.passwords.set')
+      - if ENV["API_ENABLED"] == "true" or (ENV["API_ENABLED"] == "admin" and current_user.admin?)
+        .settings-panel
+          .sp-content
+            h2
+              = t('.api_tokens.title')
+            p
+              = t('.api_tokens.description')
+          .sp-action
+            a.btn.btn-lg.btn-block.btn-dark href=api_tokens_path
+              i.fas.fa-code
+              | &nbsp;
+              = t('.api_tokens.go')
+  .clearfix

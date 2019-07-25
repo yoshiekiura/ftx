@@ -1,0 +1,16 @@
+#chart.feature
+  .feature-header
+    .feature-title data-toggle="collapse" data-target="#chart-container"
+      i.fas.fa-chevron-up.mobile.mobile-smd
+      |&nbsp;
+      i.fas.fa-chart-area
+      |&nbsp;
+      = t('shared.market.chart.title').mb_chars.upcase
+    .is-clearfix
+
+  #chart-container.feature-container.of-container.collapse.in
+    #candlestick_tv style="height: 480px"
+      #candlestick_chart
+      .mask: table: tr: td.text-center style='width: 100%;background-color: #38434a;'
+        i.fa.fa-refresh.fa-spin.fa-1x
+        span Loading ...

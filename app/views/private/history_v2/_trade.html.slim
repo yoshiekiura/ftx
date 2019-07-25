@@ -1,0 +1,12 @@
+tr
+  td = trade.created_at
+  td = trade.market.name.upcase
+  td = trade.id
+  td = trade_side(trade) == "buy" ? trade.bid_id : trade.ask_id
+  td = t "private.history.trade.#{trade_side trade}"
+  td = trade.volume
+  td = trade.price
+  td = trade.volume*trade.price
+  / td = "??"
+  / td = "??"
+  / td = "??"

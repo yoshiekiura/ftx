@@ -1,0 +1,32 @@
+<%  time_updated = @withdraw.updated_at %>
+<%  time_create = @withdraw.created_at %>
+
+<p style="color:#078ABA; font-size:30px;">
+  Administrador!
+</p>
+
+<p style="color:#078ABA; font-size:30px;">
+  Um saque de <%= @withdraw.currency.upcase %> foi solicitado.
+</p>
+
+<p style="color:#078ABA; font-size:30px;">
+  Valor: <%= Currency.find_by_code(@withdraw.currency).symbol %> <%= @withdraw.amount %>
+</p>
+
+<p>
+  Usuário: <%= @withdraw.member.email %><br />
+  Criado as <%= time_create.strftime('%H:%M')  %> do dia <%= time_create.strftime('%d/%m/Y')  %><br />
+  Atualizado as <%= time_updated.strftime('%H:%M')  %> do dia <%= time_updated.strftime('%d/%m/Y')  %><br />
+  Status: <%= @withdraw.aasm_state %><br />
+  Endereço IP: <%= @ips.inspect %>
+</p>
+
+<!--Member e-mail: <%#= @withdraw.member.email %>-->
+<!--Transaction ID: <%#= @withdraw.txid %>-->
+<!--Amount: <%#= Currency.find_by_code(@withdraw.currency).symbol %> <%#= @withdraw.amount %>-->
+<!--Currency: <%#= @withdraw.currency %>-->
+<!--Created at: <%#= @withdraw.created_at %>-->
+<!--Updated at: <%#= @withdraw.updated_at %>-->
+<!--Status: <%#= @withdraw.aasm_state %>-->
+
+<!--Source: <%#= @ips.inspect %>-->

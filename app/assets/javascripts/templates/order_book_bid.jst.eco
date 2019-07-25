@@ -1,0 +1,14 @@
+<tr data-order='<%= @index %>' data-price='<%= @price %>' data-volume='<%= @volume %>' class='<%= @classes %>' style="background: linear-gradient(to right, rgba(10, 10, 10, 0) <%= (100 - @background) %>%, rgba(93, 210, 93, 0.61));">
+  <td class='count col-xs-7'><div>
+    <%- formatter.mask_fixed_count @count %>
+  </div></td>
+  <td class='amount col-xs-10'><div>
+    <%- formatter.mask_fixed_volume @volume %>
+  </div></td>
+  <td class='total col-xs-10'><div>
+    <%- formatter.mask_fixed_volume @total %>
+  </div></td>
+  <td class='price col-xs-7 text-up'><div>
+    <%- formatter.mask_fixed_price @price %>
+  </div></td>
+</tr>

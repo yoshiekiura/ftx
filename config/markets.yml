@@ -1,0 +1,458 @@
+- id: btcbrl
+  code: 2
+  name: BTC/BRL      # default name
+  base_unit: btc
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 2}
+  ask: {fee: 0.25, currency: btc, fixed: 8}
+  sort_order: 1
+  maintenance: false
+
+- id: bchbrl
+  code: 3
+  name: BCH/BRL      # default name
+  base_unit: bch
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 2}
+  ask: {fee: 0.25, currency: bch, fixed: 8}
+  sort_order: 2
+  maintenance: false
+
+- id: btgbrl
+  code: 4
+  name: BTG/BRL      # default name
+  base_unit: btg
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 2}
+  ask: {fee: 0.25, currency: btg, fixed: 8}
+  sort_order: 3
+  maintenance: false
+
+- id: dashbrl
+  code: 5
+  name: DASH/BRL      # default name
+  base_unit: dash
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 2}
+  ask: {fee: 0.25, currency: dash, fixed: 8}
+  sort_order: 4
+  maintenance: false
+
+- id: ethbrl
+  code: 6
+  name: ETH/BRL      # default name
+  base_unit: eth
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 2}
+  ask: {fee: 0.25, currency: eth, fixed: 8}
+  sort_order: 5
+  maintenance: false
+
+- id: zecbrl
+  code: 7
+  name: ZEC/BRL      # default name
+  base_unit: zec
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 2}
+  ask: {fee: 0.25, currency: zec, fixed: 8}
+  sort_order: 6
+  maintenance: false
+
+- id: dgbbrl
+  code: 8
+  name: DGB/BRL      # default name
+  base_unit: dgb
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 2}
+  ask: {fee: 0.25, currency: dgb, fixed: 8}
+  sort_order: 7
+  maintenance: false
+
+- id: xrpbrl
+  code: 9
+  name: XRP/BRL      # default name
+  base_unit: xrp
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 2}
+  ask: {fee: 0.25, currency: xrp, fixed: 6}
+  sort_order: 8
+  maintenance: false
+
+- id: smartbrl
+  code: 10
+  name: SMART/BRL      # default name
+  base_unit: smart
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 2}
+  ask: {fee: 0.25, currency: smart, fixed: 8}
+  sort_order: 9
+  maintenance: false
+
+#- id: iotabrl
+#  code: 11
+#  name: IOTA/BRL      # default name
+#  base_unit: iota
+#  quote_unit: brl
+#  bid: {fee: 0.25, currency: brl, fixed: 8}
+#  ask: {fee: 0.25, currency: iota, fixed: 8}
+#  sort_order: 9
+
+- id: ltcbrl
+  code: 12
+  name: LTC/BRL      # default name
+  base_unit: ltc
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 2}
+  ask: {fee: 0.25, currency: ltc, fixed: 8}
+  sort_order: 9
+  maintenance: false
+
+- id: zcrbrl
+  code: 13
+  name: ZCR/BRL      # default name
+  base_unit: zcr
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 8}
+  ask: {fee: 0.25, currency: zcr, fixed: 8}
+  sort_order: 10
+  maintenance: false
+
+- id: tusdbrl
+  code: 14
+  name: TUSD/BRL      # default name
+  base_unit: tusd
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 2}
+  ask: {fee: 0.25, currency: tusd, fixed: 8}
+  sort_order: 11
+  maintenance: false
+
+- id: bchbtc
+  code: 15
+  name: BCH/BTC      # default name
+  base_unit: bch
+  quote_unit: btc
+  bid: {fee: 0.25, currency: btc, fixed: 8}
+  ask: {fee: 0.25, currency: bch, fixed: 8}
+  sort_order: 12
+  maintenance: false
+
+- id: btgbtc
+  code: 16
+  name: BTG/BTC      # default name
+  base_unit: btg
+  quote_unit: btc
+  bid: {fee: 0.25, currency: btc, fixed: 8}
+  ask: {fee: 0.25, currency: btg, fixed: 8}
+  sort_order: 13
+  maintenance: false
+
+- id: dashbtc
+  code: 17
+  name: DASH/BTC      # default name
+  base_unit: dash
+  quote_unit: btc
+  bid: {fee: 0.25, currency: btc, fixed: 8}
+  ask: {fee: 0.25, currency: dash, fixed: 8}
+  sort_order: 14
+  maintenance: false
+
+- id: ethbtc
+  code: 18
+  name: ETH/BTC      # default name
+  base_unit: eth
+  quote_unit: btc
+  bid: {fee: 0.25, currency: btc, fixed: 8}
+  ask: {fee: 0.25, currency: eth, fixed: 8}
+  sort_order: 15
+  maintenance: false
+
+- id: zecbtc
+  code: 19
+  name: ZEC/BTC      # default name
+  base_unit: zec
+  quote_unit: btc
+  bid: {fee: 0.25, currency: btc, fixed: 8}
+  ask: {fee: 0.25, currency: zec, fixed: 8}
+  sort_order: 16
+  maintenance: false
+
+- id: dgbbtc
+  code: 20
+  name: DGB/BTC      # default name
+  base_unit: dgb
+  quote_unit: btc
+  bid: {fee: 0.25, currency: btc, fixed: 8}
+  ask: {fee: 0.25, currency: dgb, fixed: 8}
+  sort_order: 17
+  maintenance: false
+
+- id: xrpbtc
+  code: 21
+  name: XRP/BTC      # default name
+  base_unit: xrp
+  quote_unit: btc
+  bid: {fee: 0.25, currency: btc, fixed: 8}
+  ask: {fee: 0.25, currency: xrp, fixed: 6}
+  sort_order: 18
+  maintenance: false
+
+- id: smartbtc
+  code: 22
+  name: SMART/BTC      # default name
+  base_unit: smart
+  quote_unit: btc
+  bid: {fee: 0.25, currency: btc, fixed: 8}
+  ask: {fee: 0.25, currency: smart, fixed: 8}
+  sort_order: 19
+  maintenance: false
+
+- id: ltcbtc
+  code: 23
+  name: LTC/BTC      # default name
+  base_unit: ltc
+  quote_unit: btc
+  bid: {fee: 0.25, currency: btc, fixed: 8}
+  ask: {fee: 0.25, currency: ltc, fixed: 8}
+  sort_order: 20
+  maintenance: false
+
+- id: zcrbtc
+  code: 24
+  name: ZCR/BTC      # default name
+  base_unit: zcr
+  quote_unit: btc
+  bid: {fee: 0.25, currency: btc, fixed: 8}
+  ask: {fee: 0.25, currency: zcr, fixed: 8}
+  sort_order: 21
+  maintenance: false
+
+- id: btctusd
+  code: 25
+  name: BTC/TUSD     # default name
+  base_unit: btc
+  quote_unit: tusd
+  bid: {fee: 0.25, currency: tusd, fixed: 8}
+  ask: {fee: 0.25, currency: btc, fixed: 8}
+  sort_order: 23
+  maintenance: false
+
+- id: bchtusd
+  code: 26
+  name: BCH/TUSD      # default name
+  base_unit: bch
+  quote_unit: tusd
+  bid: {fee: 0.25, currency: tusd, fixed: 8}
+  ask: {fee: 0.25, currency: bch, fixed: 8}
+  sort_order: 24
+  maintenance: false
+
+- id: btgtusd
+  code: 27
+  name: BTG/TUSD      # default name
+  base_unit: btg
+  quote_unit: tusd
+  bid: {fee: 0.25, currency: tusd, fixed: 8}
+  ask: {fee: 0.25, currency: btg, fixed: 8}
+  sort_order: 25
+  maintenance: false
+
+- id: dashtusd
+  code: 28
+  name: DASH/TUSD      # default name
+  base_unit: dash
+  quote_unit: tusd
+  bid: {fee: 0.25, currency: tusd, fixed: 8}
+  ask: {fee: 0.25, currency: dash, fixed: 8}
+  sort_order: 26
+  maintenance: false
+
+- id: ethtusd
+  code: 29
+  name: ETH/TUSD      # default name
+  base_unit: eth
+  quote_unit: tusd
+  bid: {fee: 0.25, currency: tusd, fixed: 8}
+  ask: {fee: 0.25, currency: eth, fixed: 8}
+  sort_order: 27
+  maintenance: false
+
+- id: zectusd
+  code: 30
+  name: ZEC/TUSD      # default name
+  base_unit: zec
+  quote_unit: tusd
+  bid: {fee: 0.25, currency: tusd, fixed: 8}
+  ask: {fee: 0.25, currency: zec, fixed: 8}
+  sort_order: 28
+  maintenance: false
+
+- id: dgbtusd
+  code: 31
+  name: DGB/TUSD      # default name
+  base_unit: dgb
+  quote_unit: tusd
+  bid: {fee: 0.25, currency: tusd, fixed: 8}
+  ask: {fee: 0.25, currency: dgb, fixed: 8}
+  sort_order: 29
+  maintenance: false
+
+- id: xrptusd
+  code: 32
+  name: XRP/TUSD      # default name
+  base_unit: xrp
+  quote_unit: tusd
+  bid: {fee: 0.25, currency: tusd, fixed: 8}
+  ask: {fee: 0.25, currency: xrp, fixed: 6}
+  sort_order: 30
+  maintenance: false
+
+- id: smarttusd
+  code: 33
+  name: SMART/TUSD      # default name
+  base_unit: smart
+  quote_unit: tusd
+  bid: {fee: 0.25, currency: tusd, fixed: 8}
+  ask: {fee: 0.25, currency: smart, fixed: 8}
+  sort_order: 31
+  maintenance: false
+
+- id: ltctusd
+  code: 34
+  name: LTC/TUSD      # default name
+  base_unit: ltc
+  quote_unit: tusd
+  bid: {fee: 0.25, currency: tusd, fixed: 8}
+  ask: {fee: 0.25, currency: ltc, fixed: 8}
+  sort_order: 32
+  maintenance: false
+
+- id: zcrtusd
+  code: 35
+  name: ZCR/TUSD      # default name
+  base_unit: zcr
+  quote_unit: tusd
+  bid: {fee: 0.25, currency: tusd, fixed: 8}
+  ask: {fee: 0.25, currency: zcr, fixed: 8}
+  sort_order: 33
+  maintenance: false
+
+- id: xembrl
+  code: 36
+  name: XEM/BRL      # default name
+  base_unit: xem
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 2}
+  ask: {fee: 0.25, currency: xem, fixed: 8}
+  sort_order: 33
+  maintenance: true
+
+- id: rbtcbrl
+  code: 37
+  name: RBTC/BRL      # default name
+  base_unit: rbtc
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 2}
+  ask: {fee: 0.25, currency: rbtc, fixed: 8}
+  sort_order: 34
+  maintenance: true
+
+- id: rifbrl
+  code: 38
+  name: RIF/BRL      # default name
+  base_unit: rif
+  quote_unit: brl
+  bid: {fee: 0.25, currency: brl, fixed: 2}
+  ask: {fee: 0.25, currency: rif, fixed: 8}
+  sort_order: 35
+  maintenance: true
+
+#- id: xarbrl
+#  code: 39
+#  name: XAR/BRL      # default name
+#  base_unit: XAR
+#  quote_unit: brl
+#  bid: {fee: 0.25, currency: brl, fixed: 2}
+#  ask: {fee: 0.25, currency: xar, fixed: 8}
+#  sort_order: 36
+#  maintenance: false
+
+- id: xembtc
+  code: 40
+  name: XEM/BTC      # default name
+  base_unit: xem
+  quote_unit: btc
+  bid: {fee: 0.25, currency: btc, fixed: 8}
+  ask: {fee: 0.25, currency: xem, fixed: 8}
+  sort_order: 37
+  maintenance: true
+
+- id: rbtcbtc
+  code: 41
+  name: RBTC/BTC      # default name
+  base_unit: rbtc
+  quote_unit: btc
+  bid: {fee: 0.25, currency: btc, fixed: 8}
+  ask: {fee: 0.25, currency: rbtc, fixed: 8}
+  sort_order: 38
+  maintenance: true
+
+- id: rifbtc
+  code: 42
+  name: RIF/BTC     # default name
+  base_unit: rif
+  quote_unit: btc
+  bid: {fee: 0.25, currency: btc, fixed: 8}
+  ask: {fee: 0.25, currency: rif, fixed: 8}
+  sort_order: 39
+  maintenance: true
+
+#- id: xarbtc
+#  code: 43
+#  name: XAR/BTC    # default name
+#  base_unit: XAR
+#  quote_unit: btc
+#  bid: {fee: 0.25, currency: btc, fixed: 8}
+#  ask: {fee: 0.25, currency: xar, fixed: 8}
+#  sort_order: 40
+#  maintenance: false
+
+- id: xemtusd
+  code: 44
+  name: XEM/TUSD      # default name
+  base_unit: xem
+  quote_unit: tusd
+  bid: {fee: 0.25, currency: tusd, fixed: 8}
+  ask: {fee: 0.25, currency: xem, fixed: 8}
+  sort_order: 41
+  maintenance: true
+
+- id: rbtctusd
+  code: 45
+  name: RBTC/TUSD      # default name
+  base_unit: rbtc
+  quote_unit: tusd
+  bid: {fee: 0.25, currency: tusd, fixed: 8}
+  ask: {fee: 0.25, currency: rbtc, fixed: 8}
+  sort_order: 42
+  maintenance: true
+
+- id: riftusd
+  code: 46
+  name: RIF/TUSD     # default name
+  base_unit: rif
+  quote_unit: tusd
+  bid: {fee: 0.25, currency: tusd, fixed: 8}
+  ask: {fee: 0.25, currency: rif, fixed: 8}
+  sort_order: 43
+  maintenance: true
+
+#- id: xartusd
+#  code: 47
+#  name: XAR/TUSD    # default name
+#  base_unit: XAR
+#  quote_unit: tusd
+#  bid: {fee: 0.25, currency: tusd, fixed: 8}
+#  ask: {fee: 0.25, currency: xar, fixed: 8}
+#  sort_order: 44
+#  maintenance: false

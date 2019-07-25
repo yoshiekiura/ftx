@@ -1,0 +1,17 @@
+.user-wrapper
+  ul.nav.nav-pills
+    li#fav-ticker-button.ticker-toggle.nav-item.active
+      a.nav-link data-toggle="tab" href="#marketdepth"
+      = t('markets_overview.market_depth')
+        .tab-content = render partial: 'private/markets_overview/market_depth'
+  /   li#brl-ticker-button.ticker-toggle.nav-item.active
+  /     a.nav-link data-toggle="tab" href="#marketoverview"  MARKET OVERVIEW
+  /   li#fav-ticker-button.ticker-toggle.nav-item
+  /     a.nav-link data-toggle="tab" href="#marketspread"  MARKET SPREAD
+  /   li#fav-ticker-button.ticker-toggle.nav-item
+  /     a.nav-link data-toggle="tab" href="#marketdepth"  MARKET DEPTH
+  /   li#fav-ticker-button.ticker-toggle.nav-item
+  /     a.nav-link data-toggle="tab" href="#marketactivity"  MARKET ACTIVITY
+  /   li#fav-ticker-button.ticker-toggle.nav-item
+  /     a.nav-link data-toggle="tab" href="#marketfullbook"  MARKET FULLBOOK
+  /

@@ -1,0 +1,755 @@
+en:
+  js:
+    brand: Cointrade
+    submit: Submit
+    cancel: Cancel
+    confirm: Confirm
+    banks:
+      _065: "Andbank"
+      _654: "Banco A.j. Renner S.A."
+      _246: "Banco Abc/brasil S.A."
+      _121: "Banco Agibank S.A."
+      _025: "Banco Alfa S.A."
+      _213: "Banco Arbi S.A."
+      _096: "Banco B3 S.A."
+      _036: "Banco Bem S.a.."
+      _122: "Banco Berj S.A."
+      _318: "Banco Bmg Comercial S.A."
+      _752: "Banco Bnp Paribas Brasil S.A."
+      _107: "Banco Bocom Bbm S.A."
+      _069: "Banco Bpn Brasil S.A."
+      _063: "Banco Bradescard S.A."
+      _237: "Banco Bradesco S.A."
+      _218: "Banco Bs2 S.A."
+      _473: "Banco Caixa Geral Brasil S.A."
+      _412: "Banco Capital S.A."
+      _040: "Banco Cargill S.A."
+      _266: "Banco Cedula S.A."
+      _745: "Banco Citibank S.A."
+      _756: "Banco Cooperativo do Brasil S.A."
+      _748: "Banco Cooperativo Sicredi S.A."
+      _505: "Banco Credit Suisse (brasil) S.A."
+      _003: "Banco da Amazonia S.A."
+      _083: "Banco da China Brasil S.A."
+      _707: "Banco Daycoval S.A."
+      _070: "Banco de Brasilia S.A."
+      _300: "Banco de La Nacion Argentina S.A."
+      _487: "Banco Deutsche Bank S.A."
+      _001: "Banco do Brasil S.A."
+      _047: "Banco do Estado de Sergipe S.A."
+      _021: "Banco do Estado do Espirito Santo S.A."
+      _037: "Banco do Estado do Para S.A."
+      _041: "Banco do Estado do Rio Grande do Sul S.A."
+      _004: "Banco do Nordeste do Brasil S.A."
+      _265: "Banco Fator S.A."
+      _224: "Banco Fibra S.A."
+      _626: "Banco Ficsa S.A."
+      _394: "Banco Finasa Bmc S.A."
+      _612: "Banco Guanabara S.A."
+      _604: "Banco Industrial do Brasil S.A."
+      _653: "Banco Indusval S.A."
+      _077: "Banco Intermedium"
+      _074: "Banco J. Safra S.A."
+      _376: "Banco Jp Morgan S.A."
+      _600: "Banco Luso Brasileiro S.A."
+      _389: "Banco Mercantil do Brasil S.A."
+      _755: "Banco Merrill Lynch S.A."
+      _746: "Banco Modal S.A."
+      _456: "Banco Mufg Brasil S.A."
+      _079: "Banco Original do Agronegocio S.A."
+      _212: "Banco Original S.A."
+      _208: "Banco Pactual S.A."
+      _623: "Banco Pan"
+      _254: "Banco Parana Banco S.A."
+      _611: "Banco Paulista S.A."
+      _643: "Banco Pine S.A."
+      _747: "Banco Rabobank International Br S.A."
+      _633: "Banco Rendimento S.A."
+      _741: "Banco Ribeirao Preto S.A."
+      _422: "Banco Safra S.A."
+      _033: "Banco Santander S.A."
+      _743: "Banco Semear S.A."
+      _366: "Banco Societe Generale Brasil S.A."
+      _637: "Banco Sofisa"
+      _243: "Banco Stock Maxima S.A."
+      _464: "Banco Sumitomo Mitsui Brasileiro S.A."
+      _634: "Banco Triangulo S.A."
+      _018: "Banco Tricury S.A."
+      _655: "Banco Votorantim S.A."
+      _610: "Banco Vr S.A."
+      _222: "Bco Credit Agricole Brasil S.A."
+      _017: "Bny Mellon Banco S.A."
+      _125: "Brasil Plural S.A."
+      _097: "Cc Centralcredi"
+      _136: "Cc Unicred do Brasil"
+      _320: "Ccb Brasil"
+      _098: "Cerdialinca Cooperativa Credito Rural"
+      _739: "Cetelem"
+      _163: "Commerzbank"
+      _085: "Cooperativa Central de Credito / Ailos"
+      _099: "Cooperativa Central Econ. Cred. Mutuo Un"
+      _089: "Cooperativa de Credito Rural da Regiao D"
+      _010: "Credicoamo Credito Rural Cooperativa"
+      _104: "Cx Economica Federal"
+      _094: "Finaxis"
+      _132: "Icbc do Brasil Banco Multiplo S.A."
+      _630: "Intercap"
+      _341: "Itaú Unibanco S.A."
+      _076: "Kdb do Brasil"
+      _757: "Keb Hana do Brasil"
+      _753: "Nbc Bank Brasil Sa/banco Multiplo"
+      _260: "Nu Pagamentos S.A."
+      _613: "Omni Banco S A"
+      _120: "Rodobens"
+      _751: "Scotiabank Brasil S.a. Banco Multiplo"
+      _082: "Topazio"
+      _084: "Uniprime Norte do Parana Cc"
+      _119: "Western Union"
+      _124: "Woori Bank"
+    fund_sources:
+      manage_bank_account: Bank Account Management
+      manage_bank_account_desc: To facilitate the choice of bank withdrawals address
+      manage_bank_account_alert_deposit: Please register here the bank accounts that will be used for deposits in Reais, just as it is indispensable to inform your CPF.
+      manage_bank_account_alert_withdraw: Please register here the bank accounts that will be used for withdrawals in Reais, just as it is indispensable to inform your CPF.
+      manage_bank_account_info: "* Caution If your bank's digit is X, please substitute 0."
+      manage_bank_account_required: All fields are mandatory.
+      msg_time_close: "Brazilian time for deposit: 09:00-16:30, except Itaú account (TEF)"
+      copied: Copied!
+      manage_coin_address: Coin Address Management
+      manage_coin_address_desc: To facilitate the choice of coin withdrawals address
+      select_region: Select Region
+      brasil : Brazil
+      type_deposit: Type of deposit
+      type_transfer: Type of transfer
+      select_type: Select the type
+      another: Others
+      fiat: REAIS
+      region: Region
+      bank_transfer: Bank transfer
+      bank_slip: Bank slip
+      bank: Bank
+      account: "Account"
+      cpf: CPF/CNPJ
+      agency: Agency
+      label_agency: Agency
+      label_account-dig: Account-dig
+      digit: dig
+      label: Label
+      address: Address
+      action: Action
+      add: Add
+      remove: Remove
+      default: Default
+      select_account: "Select Account"
+    payment_slip:
+      tax: Tax
+      click_slip: Click to print the bank slip
+      bank: Bank
+      label_name: Name
+      label_cpf: CPF
+      label_cnpj: CNPJ
+      label_cpfcnpj: CPF or CNPJ
+      label_phone: Num.Mobile
+      label_email: E-mail
+      label_address: Address
+      label_city: City
+      label_uf: UF
+      label_state: State
+      label_cep: Zip Code
+      label_complement: Complement
+      label_number: Number
+      title : Bank Slip generation
+      label: Apelido
+      address: Address
+      action: Action
+      add: Add
+      remove: Remove
+      default: Default
+      desc: The information reported here will be used in the generation of the bank slip.
+      btn_generete_slip: Generate bank slip
+      label_amount: R$ 00000
+      value_req: Fill all inputs
+      label_tabDeposit: Deposits
+      label_tabBank: Bank Slip
+      amount: Amount
+      amount_total: Total Amount
+      tax: Tax
+    funds:
+      deposit: Deposit
+      withdraw: Withdraw
+
+      tooltip_status:
+        accepted:
+          text: The informed Txid was processed successfully. Please check your balance.
+          icon: <i class="far fa-check-circle"></i>
+
+        checked:
+          text: Order reviewed by Admin.
+          icon: <i class="far fa-check-circle"></i>
+
+        submitting:
+          text: Txid is being processed.
+          icon: <i class="far fa-clock"></i>
+
+        submitted:
+          text: The deposit order has been submitted.
+          icon: <i class="far fa-clock"></i>
+
+        cancelled:
+          text: Canceled order.
+          icon: <i class="far fa-times-circle"></i>
+
+        rejected:
+          text: Order rejected. Please contact our support.
+          icon: <i class="far fa-times-circle"></i>
+
+        warning:
+          text: The informed Txid has not been processed in the last 2 hours. Please contact our support.
+          icon: <i class="fas fa-exclamation-triangle"></i>
+
+        suspect:
+          text: Irregular order. Please contact our support.
+          icon: <i class="fas fa-exclamation-triangle"></i>
+      deposit_modal:
+        tef: TEF (Transfer between Itaú accounts)
+        ted: TED (Electronic Transfer Available)
+        dia: DIA (Cash deposit Identified at the agency)
+        session_expire: Time expired, deposit order automatically canceled.
+        deposit_code: "Code for deposit identification"
+        content_header: " <table width=\"100%\" style=\"background:#28363D;\">
+                                                   <tbody>
+                                                   <tr align=\"center\">
+                                                       <td style=\"padding:10px 10px 10px 10px; display:flex; justify-content: center; align-items:center;\">
+                                                           <img  src=\"logo_cx_email.png\" >
+                                                       </td>
+                                                   </tr>
+                                                   </tbody>
+                                               </table>
+                           <div style=\"padding-left:35px;padding-right:35px;padding-top:10px;\">
+                              <span style=\"font-size:30px;\">ATTENTION! Information on how to make a deposit.</span><br>
+                              <span style=\"font-size:20px;\">Your order %{type_transfer_description} was created in the system.</span>
+                           </div>"
+
+
+        content_tef: "    <div style=\"width:100%; padding-top:15px;padding-bottom:15px;padding-left:35px;padding-right:35px; color:white; background-color:#EA5E6E;\">
+                                                         <span style=\"font-size:20px;\">AMOUNT: <span style=\"font-size:30px;\">R$ %{valor_deposito}</span></span><br>
+                                                         </span>
+                                                     </div>
+                                    <div style=\"width:100%; padding-top:15px;padding-bottom:15px;padding-left:35px;padding-right:35px; font-weight:bold; color:grey\">
+                                    Bank details for transfer:<br>
+                                    Bank: 341 - Itaú<br>
+                                    Agency: 7307<br>
+                                    Account: 08782-0<br>
+                                    COINBR SERVICOS DIGITAIS LTDA<br>
+                                    CNPJ: 11.768.654/0001-86<br>
+                                    Data: %{date_create}</br>
+                                    Time: %{time_created}</br>
+                                    <div>
+                                      <br>
+                                     <br>"
+
+        content_ted:   "  <div style=\"width:100%; padding-top:15px;padding-bottom:15px;padding-left:35px;padding-right:35px; color:white; background-color:#EA5E6E;\">
+                                           <span style=\"font-size:20px;\">Amount: <span style=\"font-size:30px;\">R$ %{valor_deposito}</span></span><br>
+                                           <span><span style=\"font-weight:bold\">*ATTENTION</span>: Make the deposit according to the exact amount above.<br>
+                                            <span style=\"font-size:20px;\">Due date: %{expire}<span>
+                                            </span>
+                                        </div>
+
+                                    <div style=\"width:100%; padding-top:15px;padding-bottom:15px;padding-left:35px;padding-right:35px; font-weight:bold; color:grey\">
+                                      Bank details for transfer:</br>
+                                      CPF: %{samurai_code}</br>
+                                      Bank: 341 - Itaú</br>
+                                      Agency: 7307</br>
+                                      Account: 08782-0</br>
+                                      COINBR SERVICOS DIGITAIS LTDA</br>
+                                      CNPJ: 11.768.654/0001-86</br>
+                                      </br>
+                                      Date: %{date_create}</br>
+                                      Time: %{time_created}</br>
+                                    </div>"
+
+
+        content_footer_tef: "<div>* The values for minimum transfer of R $ 25.00 (twenty five reais).
+
+                        Transfers effected that are less than R $ 25.00 (twenty five reais) will not be compensated, and will be returned upon payment of a fee of R $ 20.00 (twenty reais).<br>
+
+                        Os valores de depósitos BRL (em Reais) realizados em toda nossa plataforma terminam com 08 centavos para possibilitar o processo de verificação automática,garanta que o valor depositado inclua os 08 centavos requisitados para o mesmo ser corretamente identificado.<br>
+
+                        Confirmation of the deposit may take up to 3 business days, however, the current average time is up to 3 hours."
+        content_footer_ted: "<div style=\"width:100%;padding-bottom:15px;padding-left:35px;padding-right:35px; font-weight:bold; color:grey; font-size:13px\"><span style=\"color:#EA5E6E;\">* BRL deposit amounts (in Reais) made across our platform end with 08 cents to enable the automatic verification process,
+                              guarantee that the amount deposited includes the 08 cents required for it to be correctly identified.</span><br>
+                              Confirmation of the deposit may take up to 3 business days, however, the current average time is up to 6 hours. <br>
+                               From the transfer of international banks that have not been successfully completed, please forward emails to financeiro@cointrade.cx</span></div>"
+      currency_name:
+        btc: BTC
+        brl: BRL
+        doge: DOGE
+        pts: PTS
+        ltc: LTC
+        bch: BCH
+        btg: BTG
+        dash: DASH
+        eth: ETH
+        zec: ZEC
+        dgb: DGB
+        xrp: XRP
+        smart: Smart
+        iota: IOTA
+        ltc: LTC
+        zcr: ZCR
+        tusd: TUSD
+        xem: XEM
+        rbtc: RBTC
+        rif: RIF
+        xar: XAR
+      deposit_brl:
+        title: At our platform
+        title2: At your bank
+        message_validation2: Could not connect to BankSlip provider!
+        message_validation: Please fill in all fields
+        message_creation: Created successfully
+        slip_buttom: BankSlip
+        title_transfer: Brazilian Real transfer bank
+        desc: "Follow the steps below:"
+        desc_item_1: "Enter the value of the deposit;"
+        desc_item_2: "Access the MANAGE ACCOUNTS option and register your bank account;"
+        desc_item_3: "Click the Submit button;"
+        desc_item_4: "Information about the procedure will be displayed on the screen and sent by email."
+        desc_item_5: "Transfer the money to the account of COINBR SERVICOS DIGITAIS LTDA;"
+        desc_item_6: "Minimum amount of R$ 25.08 with identification of the CPF;"
+        desc_item_7: "ALWAYS send your proof of deposit to <comprovante@cointrade.cx>. Your deposit will be confirmed as soon as your money is received."
+        desc_item_8: "Time for deposit: 09:00 to 16:30 Brazilian time. Any ted that is generated on the day and does not run on it until 4.30pm will be rejected, generating a charge of R $ 20.00 for the chargeback."
+        attention: "Attention: We DO NOT accept transfers from different account holders, subject to 10% refund fee. The name of your bank account must match with
+        name of your Cointrade Registration, otherwise your deposit will not be identified."
+        attention2: "Deposit amounts (in Reais) made on our entire platform end with 08 cents to enable the automatic verification process."
+        title_slip: Deposit Bank Slip
+        observations_slip: Observations
+        desc_on_slip:
+          desc_item_1: "Minimum amount of R$ 25.08 with identification of the CPF;"
+          desc_item_2: The ticket processing company charges a fee of 0.0% plus R$ 6.50;
+          desc_item_3: This fee is added to the total amount of the ticket generated, where the processor will discount its fees when it is cleared.
+        from: From
+        to: To
+        bank_information:
+          title: Our bank information
+          label_bank: Bank
+          bank: 341 - Itaú
+          label_recipient: Beneficiary
+          recipient: COINBR SERVICOS DIGITAIS LTDA
+          label_cnpj: CNPJ
+          cnpj: 11.768.654/0001-86
+          label_agency: Agency
+          agency: 7307
+          label_account: Account
+          account: 08782-0
+          place_holder_amount: Minimum value 25 Reais
+        deposit_name: Your Name
+        deposit_account: Deposit Account
+        add: Add
+        manage: MANAGE ACCOUNTS
+        amount: AMOUNT
+        type: Type
+        document: CPF
+        document_mask: 000.000.000-00
+        min_amount: At least 25,00 Brazilian Reais
+        to_account: TED/DOC
+        account_detail: "Itaú Ag: 7307 Conta: 08782-0"
+        to_name: Name
+        to_bank_name: Bank Name
+        opening_bank_name: Brazilian Registration CNPJ
+        remark: 'Referral Code (Transfer identification code)'
+        label_tabDeposit: Deposits
+        label_tabBank: Bank Slip
+        label_deposit_ammount: Amount
+        label_deposit_value: Select the type of transaction?
+        label_deposit_vlr: Deposit Amount.
+        label_desc : What type will the transaction be made from?
+        deposit_information_title: ATTENTION! INFORMATION ON HOW TO MAKE THE DEPOSIT
+        message_error: An error occurred, please try again later
+        message_error_limit: "The minimum deposit amount is R$25 reais."
+      deposit_btc:
+        title: BTC Deposit
+      deposit_bch:
+        title: BCH Deposit
+      deposit_btg:
+        title: BTG Deposit
+      deposit_dash:
+        title: DASH Deposit
+      deposit_eth:
+        title: ETH Deposit
+      deposit_zec:
+        title: ZEC Deposit
+      deposit_dgb:
+        title: DGB Deposit
+      deposit_xrp:
+        title: XRP Deposit
+      deposit_smart:
+        title: Smart Deposit
+      deposit_iota:
+        title: IOTA Deposit
+      deposit_ltc:
+        title: LTC Deposit
+      deposit_zcr:
+        title: ZCR Deposit
+      deposit_tusd:
+        title: TUSD Deposit
+      deposit_xem:
+        title: XEM Deposit
+      deposit_rbtc:
+        title: RBTC Deposit
+      deposit_rif:
+        title: RIF Deposit
+      deposit_xar:
+        title: XAR Deposit
+
+      deposit_coin:
+        address: Address
+        new_address: New Address
+        confirm_gen_new_address: You sure want to generate a new deposit address?
+        open-wallet: Please use your common wallet services, local wallet, mobile terminal or online wallet, select a payment and send.
+        detail: Please paste the address below in your wallet, and fill in the amount you want to deposit, then confirm and send.
+        scan-qr: Scanning QR code to Pay for In the mobile terminal wallet.
+        after_deposit: Once you complete sending, you can check the status of your new deposit below.
+        generate-new: Generate new address
+        copy: Copy
+
+        txidText: After generating your deposit, you must enter here the Txid (transaction ID)
+        txidText2: generated by the platform of your choice. To check your deposits,
+        click: click here!
+        insertTxid: Insert your Txid
+        msg1: Your TXID has been successfully saved and we will investigate it to credit your deposit as soon as possible.
+        msg2: You already have a deposit order with this Txid number.
+        tag_xrp_tip: "*In order to make an XRP deposit it is necessary to use the TAG,"
+        tag_xrp_tip_2: "otherwise your deposit will be forfeited."
+
+      deposit_history:
+        coin:  COIN
+        fiat: REAIS
+        title: HISTORY
+        describe: All cryptos deposits addresses have been updated.
+        describe1: Before making a new crypto deposit on the platform,
+        describe2: make sure you are using the correct address.
+        describe3: "All crypto addresses have been updated. <br/> Before you make a new crypto order on the platform,<br/> make sure you are using the correct address"
+        number: '#'
+        identification: Identification Code
+        time: Time
+        txid: Transaction ID
+        confirmations: Confirmations
+        from: From
+        imformation_from: Transaction Information
+        slip_type: BankSlip
+        amount: Amount
+        state_and_action: "State/Action"
+        inserted_txid: Inserted Txid
+        cancel: cancel
+        no_data: There is no history data
+        coin: Coin
+        submitting: Submitting
+        cancelled: Cancelled
+        submitted: Submitted
+        accepted: Accepted
+        rejected: Rejected
+        checked: Checked
+        warning: Warning
+        suspect: Suspect
+        transaction_type: Transaction type
+        validator: Validator
+
+      withdraw_brl:
+        title: Brazilian Real Withdraw
+        desc: "Follow the steps below:"
+        intro: Select the bank to cash withdrawal amount and enter the account number and complete submission.
+        intro_2: Your bank account and name must be consistent with the real-name authentication name.
+        intro_3: If your account registered for redemption is from Banco Itaú, no transaction fee will be charged. If you wish to make a redemption for a non-Itaú bank account, the TED fee will be charged in the amount of R $ 10.90.
+        intro_4: For crypto coins withdrawals higher than the value 5 (five), the release is the result of conference management team cointrade.cx.
+        intro_5: The value in reais will be charged a fee of 0.25% on the amount drawn.
+        intro_6: If you wish to make a redemption for a non-Itaú account, the TED fee will be charged in the amount of R $ 10.90.
+        intro_7: "Opening hours: 09:00 to 16:30 Brazilian time. Any ted that is generated on the day and does not run on it until 4.30pm will be rejected, generating a charge of R $ 20.00 for the chargeback."
+        attention: "Working Hours: 9:00 - 18:00"
+        account_name: Account Name
+        withdraw_address: Withdraw Address
+        balance: Available Amount
+        balance_tip: Amount available for withdrawal
+        locked: Amount in trading
+        locked_tip: Value blocked due to open trade orders
+        total: Amount
+        total_tip: Sum of available value with locked traded amounts
+        withdraw_amount: Withdraw Amount
+        manage_withdraw: Manage Withdraw
+        fee_explain: About Fee
+        min: At least
+        withdraw_all: Withdraw all
+        message_success: Withdrawn
+
+      withdraw_btc:
+        title: BTC Withdraw
+      withdraw_bch:
+        title: BCH Withdraw
+      withdraw_btg:
+        title: BTG Withdraw
+      withdraw_dash:
+        title: DASH Withdraw
+      withdraw_eth:
+        title: ETH Withdraw
+      withdraw_zec:
+        title: ZEC Withdraw
+      withdraw_dgb:
+        title: DGB Withdraw
+      withdraw_xrp:
+        title: XRP Withdraw
+      withdraw_smart:
+        title: Smart Withdraw
+      withdraw_iota:
+        title: IOTA Withdraw
+      withdraw_ltc:
+        title: LTC Withdraw
+      withdraw_zcr:
+        title: ZCR Withdraw
+      withdraw_tusd:
+        title: TUSD Withdraw
+      withdraw_xem:
+        title: XEM Withdraw
+      withdraw_rbtc:
+        title: RBTC Withdraw
+      withdraw_rif:
+        title: RIF Withdraw
+      withdraw_xar:
+        title: XAR Withdraw
+
+      withdraw_coin:
+        intro: Please fill in the address and amount, then submit the form. 
+        label: Denomination
+        balance: Balance
+        amount: Amount
+        manage_withdraw: Manage Address
+        min: At least
+        withdraw_all: Withdraw all
+        fee_explain: About Fee
+        with: Amount of service fee.
+
+      withdraw_history:
+        title: Withdraw History
+        number: Number
+        withdraw_time: Time
+        withdraw_account: Withdraw Account
+        withdraw_address: Address
+        withdraw_amount: Amount
+        actual_amount: Actual Amount
+        fee: Fee
+        fee_ted: TED Fee
+        fee_withdraw: Withdraw Fee
+        miner_fee: Fee
+        state_and_action: "State/Action"
+        cancel: Cancel
+        no_data: There is no history data
+        coin: Coin
+        inserted_txid: Txid provided by Stratum
+        submitting: Submitting
+        submitted: Submitted
+        rejected: Rejected
+        accepted: Accepted
+        suspect: Suspect
+        processing: Processing
+        coin_ready: Coin Ready
+        coin_done: Coin Done
+        done: Done
+        almost_done: Almost Done
+        canceled: Canceled
+        failed: Failed
+        cancelled: Cancelled
+        checked: Checked
+        warning: Warning
+        validator: Validator
+        value: 10.90
+        value_percent: 0.25%
+        fee_info: 'BRL withdraw: Fee of 0.25% on the total amount of withdrawal + Fee of TED R$10,90 Crypto withdraw: Network amount Fee of each crypto.'
+
+        tooltip_status:
+          accepted:
+            text: The withdrawal was processed successfully. Please check in your personal wallet.
+            icon: <i class="far fa-check-circle"></i>
+
+          done:
+            text: The withdrawal was processed successfully. Please check in your personal wallet.
+            icon: <i class="far fa-check-circle"></i>
+
+          checked:
+            text: Order reviewed by Admin.
+            icon: <i class="far fa-check-circle"></i>
+
+          almost_done:
+            text: The withdrawal order is being submitted.
+            icon: <i class="far fa-clock"></i>
+
+          submitting:
+            text: The withdrawal order is being submitted.
+            icon: <i class="far fa-clock"></i>
+
+          submitted:
+            text: The withdrawal order has been submitted.
+            icon: <i class="far fa-clock"></i>
+
+          cancelled:
+            text: Order rejected.
+            icon: <i class="far fa-times-circle"></i>
+
+          rejected:
+            text: Order rejected.
+            icon: <i class="far fa-times-circle"></i>
+
+          warning:
+            text: No transactions have been processed to date. Please contact our support.
+            icon: <i class="fas fa-exclamation-triangle"></i>
+
+          suspect:
+            text: Irregular order. Please contact our support.
+            icon: <i class="fas fa-exclamation-triangle"></i>
+
+          processing:
+            text: The service order is being processed.
+            icon: <i class="far fa-clock"></i>
+
+    auth:
+      please_active_two_factor: Please set mobile number or google authenticator first.
+      submit: Submit
+      otp_placeholder: 6-digit password
+      google_app: Google Authenticator
+      sms: SMS Verification Messages
+      send_code: Send Code
+      send_code_alt: Resend in COUNT seconds
+      hints:
+        app: Google Authenticator will re-generate a new password every thirty seconds, please input timely.
+        sms: We'll send a text message to you phone with verify code.
+      term_agree:
+         SERVICE TERMS<br>
+                1. The present Term of Services establishes the conditions of use of the Platform between Cointrade Crypto Exchange and its Users.<br>
+                2. Cointrade Crypto Exchange does not buy and sell coins. The objective of the Platform is to bring users closer to buying and selling their own crypto-coins, offering features to facilitate transactions.<br>
+                3. To transact on the Cointrade Crypto Exchange Platform you must register, simply by providing a valid email and password, at which time you declare and acknowledge that you have read, understood and irrevocably accepted this Agreement of its attachments and / or appendices, as well as documentation and information published on the site.<br>
+                4. This Term of Service, its attachments, appendices, services, tools and conditions may be modified, amended, modified, deleted or updated by Cointrade Crypto Exchange at any time without notice. Reason why, you should check frequently to confirm that your copy and the understanding of this Term of Use, attachments and appendices are up to date and correct. The non-termination or use of any services after the effective date of any incorporations, changes, modifications or updates constitutes implicitly and unequivocally your acceptance of the modifications by such amendments, changes or updates. If you do not agree to any of the terms here, please do not sign up for and continue to use the cointrade.cx site.<br>
+                5. Use of the site and any services is void where prohibited by applicable law.<br>
+                6. In this act you represent and warrant that<br>
+                6.1.You are at least 18 years old, full civil capacity, according to your relevant jurisdiction;<br>
+                6.2.Have not previously been suspended or removed from our services;<br>
+                6.3.Have full power and authority to enter into this legal relationship and, in so doing, shall not violate any other legal relationship;<br>
+                6.4.Use our Platform with your own email;<br>
+                6.5.The encryption assets that you transfer to the platform are not sold, encumbered, disputed or under arrest, and that there is no third party right over them;<br>
+                6.6.You will immediately terminate your use of our services if you are a resident or become a state or regional resident, where encryption asset transactions are prohibited or require special approval, permission or authorization of any kind, which Cointrade Crypto Exchange does not has obtained;<br>
+                6.7.You agree that you will not violate any law, contract, intellectual property or other right of any third party or you will commit an unlawful act and that you are solely responsible for your conduct in using our Platform.<br>
+                7. Without prejudice to the generality of the foregoing, you represent, agree, accept and warrant that you will not.<br>
+                7.1.Use the Platform in any manner that may interfere with, disrupt, adversely affect, or inhibit other users from using our Platform with complete functionality, or that may damage, disable, overburden, or impair the Platform's operation in any manner;<br>
+                7.2.Use the Platform to pay, support or otherwise engage in any illegal gambling activities; fraud; money laundry; or terrorist activities; or any other illegal activities;<br>
+                7.3.Use any robot, spider, crawler, scraper or other automated means or interface not provided by Cointrade Crypto Exchange to extract data;<br>
+                7.4.Use or attempt to use another user account without authorization;<br>
+                7.5.Attempt to circumvent any content filtering techniques that Cointrade Crypto Exchange uses, or attempt to access any service or area of ​​the Platform that you are not authorized to access;<br>
+                7.6. Develop any third party applications that interact with the Platform without the prior written consent of Cointrade Crypto Exchange.<br> OF RISK<br>
+                8. You acknowledge and agree that you will use the Platform at your own risk. The risk of loss in dealing in cryptographic assets can be substantial, so you should consider whether this negotiation is appropriate for you. There is no guarantee against loss on the Site.<br>
+                8.1 You acknowledge and agree to the possibility of the following;<br>
+                8.1.a You can support a total loss of active crypto in your Cointrade Crypto Exchange account.<br>
+                8.1.b Under certain market conditions, you may find it difficult to settle a position, such as when liquidity in the market is insufficient because it has reached a daily price fluctuation threshold ("threshold movement").<br>
+                8.1.c The use of orders such as "stop-loss" or "stop-limit", will not necessarily limit their losses to the desired values, since market conditions may make it impossible to execute such orders.<br>
+                8.1.d The points mentioned above apply to all encrypted assets. This brief statement can not, however, expose all risks and other aspects associated with the trading of cryptographic assets and should not be considered as any advice.<br>
+                8.2. You acknowledge that there are risks associated with the use of a  Internet-based commerce, including, but not limited to, hardware failures, software and Internet connections. You acknowledge that the Cointrade Crypto Exchange shall not be liable for any communication failures, interruptions, errors, distortions or delays that you may have in using the Platform, regardless of the cause.<br>
+                8.3. The Platform and its related Services are based on the Blockchain protocol, thus any malfunction, unintended function, unexpected operation or Blockchain attack may cause malfunction or malfunction unexpectedly or unintentionally.<br>
+                8.4. You acknowledge and agree that Cointrade Crypto Exchange has no control over encryption network and understands all risks associated with the use of any network encryption assets, and that the Cointrade Crypto Exchange is not responsible for any damages that occur as a result of such risks.<br>
+                8.5. You are fully responsible for protecting your access to the Technology Platform, your private key, passwords, and your bank account details.<br>
+                  PROTECTION OF ACTIVE CRYPTO<br>
+                9. We strive to protect your encryption assets, and for that, we use a variety of physical and technical measures designed to protect our systems and  your encryption assets. When you forward your encryption assets to the Account Cointrade Crypto Exchange, you entrust us and authorize us to make decisions about the security of your encryption assets.<br> NOTIFICATIONS<br>
+                10. You agree and agree to electronically receive all Communications, which Cointrade Crypto Exchange is willing to do. You agree that Cointrade Crypto Exchange can make these Communications by posting them on the Platform.<br>
+                10.1. It is your responsibility to keep your e-mail address registered in the Cointrade Crypto Exchange updated so we can communicate with you   electronically. You understand and agree that if Cointrade Crypto Exchange  send an electronic communication but you do not receive it because your email address is out of date, blocked by your service provider, or if you  unable to receive electronic communications, Cointrade Crypto Exchange will consider how the communication was carried out. You waive your right to plead  ignorance.<br>
+                10.2. If you use a spam filter that blocks or redirects mail from senders not listed in your contact list, you must add Cointrade Crypto Exchange so that you can receive the Communications.<br>
+                10.3. If the electronic correspondence sent to you by Cointrade Crypto Exchange, Cointrade Crypto Exchange may consider that your account is inactive, and you may not be able to complete any transaction through Platform until we receive a valid email address from you.<br>
+                10.4. If you have not logged in to your account on the site for an uninterrupted period of  two years, Cointrade Crypto Exchange reserves the right to consider that all and  any property you hold on the site bandoned,   immediately lost and confiscated by Cointrade Crypto Exchange.<br>
+                10.5. Any benefit granted to any user of Cointrade Crypto Exchange, shall be considered as mere liberality on the part of the latter and shall not affect the other  Cointrade Crypto Exchange users.<br> SPECIAL CONDITIONS <br>
+                11. At any time and in our sole discretion, we may impose limits on the amount Transfer permitted by the Platform or impose any other conditions or conditions restrictions on the use of the Platform without prior notice.<br>
+                12. We may, at our sole discretion, without your acceptance, with or without notice prior and at any time, modify or discontinue, temporarily or permanently, any part of our Services.<br>
+                13. You can only cancel a Transfer request that has already been initiated through the Platform if such cancellation occurs before Cointrade Crypto Exchange runs  the transfer. Once your transfer request has been executed, you may not change, withdraw, or cancel your authorization. If an order of trading has been partially completed, you can cancel the remaining unfinished,  unless the request relates to a market rate. We reserve the right to right to refuse any cancellation request associated with the market rate of a order after you have sent such a request. Although we sole criterion, to reverse a negotiation under certain extraordinary conditions, the  user has no right to reverse any trading. <br>
+                14. If you have insufficient cryptographic assets in your account Cointrade Crypto Exchange to complete a transfer through the platform  technology, we may cancel the entire order or fulfill a partial order using the number of cryptographic assets currently available in your Cointrade account Crypto Exchange, less any fees due to Cointrade Crypto Exchange on  as a result of our execution of the Transfers.<br>
+                15. It is your responsibility to check which taxes, if any, Transfers that you conclude through the Platform and are your responsibility to inform and remit the correct tax to the appropriate tax authority.<br>
+                You agree that Cointrade Crypto Exchange is not responsible for determining whether taxes apply to your transfers or for collecting, reporting, holding or remitting any taxes arising from any Transactions and Transfers and does not as your tax agent. <br>
+                16. Cointrade Crypto Exchange has exclusive rights, including all intellectual property rights over Comments. Any Feedback you  send is not confidential and will become the exclusive property of Cointrade Crypto Exchange. We will have the right to unrestricted use and disclosure of such Feedback for  any purpose, commercial or otherwise, without recognition or compensation to you.<br>You waive any rights you may have about the Feedback. Do not do Comments if you expect to be paid or wish to continue owning or claiming  rights over it; your idea might be great, but maybe we already had the same idea  or a similar idea and we do not want disputes. We also have the right to disclose your identity to any third party claiming that the content posted by you constitutes an infringement of their intellectual property rights or of their right to privacy. We have the right to remove any post you post on our site if, in our opinion, it is not in compliance with the content standards established.<br> SUSPENSION OR TERMINATION OF YOUR COINTRADE CRYPTO ACCOUNT  EXCHANGE <br>
+                17. In case of violation of the Terms or any other event that we consider necessary, including, without limitation, market disruption and / or  Greater, we may, in our sole discretion and without your acceptance, with or without notice  previous <br>
+                17.1. suspend your access to all or part of our Services; or <br>
+                17.2. prevent you from completing any actions through the Platform, including the closing of any open trading order. If the transfer is  You acknowledge that the prevailing market rates may differ from the rates available prior to such event; or <br>
+                17.3. terminate your access to the Services, delete or deactivate your Crypto Cointrade Account Exchange and all related information and files in this account.<br>
+                18. In the event of termination, Cointrade Crypto Exchange will return any assets stored in your account on the platform, discounting the amounts due to the Cointrade Crypto Exchange, unless you have committed fraud, negligence or other improper conduct.<br> GUARANTEES AND RESPONSIBILITIES <br>
+                19. You disclaim all warranties of any kind, express or implied, including the information, content and materials contained in our services.<br>
+                20. You acknowledge that the information you store or transfer through our services may be lost, corrupted or temporarily become unavailable due to various causes, including software failures, third party protocol, internet interruptions, force majeure events or other disasters, scheduled or unscheduled maintenance or other causes inside or outside of our control.<br>
+                21. Except as otherwise required by law, under no circumstances shall Cointrade Crypto Exchange, its  officers, employees or agents shall be liable for any direct or indirect damages indirect damages of any kind, including, loss of use, loss of profits or loss of data,  related to the use or inability to use our services or the IP of the Cointrade Crypto Exchange, including any damages caused by the trust of  any information obtained by Cointrade Crypto Exchange or  arising from errors, omissions, interruptions, deletion of files or emails, errors, defects, viruses, delays in operation or transmission, or any performance failure, resulting from or not a force majeure event, communications failure, theft, destruction or unauthorized access to Cointrade's records, programs or services Crypto Exchange. <br>
+                22. Cointrade Crypto Exchange will not be responsible for <br>
+                22.1. any inaccuracy, error, delay or omission of any information, as well as the transmission or delivery of information; <br>
+                22.2. any loss or damage resulting from an Event of Force Majeure.<br>
+                23. We strive to protect our users from fraudulent and  schemes in the sphere of cryptographic assets. It is possible that some cryptographic assets have the purpose of illegally confiscating the property or are considered fraud, schemes or any other activity, recognized by the laws as illegal and / or incompatible with legal requirements. We reserve the right to prohibit and discontinue any transactions on our Platform with this encryption feature in our sole discretion, without any prior notice to you and without the publication of the reason for such a decision, wherever it comes to our attention.<br>
+                24. We follow the best practices for deciding whether the encryption asset is secure or do not. However, we do not give any guarantee and / or investment, financial, legal or  any other professional advice, stating that any encryption asset   available through our Platform is safe.<br>MISCELLANEOUS<br>
+                25. In the event of any conflict between these Terms and any other agreement you  Cointrade Crypto Exchange, these terms will prevail, unless  have been expressly identified and declared as canceled by the other   contract<br>
+                26. We reserve the right to make changes or modifications to these Terms of  from time to time, at our sole discretion, at which time we will provide  notices about such changes, either by email, or by notice on the homepage of the Site. The  Altered terms will be deemed effective immediately upon User continuing to  to use our Services after Cointrade Crypto Exchange warns of such  changes or publish a new version of the Terms on the Site.<br>
+                27. Any changed Terms will apply to the Services after they become effective. If you do not agree to any amended Terms, you must discontinue use of our Services and contact us to terminate your account.<br>
+                28. Our failure or delay in the exercise of any right, power or privilege under these  Terms should not work as a waiver of it. <br>
+                29. The invalidity or ineffectiveness of any provision contained in this Terms shall not affect  the validity or feasibility of the others, which shall remain in full force and effect  effect.<br>
+                30. You may not assign or transfer any of your rights or obligations under these Terms without prior written consent of Cointrade Crypto Exchange, including by law or in connection with any change of control. A Cointrade Crypto Exchange may assign or transfer any or all of its rights under these Terms, in whole or in part, without obtaining your consent or approval.<br>REGISTRATION OF AN ACCOUNT IN COINTRADE CRYPTO EXCHANGE <br>
+                31. You need to create an account at Cointrade Crypto Exchange to use our  Platform in the correct order and with all its functionality, enter a valid email and password. <br>
+                32. The KYC procedure may be required at any time if  by the competent authorities. <br>
+                33. When you create a Cointrade Crypto Exchange account, you are committed to <br>
+                33.1. create a strong password that you do not use for other sites, online or offline services; <br>
+                33.2. maintain the security of your Cointrade Crypto Exchange account by protecting your  password and restricting access to your Cointrade Crypto Exchange account; <br>
+                33.3. notify us immediately if it discovers or suspects any breach of security related to your Cointrade Crypto Exchange account  <br>
+                33.4. assume responsibility for all activities that occur under your Account Cointrade Crypto Exchange and accept all risks of any authorized access or  not authorized to your Cointrade Crypto Exchange Account, to the maximum extent permitted   by law. <br> DEPOSIT AND WITHDRAWAL OF ASSETS IN COINTRADE CRYPTO ACCOUNT EXCHANGE <br>
+                34. Our Platform allows Users to deposit in FIAT orcryptographic assets for the Crypto Exchange Cointrade Account, or through the third-party service, which the user declares to be aware of   which are only service providers. <br>
+                34.1. Cointrade Crypto Exchange is not responsible for problems occurring in the ticketing through partner; <br>
+                34.2. Tickets will be issued with the D + 1 deadline.<br>
+                35. Any fee charged by partners will be passed directly to the user.<br>
+                36. When requesting the deposit of any amount for the platform, a new value plus cents, which will identify your deposit at that time.<br>
+                If it is generated, the use of cents will be mandatory. Any error concerning the new value added plus cents will make it impossible to identify your deposit. Case  occurs, the user must prove that he was the depositor, through a letter from the bank  responsible for the deposit, to enable the attempt to recover. <br>
+                37. You warrant and hold Cointrade Crypto Exchange harmless from any claims, and damages, whether direct, indirect, consequential or special, or any other damages of any kind, including, loss of use, loss of profits or loss of  originated or in any way related to your deposit or transfer requested.<br>
+                38. You understand and acknowledge that an address to receive an encrypted asset will be automatically created as soon as you request the transfer of the Deposit, and   before any encrypted asset can be sent to your Cointrade Account  Crypto Exchange, you must fully and irrevocably authorize its creation.<br>
+                39. When you request that encryption assets be deposited or removed from your  account, you authorize Cointrade Crypto Exchange to perform this transfer through  of the Platform.<br>
+                40. You are solely responsible for using the third-party service and you agree to comply with  all terms and conditions applicable to them.<br>
+                40.1. Each currency has its own particularity, which the user is solely responsible for  Cointrade Crypto Exchange from any liability for non-compliance with such particularities.<br>
+                41. In some cases, the outsourced service may reject your encryption  suspended, Transfer of Deposit or Withdrawal of your  encryption or does not support Transfer, or may be unavailable. Do you agree  which will not hold Cointrade Crypto Exchange responsible for any claims,and damages, whether direct, indirect, consequential or special, or any other damages of any kind, including, loss of use, loss of profits or losses of  data, arising out of or in any way connected with such rejections or suspensions of  deposit or withdrawal.<br>
+                42. Subject to the terms and conditions of these Terms, we will commercially reasonable to register all Transfers on an immediate basis as soon as possible. However, the time associated with Deposit or Withdrawal of assets encryption depends, inter alia, on the performance of third-party services and we do not guarantee that the encryption assets will be Deposited or Withdrawn in period of time. You understand and acknowledge that all delays  are possible; you warrant and release Cointrade Crypto Exchange from any claims, demands and damages, whether direct, indirect, consequential or special, or any other damages of any kind, including, loss of use, loss of profits or loss of data, arising out of or in any way related to the delay of transfer, whether arising from our failure or not.<br>
+                  TRADING CRYPTO ASSETS <br>
+                43. Crypto asset trade occurs among users. <br>
+                44. When you send a trading order through the Platform, you authorize the Cointrade Crypto Exchange on <br>
+                44.1. register a transfer of your cryptographic assets from / to / into your account Cointrade Crypto Exchange. <br>
+                44.2. when applicable, reserve your encryption assets in your Cointrade account Crypto Exchange under such a trade order. <br>
+                44.3. and charge any applicable fees for such registration. <br>
+                45. You acknowledge and agree that in relation to your trading activity, our Platform <br>
+                45.1 is not acting as your broker, intermediary, agent or consultant or any fiduciary capacity; <br>
+                45.2. not acting as part of the transfer of a particular asset encrypted.<br>
+                46. ​​Each placed order of transaction creates different market exchange rates.<br>
+                You acknowledge and agree that the rate information made available through the Platform may differ from current rates made available from other sources outside the Platform. <br>
+                47. Particularly during periods of high volume, lack of liquidity,or volatility in the market for any encrypted asset, the actual the market in which a market transaction is carried out may be different from the platform indicated at the time of execution of its Transaction. commercial. You understand that we are not responsible for such rate fluctuations.<br>
+                48. The tariffs made available through the Platform should not be considered as an investment or financial advice, or referred to as such, and can not be used as the basis for investment strategy. <br>
+                  COINTRADE CRYPTO EXCHANGE RATES <br>
+                49. The first 20,000 (twenty thousand) enrolled in the Platform will be exempt from payment until December 2018, after which the promotion and fees will end. will be charged for transactions completed through the Platform. <br>
+                50. You agree to pay the fees for Transfers completed through the Platform, as defined by the Fees and Limits, which may be changed  periodically. The changes in the Fees are effective as of the date indicated in the revised Tariffs and Limits, and will be applied prospectively to the any Transfers occurring after the date of such revised Fees<br>.
+                51. Payment of fees. You authorize us, or our payment processor  designated, to collect or deduct the cryptographic assets from your Cointrade Crypto account Exchange for any fees due in connection with the negotiations concluded through of the Platform.<br>
+                  COPYRIGHT AND OTHER PROPRIETARY RIGHTS INTELECTUAL.<br>
+                52. Cointrade Crypto Exchange and the logo, trade names, brands nominative marks and design marks are trademarks of Dinamiam S / A. You agree not to appropriate, copy, display or use the Crypto Cointrade Marks Exchange or other content without prior express written permission to do so.<br>
+                  THIRD PARTY CONTENT <br>
+                53. By using our Platform, you can view third-party content. We do not  control, endorse or adopt (unless expressly stated by us) any Third Party Content and we shall have no responsibility for the Content of Third Parties, including, without limitation, materials that may be misleading, incomplete,<br>
+                misleading, offensive, indecent or otherwise objectionable. In addition, their business or correspondence with such third parties are solely between you and the 3rd. We are not responsible for any loss or damage of any kind incurred as a result of such negotiations, and you understand that your use of Content and your interactions with third parties are your responsibility. <br>
+                54. Cointrade Crypto Exchange is against any illegal activity, drug trafficking, human beings, organs and any other illegal trafficking, poaching, pornography, trade in arms, terrorism and criminal financing, corruption, bribery and laundering of money.<br>
+    markets:
+      market_list:
+        all: All Market
+        brl: BRL Market
+        btc: BTC Market
+        bch: BCH Market
+        btg: BTG Market
+        dash: DASH Market
+        eth: ETH Market
+        zec: ZEC Market
+        dgb: DGB Market
+        xrp: XRP Market
+        smart: Smart Market
+        iota: IOTA Market
+        ltc: LTC Market
+        zcr: ZCR Market
+        tusd: TUSD Market
+        xem: XEM Market
+        rbtc: RBTC Market
+        rif: RIF Market
+        xar: XAR Market
+        
+    markets_overview:
+        market_depth: Market Depth

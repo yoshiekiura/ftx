@@ -1,0 +1,39 @@
+= simple_form_for @token do |f|
+  #settings.user-wrapper
+    = render 'shared/flash'
+    = render partial: "private/settings/settings_menu"
+    .tab-content
+      .user-container
+        .settings-panel
+          .sp-content
+            .container-sm
+              h2
+                = t('guides.private.api_tokens.edit.title')
+              .form-group
+                label Nome
+                = f.input :label, label: false, :input_html => { :class => 'form-control' }
+                p.help-text
+                  = t('.label_hint')
+              .form-group
+                label
+                  = t('activerecord.attributes.api_token.access_key')
+                input#accesscode.form-control type="text" value= @token.access_key
+              .form-group
+                label
+                  = t('activerecord.attributes.api_token.ip_whitelist')
+                = f.input :ip_whitelist, label: false, :input_html => { :class => 'form-control' }
+                p.help-text
+                  = t('private.api_tokens.edit.ip_whitelist_hint')
+              .form-group
+                label
+                  = t('two_factors.auth.google_app')
+
+                  = two_factor_tag(current_user)
+                  p.help-text
+                    = t('two_factors.auth.hints.app')
+              .form-group.submit-gp
+                .buttons.center
+                  = link_to t('actions.cancel'), api_tokens_path, {:class => "btn btn-lg btn-pair btn-red"}
+                  = f.button :submit, t('actions.confirm'), class: "btn btn-lg btn-pair btn-green"
+
+    .clearfix

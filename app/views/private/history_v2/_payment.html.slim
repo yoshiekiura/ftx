@@ -1,0 +1,11 @@
+tr
+  td = t "private.history.trade.#{trade_side payment}"
+  td = payment.created_at
+  td = payment.market.name.upcase
+  td = payment.volume
+  - if payment.market.name.upcase == 'USDT'
+    td = 'USDT'
+  - else
+  	td = payment.market.name.upcase
+  td = payment.volume*payment.price
+  td = payment.price

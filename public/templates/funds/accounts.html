@@ -1,0 +1,65 @@
+<div class="panel panel-default" ng-repeat="account in accounts" bind="accounts" ng-if="account.currency != 'brl'">
+  <div class="panel-heading">
+
+      <div ng-class="{blur_maintenance: account.maintenance == true}" ng-if="accountsCtrl.isWithdraw()">
+        <div class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" ng-click="accountsCtrl.withdraw(account); $event.preventDefault()" href="#">
+          <div class="panel-coin">
+            <i ng-class="accountsCtrl.isSelected(account.currency) ? 'fa-chevron-up' : 'fa-chevron-down'" class="fas"></i>  <img height="32" width="32" ng-src="/icon-{{account.currency}}.png" alt="">  {{ account.name_text }}
+            <i ng-if="account.maintenance == true" class="betahint" style=("font-size: 8px;color: #E87171;bottom: 0;float: left;")>Moeda Indisponível no momento</i>
+          </div>
+          <div class="panel-qty">
+            {{account.balance | round_down | number:3 }} <strong>{{account.currency | uppercase}}</strong>
+          </div>
+
+          <div class="clearfix"></div>
+        </a>
+        </div>
+      </div>
+
+      <div ng-class="{blur_maintenance: account.maintenance == true}" ng-if="accountsCtrl.isDeposit()">
+        <div class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" ng-click="accountsCtrl.deposit(account); $event.preventDefault()" href="#">
+          <div class="panel-coin">
+            <i ng-class="accountsCtrl.isSelected(account.currency) ? 'fa-chevron-up' : 'fa-chevron-down'" class="fas"></i> <img height="32" width="32" ng-src="/icon-{{account.currency}}.png" alt="">  {{ account.name_text }}
+            <i ng-if="account.maintenance == true" class="betahint" style=("font-size: 8px;color: #E87171;bottom: 0;float: left;")>Moeda Indisponível no momento</i>
+          </div>
+          <div class="panel-qty">
+            {{account.balance | round_down | number:3 }} <strong>{{account.currency | uppercase}}</strong>
+          </div>
+
+          <div class="clearfix"></div>
+        </a>
+        </div>
+      </div>
+
+
+
+
+  </div>
+  <div ng-if="account.maintenance == false" id="collapse-{{account.currency}}" class="panel-collapse collapse"
+       ng-class="{in: accountsCtrl.isSelected(account.currency)}"
+       data-currency="{{account.currency}}" >
+    <div class="panel-body">
+
+      <div ng-if="accountsCtrl.isWithdraw()">
+        <div class="container-sm-accounts">
+        <ui-view></ui-view>
+        </div>
+
+      </div>
+
+      <div ng-if="accountsCtrl.isDeposit()">
+      <div class="col-sm-4" ng-if="account.deposit_address.length > 0">
+        <!--div id="qrcode-{{account.deposit_address}}" class="qrcode-container img-thumbnail"  data-width="180" data-height="180" data-text="{{account.deposit_address}}" title="{{account.deposit_address}}"></div-->
+      </div>
+      <div class="col-sm-4" ng-if="account.deposit_address == null">
+          <div>no wallet</div>
+        </div>
+      <ui-view></ui-view>
+      <div class="clearfix"></div>
+      </div>
+      </div>
+
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="order-pair">
+    <div class="order-pair-header columns">
+            <div class="column td">
+                <i class="far fa-plus-square"></i>
+            </div>
+            <div class="column td"><%= @curr_title %> (<span id="count_<%= @market_id %>">0</span>)</div>
+            <div class="column td"></div>
+            <div class="column td"></div>
+            <div class="column td desktop-sm"></div>
+            <div class="column td"></div>
+     </div>
+     <div class="order-pair-subrows" id="<%= @market_id %>">
+     </div>
+
+</div>

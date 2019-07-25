@@ -1,0 +1,51 @@
+
+
+<% time = @withdraw.created_at %>
+
+<% conta = @fund_source.uid.split("/") %>
+<% bank = @fund_source.label %>
+<% week_day = Date.today.wday %>
+
+
+<p style="color:#078ABA; font-size:15px; margin-top:-25px;">
+  <%= t('mailer.client_uuid') %> <%= @client_uuid %>
+</p>
+
+<p style="color:#078ABA; font-size:30px; margin-bottom: -25px; font-weight: 500">
+  <%= t('.request') %>
+</p>
+
+<p style="color:#5F5F5F; font-weight: 500">
+  <%= t('.content', {currency: @withdraw.currency_text, number: @withdraw.id}) %>
+</p>
+
+<% unless @withdraw.currency_text == 'BRL' %>
+  <p style="color:#078aba;font-size:20px; font-weight: 500">
+    <%= t('withdraw_mailer.done.amount_crypto', {amount:  @withdraw.amount, currency: @withdraw.currency_text}) %><br/>
+  </p>
+<% end %>
+
+<% unless @withdraw.currency_text != 'BRL' %>
+  <p style="color:#078aba;font-size:20px; font-weight: 500">
+    <%= t('withdraw_mailer.done.amount', {symbol: Currency.find_by_code(@withdraw.currency).symbol, amount:  @withdraw.amount}) %>0<br/>
+  </p>
+<% end %>
+
+<% unless @withdraw.currency_text == 'BRL' %>
+  <p style="color:#9A9A9A; font-weight: 500" >Carteira de destino: <%= @withdraw.fund_uid %></p>
+<% end %>
+
+<% unless @withdraw.currency_text != 'BRL' %>
+  <p style="color:#9A9A9A; font-weight: 500">
+    Banco: <%= bank %><br/>
+    Agencia: <%= conta[1] %><br/>
+    Conta: <%= conta[2] %><br/>
+  </p>
+<% end %>
+
+
+<p style="color:#5F5F5F; font-weight: 500">
+  Data: <%= time.strftime("%d/%m/%Y") %>, <%= I18n.t('date.formats.day_names')[week_day] %><br/>
+  Hora: <%= time.strftime("%H:%M") %>
+</p>
+<br/>

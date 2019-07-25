@@ -1,0 +1,231 @@
+.user-container {
+    background: #fff;
+    border-top: 1px solid #a1b5c1;
+    color: #333;
+}
+
+
+/*pillls*/
+
+.user-wrapper .nav-pills>li.active>a, 
+.user-wrapper .nav-pills>li.active>a:hover, 
+.user-wrapper .nav-pills>li.active>a:focus {
+    color: #fff;
+    background-color:#ff7d00;
+}
+
+.user-wrapper .nav>li>a:hover, 
+.user-wrapper .nav>li>a:focus {
+    background: none;
+}
+
+
+/*forms*/
+
+.input-group-addon i {
+    color: #3c656e;
+}
+
+.form-control {
+    background: #fff;
+    color: #333;
+    border-color: #3c656e;
+}
+
+.highlight{
+    border: 1px solid white;
+}
+
+.highlight-blue{
+    border-color:rgb(116, 116, 209);
+}
+.highlight-green{
+    border-color:rgb(68, 192, 72);
+}
+.highlight-red{
+    border-color:rgb(189, 40, 40);
+}
+
+.indicator{
+    background-color: grey;
+}
+.indicator-sell{
+    background-color: rgb(196, 34, 34);
+}
+.indicator-buy{
+    background-color: rgb(15, 167, 23);
+}
+.form-check{
+    color: rgb(201, 199, 199);
+}
+
+
+.form-control::placeholder {
+    color:#333;
+}
+
+.input-group .input-group-addon {
+    background: transparent;
+    color:#333;
+    border-top: 1px solid #3c656e;
+    border-right: 1px solid #3c656e;
+    border-bottom: 1px solid #3c656e;
+    border-left: 1px solid #3c656e;
+
+}
+
+.form-group.submit-gp {
+    margin-top: 20px;
+}
+
+/*tables*/
+
+.user-wrapper td,
+.user-wrapper th {
+    color: #333;
+}
+
+.user-wrapper .table>thead>tr>th {
+    border-bottom: 1px solid #a1b5c1;
+}
+
+.user-wrapper .table>thead>tr>th, 
+.user-wrapper .table>tbody>tr>th, 
+.user-wrapper .table>tfoot>tr>th, 
+.user-wrapper .table>thead>tr>td, 
+.user-wrapper .table>tbody>tr>td, 
+.user-wrapper .table>tfoot>tr>td {
+    border-top: 1px solid #a1b5c1;
+}
+
+.user-wrapper td {
+    color: #333;
+}
+
+
+
+.table th .sort i.active {
+    color:rgb(55, 171, 206);
+}
+
+
+/*DEPOSITS WITHDRAWALS */
+
+    /*Crypto*/
+
+
+    .panel-group .panel {
+        background: #fdfdfd;
+    }
+
+    .panel-default {
+        border: transparent;
+        color: #333;
+    }
+
+    .panel-default>.panel-heading {
+        color: #555;
+        background-color: #d5dfe0;
+        border-color: #ddd;
+    }
+
+
+  
+
+    /*Fiat*/
+
+ 
+    .dep-instructions label {
+        color: #45a7b9;
+
+    }
+    .bank-info-section {
+
+        border: 1px solid #a1b5c1;
+    }
+
+
+    .dataline {
+        border-bottom: 1px solid #a1b5c1;
+    }
+
+
+
+
+    /*History*/
+
+
+    .confirmations{
+        border-color: rgb(211, 176, 38);
+    }
+    @keyframes processing_animate{
+        0% {
+            border-color: rgb(211, 176, 38);
+        }
+   
+        40% {
+            border-color: rgb(189, 178, 133);
+        } 
+        90% {
+            border-color: rgb(221, 184, 35);
+        }     
+        100% {
+            border-color: rgb(211, 176, 38);
+          }
+      }
+
+
+   
+/*MARKETS*/
+
+
+.market-table tr.bought td {
+    background: #24b7405e !important;
+}
+
+.market-table tr.sold td {
+    background: #ce4f3d4f !important;
+}
+
+/*SETTINGS*/
+
+/*nav*/
+
+
+.list-group-item {
+    background-color: #fff;
+    border: 1px solid #ccc!important;
+}
+
+a.list-group-item {
+    color: #555;
+}
+
+a.list-group-item:hover, a.list-group-item:focus, a.list-group-item.active
+{
+    color: #5b8990!important;
+    background-color: #fff!important;
+    border: 1px solid #ccc!important;
+}
+
+.settings-panel {
+    background-color: #d5dfe0;
+    border-color: #ddd;
+}
+
+.settings-panel h3 {
+    color: #555;
+}
+
+
+#theme-switch .slider {
+    background:#72828a;
+}
+
+
+#theme-switch input:checked + .slider {
+    background: #88c8d6;
+}
+
+/*settings table */
+

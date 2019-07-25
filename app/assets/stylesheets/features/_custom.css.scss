@@ -1,0 +1,37 @@
+// FundSource Management Dialog
+#funds-index {
+  .ngdialog.ngdialog-theme-default.custom-width {
+    .ngdialog-content {
+      width: 600px;
+      background-color: #38434a;
+    }
+    .ngdialog-content h5{
+      color: #a7a1a1;
+    }
+    &.coin .ngdialog-content {
+      width: 600px;
+      background-color: #38434a;
+    }
+  }
+
+  .ngdialog.ngdialog-theme-default.custom-width-modal1 {
+    .ngdialog-content {
+      width: 600px;
+      background-color: #FFFFFF;
+    }
+    .ngdialog-content h5{
+      color: #a7a1a1;
+    }
+    &.coin .ngdialog-content {
+      width: 600px;
+      background-color: #38434a;
+    }
+  }
+}
+
+
+
+// ngDialog Confim Dialog
+.ngdialog.ngdialog-theme-default .dialog-contents {
+  button.cancel { margin-right: 10px; }
+}

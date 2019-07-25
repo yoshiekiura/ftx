@@ -1,0 +1,39 @@
+.row
+  .col-xs-8
+    .panel.panel-primary
+      .panel-heading
+        span = t('.deposit')
+      .panel-body
+        = description_for :member do
+          = item_for @deposit, :sn
+          = item_for @deposit.member, :name
+          = item_for @deposit, :amount
+          = item_for @deposit, :created_at
+          hr.split
+          = item_for @deposit, :fund_uid
+          = item_for @deposit, :aasm_state_text
+          dt Fund Extra
+          dd
+            = link_to (truncate @deposit.fund_extra, length: 35, separator: /\w+/), @deposit.fund_extra
+
+  .col-xs-8
+    .panel class='panel-primary'
+      .panel-heading
+        span = t('.target_deposit')
+      .panel-body
+        = simple_form_for @deposit, :url => admin_deposits_deposit_slip_path do |f|
+          dl.dl-horizontal.dl-member
+            = item_for @deposit, :sn
+            = item_for @deposit, :amount
+            = item_for @deposit, :done_at
+            - if @deposit.may_submit? or @deposit.may_accept?
+			  = item_for @deposit, :txid
+              hr.split
+              dt = t('.txid')
+              dd = f.text_field :txid, class: 'col-xs-24', style: 'color:black', name: 'deposit[txid]'
+              = f.submit t('admin.deposits.banks.show.accept'), class: 'btn btn-primary pull-right', confirm: t('admin.deposits.banks.show.confirm')
+            - else
+              = item_for @deposit, :txid
+
+  .col-xs-8
+    = render partial: 'shared/admin/member', locals: {member: @deposit.member}

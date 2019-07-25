@@ -1,0 +1,189 @@
+#order-form-buy.feature
+  .feature-header
+    .feature-title data-toggle="collapse" data-target="#buy-container"
+      i.fas.fa-chevron-up.mobile.mobile-smd
+      |&nbsp;
+      i.fas.fa-shopping-cart
+      |&nbsp;
+      =t('private.history.account.buy').upcase
+      |&nbsp;
+      =t(market.bid['currency'], scope: 'market.currency').upcase
+      |&nbsp;
+      | x
+      |&nbsp;
+      =t(market.ask['currency'], scope: 'market.currency').upcase
+      .is-clearfix
+
+  #bid_entry
+    #buy-container.feature-container.of-container.collapse.in
+      = form_for [market, order], :remote => true do |f|
+        ul#market_type.nav.nav-tabs
+          li#bid-of-market onclick="changeBidTab('market')"
+            a href="#" style=("position: absolute;font-size: 6pt;padding: 0 24px 2px;color: #E87171;")   BETA
+            a.betahint href="#" data-placement="rigth" data-html="true" title="#{t('shared.market.buy_sell.beta')}" Market
+          li#bid-of-limit  onclick="changeBidTab('limit')"
+            a href="#"  Limit
+          br/
+          br/
+        = f.hidden_field :volume_holder
+        = f.hidden_field :ord_type
+        = f.hidden_field :last_bid
+        .inner-buy-container.buy-limit-container.inner-buy-container-active
+          .of-info
+            .of-row
+              .of-label = t('private.shared.balances.balance')
+              |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              .balance.of-qty
+                .animated-background
+
+            .of-row
+              .of-label = t('private.shared.balances.in_orders')
+              |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              .order.of-qty
+                .animated-background.smal-animated-size
+
+            .of-row
+              .of-label = t('private.shared.balances.available')
+              |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              .aval.of-qty.clickable data-placement="left" id="available_b" data-toggle="tooltip" title=(t('private.shared.balances.add_value'))
+                .animated-background.smal-animated-size
+              / .aval.of-qty id="available_b"
+            .of-row
+              .of-label = t('private.shared.balances.best_ask')
+              |&nbsp;&nbsp;&nbsp;&nbsp;
+              .ask.of-qty.price-value id="bestBuy"
+                .animated-background.smal-animated-size
+              |&nbsp;
+
+          .of-inputs
+            .form-group style="margin-bottom: 5px;display:none"
+              .custom_checkbox
+                label.clickable
+                  input.checkStop type="checkbox"
+                  span Stop
+
+            .invalid-feedback
+              |&nbsp;
+
+            #bid-type-of-market.form-group
+              .input-group.spinner-field
+                span.input-group-addon = t('private.markets.bid_entry.price').mb_chars.upcase
+                .inputNumber
+                  spinner_5.number_spinner   /
+                  = f.text_field :price , type: 'text', pattern:"[0-9]+([.][0-9]+)?"
+                  p#spinner_5_label.spinner_label
+                    span = t(market.bid['currency'], scope: 'market.currency').upcase
+
+            .form-group
+              .input-group.spinner-field
+                span.input-group-addon = t('private.markets.ask_entry.amount').upcase
+                .inputNumber
+                  spinner_4.number_spinner   /
+                  = f.text_field :origin_volume,  type: 'text', pattern:"[0-9]+([.][0-9]+)?"
+                  p#spinner_4_label.spinner_label
+                    span id="volume_buy" = t(market.ask['currency'], scope: 'market.currency').upcase
+
+            .form-group
+              .input-group.spinner-field
+                span.input-group-addon
+                  = (t('private.markets.bid_entry.total').upcase)
+                  |&nbsp;
+                  |&nbsp;
+                  i.fas.fa-info-circle data-html="true" id="icon_info" data-placement="bottom" title="#{t('shared.market.buy_sell.information')}"
+                .inputNumber
+                  spinner_6.number_spinner type="number"  /
+                  = f.text_field :total, readonly: 'true' ,type: 'text' ,pattern:"[0-9]+([.][0-9]+)?"
+                  p#spinner_6_label.spinner_label
+                    span = t(market.bid['currency'], scope: 'market.currency')
+
+            .invalid-feedback
+              .input-group.spinner-field
+                //span.label.label-info.status-info
+                .status-success style="color:white;"
+                .status-danger style="color:white;"
+                //span.label.label-danger.hint-price-disadvantage
+                .alert-danger-value id="available-message" style="background:rgb(168, 90, 90); color:white; display:flex; position:absolute; width:100%;  height: 54px;"
+                  .container-danger-msg style="display:flex; align-items:center; font-size:17px; padding:10px;"
+                    i.fas.fa-exclamation-triangle
+                  = (t('private.markets.my_orders.no_available_funds').html_safe)
+                |&nbsp;
+
+
+            .of-info
+              .of-row
+
+        .control
+          = f.button t('private.markets.bid_entry.action_v2'), id:"btn_buy" , type:"submit" ,class: "btn btn-block btn-lg btn-green", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i>"}
+        .switch-container
+          |&nbsp;
+          |&nbsp;
+          |&nbsp;
+          |&nbsp;
+          .sc-text align="center" = t('private.markets.bid_entry.information_fee') << ' ' << market.bid['fee'].to_s  << '%'
+
+    javascript:
+      var bid_order_type = "bid-limit";
+      $("[rel='betahint'], .fas.fa-info-circle").tooltip();
+      
+      $("[rel='betahint'], .betahint").tooltip();
+      $("#icon_info").hide();
+      $("#available-message").hide();
+
+      $("#bid-of-limit").addClass("active");
+      $("#order_bid_origin_volume").on("keyup input", function(e) {
+
+          var total = $("#order_bid_price").val() * $("#order_bid_origin_volume").val();
+          var available = parseFloat($("#available_b").text());
+
+          if( total > available){
+              $("#available-message").show();
+          }else if(total <= available){
+              $("#available-message").hide();
+          }
+
+        if($("#order_bid_ord_type").val() === 'market') {
+
+          $("#order_bid_price").val();
+          $("#order_bid_total").val($("#order_bid_last_bid").val() * $("#order_bid_origin_volume").val());
+
+        }
+      });
+
+      function changeBidTab(id) {
+
+        bid_order_type = 'bid-'+id;
+        $('#order_bid_ord_type').val(id);
+        
+        
+        if(id == 'market') {
+          $("#icon_info").show();
+
+          if(!$("#bid-type-of-market").hasClass("hidden")) {
+            $("#bid-type-of-market").addClass("hidden");
+          }
+
+          if(!$("#bid-of-market").hasClass("active")) {
+            $("#bid-of-market").addClass("active");
+          }
+
+          if($("#bid-of-limit").hasClass("active")) {
+            $("#bid-of-limit").removeClass("active");
+          }
+        }
+        else if(id == 'limit') {
+          $('#order_bid_price').val('');
+          $('#order_bid_total').val('');
+          $("#icon_info").hide();
+          if($("#bid-type-of-market").hasClass("hidden")) {
+            $("#bid-type-of-market").removeClass("hidden");
+          }
+
+          if($("#bid-of-market").hasClass("active")) {
+            $("#bid-of-market").removeClass("active");
+          }
+
+          if(!$("#bid-of-limit").hasClass("active")) {
+            $("#bid-of-limit").addClass("active");
+          }
+        }
+      }

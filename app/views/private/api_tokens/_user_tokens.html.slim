@@ -1,0 +1,33 @@
+.tab-content
+  .user-container
+    .settings-panel
+      .sp-content
+        h2 = guide_panel_title
+        .fright
+          a.btn.btn-dark href=new_api_token_path
+            = t('.create')
+        .clearfix
+
+          .table-responsive.table-area
+            table.table
+              thead
+                tr
+                  th = APIToken.human_attribute_name('label')
+                  th = APIToken.human_attribute_name('access_key')
+                  th Ação
+              tbody
+                - if @tokens.empty?
+                  tr
+                    td colspan='3'
+                - else
+                  - @tokens.each do |token|
+                    tr
+                      td = token.label
+                      td = token.access_key
+                      td
+                        = link_to edit_api_token_path(token)
+                          i.fas.fa-pencil-alt data-original-title=t('.edit') data-toggle="tooltip" title=""
+                        | &nbsp;
+                        = link_to api_token_path(token), method: :delete, data: {confirm: t('.destroy-confirm')}
+                          i.fas.fa-times data-original-title=t('.destroy') data-toggle="tooltip" title=""
+.clearfix

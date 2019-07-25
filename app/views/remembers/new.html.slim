@@ -1,0 +1,42 @@
+.auth-wrapper
+  .auth-top
+    .auth-top-left
+      .logo
+        img src='#{image_path 'cointrade-logo.png'}'
+    .auth-top-right.nav
+      a.active href=signin_path
+        = t('header.signin')
+      a href=signup_path
+        = t('header.signup')
+      .clearfix
+  .auth-container
+    .auth-sub-container
+      h2
+        = t('private.settings.index.remember')
+      .auth-data
+        = simple_form_for @token, url: remembers_path(@token.id), as: :remember do |f|
+          .form-group
+            = f.input :email, :label => t('activerecord.attributes.token/remember_id.sign_email')
+            p.help-text = t('private.settings.index.send_instrution').html_safe
+          .form-group
+            = f.button :submit, t('actions.confirm').upcase, class: "btn btn-lg btn-block btn-orange submit"
+    .auth-footer
+      p
+        = t('private.settings.index.maintance_by').html_safe
+        |&nbsp;
+        a href="https://cointrade.cx/sobre-nos/" = t('private.settings.index.team_cointrade').html_safe
+        |&nbsp;
+        = t('private.settings.index.maintance_by_and').html_safe
+      ul
+        li
+          a href="https://cointrade.cx/plataforma/#porque-usar" = t('private.settings.index.why_use').html_safe
+        li
+          a href="https://cointrade.cx/plataforma/#funcionalidades" = t('private.settings.index.functionalities').html_safe
+        li
+          a href="https://cointrade.cx/faq/" = t('private.settings.index.faq').html_safe
+        li
+          a href="https://cointrade.cx/wp-content/uploads/2018/08/TERMOS-DE-SERVIC%CC%A7O.pdf" = t('private.settings.index.service_terms').html_safe
+        li
+          a href="https://cointrade.cx/wp-content/uploads/2018/08/POLI%CC%81TICA-DE-PRIVACIDADE.pdf" = t('private.settings.index.privacy').html_safe
+        li
+          a href="https://cointrade.zendesk.com/hc/pt-br/requests/new" target="_blank" = t('private.settings.index.support').html_safe

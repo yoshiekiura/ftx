@@ -1,0 +1,11 @@
+- unless @one_zecs.empty?
+  .panel.panel-primary
+    .panel-heading: span = t('.one')
+    = render partial: 'table', locals: {zecs: @one_zecs}
+- unless @all_zecs.empty?
+  .panel.panel-success
+    .panel-heading: span = t('.all')
+    = render partial: 'table', locals: {zecs: @all_zecs}
+
+- if @all_zecs.empty? and @one_zecs.empty?
+  h3.text-info.text-center = t('.empty')

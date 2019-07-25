@@ -1,0 +1,53 @@
+= simple_form_for @google_auth, as: 'google_auth', url: verify_google_auth_path do |f|
+  #settings.user-wrapper
+    = render 'shared/flash'
+    = render partial: "private/settings/settings_menu"
+
+    .tab-content
+      .user-container
+        .settings-panel
+          .sp-content
+            .container-sm
+              h2
+                = t('sessions.new_with_two_factor_auth.title')
+              h3
+                = t('.step-1')
+              p
+                = t('.download-app')
+                |&nbsp;
+                a href="https://support.google.com/accounts/answer/1066447"
+
+                  = t('.guide-link')
+              h3
+                = t('.step-2')
+              p
+                = t('.scan-qr-code')
+              br
+              .center
+                = qr_tag(@google_auth.uri)
+
+              .form-group
+
+                = f.label :otp_secret
+                = f.input_field :otp_secret, style:"width: 90%;float:left", class: 'form-control', readonly: true
+                a.btn.btn-lg.btn-block.btn-dark style="width: 7%;float:right;padding:0px;height: 30px;" href='#{verify_google_auth_path(:app, refresh: true)}'
+                  i.fas.fa-sync
+              .clearfix
+
+              h3
+                = t('.step-3')
+              p
+                = t('.enter-passcode')
+              .form-group
+                = f.label :otp
+                = f.input :otp, class:"form-control", label: false, :input_html => { :class => 'form-control' }
+              .clearfix
+              .form-group.submit-gp
+                .buttons.center
+
+                  = link_to t('actions.cancel'), settings_path, {:class=>"btn btn-lg btn-pair btn-red"}
+                  / = f.button :cancel, t('actions.cancel') ,class:"btn btn-lg btn-pair btn-red"
+                  = f.button :submit, t('.submit'), class:"btn btn-lg btn-pair btn-green"
+
+
+    .clearfix

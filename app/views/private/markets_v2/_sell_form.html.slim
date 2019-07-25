@@ -1,0 +1,190 @@
+#order-form-sell.feature
+  .feature-header
+    .feature-title data-toggle="collapse" data-target="#sell-container"
+      i.fas.fa-chevron-up.mobile.mobile-smd
+      |&nbsp;
+      i.fas.fa-tag
+      |&nbsp;
+      =t('private.history.account.sell').upcase
+      |&nbsp;
+      =t(market.ask['currency'], scope: 'market.currency').upcase
+      |&nbsp;
+      | x
+      |&nbsp;
+      =t(market.bid['currency'], scope: 'market.currency').upcase
+      .is-clearfix
+
+  #ask_entry
+    #sell-container.feature-container.of-container.collapse.in
+      = form_for [market, order], :remote => true do |f|
+        ul#market_type.nav.nav-tabs
+          li#ask-of-market onclick="changeAskTab('market')"
+            a href="#" style=("position: absolute;font-size: 6pt;padding: 0 24px 2px;color: #E87171;")   BETA
+            a.betahint href="#" data-placement="rigth" data-html="true" title="#{t('shared.market.buy_sell.beta')}" Market
+          li#ask-of-limit onclick="changeAskTab('limit')"
+            a href="#"  Limit
+          br/
+          br/
+        = f.hidden_field :ord_type
+        = f.hidden_field :last_ask
+        = f.hidden_field :volume_holder
+        .inner-sell-container.sell-limit-container.inner-sell-container-active
+          .of-info
+            .of-row
+              .of-label = t('private.shared.balances.balance')
+              |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              .balance.of-qty
+                .animated-background
+
+            .of-row
+              .of-label = t('private.shared.balances.in_orders')
+              |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              .order.of-qty id="available_sell"
+                .animated-background.smal-animated-size
+
+            .of-row
+              .of-label = t('private.shared.balances.available')
+              |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              .aval.of-qty.clickable data-placement="bottom" data-toggle="tooltip" id="bestSell" title=(t('private.shared.balances.add_value'))
+                .animated-background.smal-animated-size
+              / .aval.of-qty id="bestSell"
+            .of-row
+              .of-label = t('private.shared.balances.best_bid')
+              |&nbsp;&nbsp;&nbsp;&nbsp;
+              .bid.of-qty.price-value id="price_sell"
+                .animated-background.smal-animated-size
+              |&nbsp;
+
+          .of-inputs
+            .form-group style="margin-bottom: 5px;display:none"
+              .custom_checkbox
+                label.clickable
+                  input.checkStop type="checkbox"
+                  span Stop
+
+            .invalid-feedback
+              |&nbsp;
+
+
+            #ask-type-of-market.form-group
+              .input-group.spinner-field
+                span.input-group-addon = t('private.markets.bid_entry.price').mb_chars.upcase
+                .inputNumber
+                  spinner_2.number_spinner type="number"  /
+                  = f.text_field :price , type: 'text', pattern:"[0-9]+([.][0-9]+)?"
+                  p#spinner_2_label.spinner_label
+                    span = t(market.bid['currency'], scope: 'market.currency')
+
+
+            .form-group
+              .input-group.spinner-field
+                span.input-group-addon = t('private.markets.ask_entry.amount').upcase
+                .inputNumber
+                  spinner_1.number_spinner type="number"  /
+                  = f.text_field :origin_volume, type: 'text', pattern:"[0-9]+([.][0-9]+)?"
+                  p#spinner_1_label.spinner_label
+                    span id="volume_sell" = t(market.ask['currency'], scope: 'market.currency').upcase
+
+
+            .form-group
+              .input-group.spinner-field
+                span.input-group-addon
+                  = t('private.markets.bid_entry.total').upcase
+                  |&nbsp;
+                  |&nbsp;
+                  i.fas.fa-info-circle data-html="true" id="icon_infoS" data-placement="bottom" title="#{t('shared.market.buy_sell.information')}"
+                .inputNumber
+                  spinner_3.number_spinner type="number"  /
+                  = f.text_field :total, readonly: 'true', type: 'text' ,pattern:"[0-9]+([.][0-9]+)?"
+                  p#spinner_3_label.spinner_label
+                    span = t(market.bid['currency'], scope: 'market.currency')
+
+            .invalid-feedback
+              .input-group.spinner-field
+                //span.label.label-info.status-info
+                .status-success style="color:white;"
+                .status-danger style="color:white;"
+                //span.label.label-danger.hint-price-disadvantage
+
+                .alert-danger-value id="volume-message" style="background:rgb(168, 90, 90); color:white; display:flex; position:absolute; width:100%;  height: 54px;"
+                  .container-danger-msg style="display:flex; align-items:center; font-size:17px; padding:10px;"
+                    i.fas.fa-exclamation-triangle
+                  = (t('private.markets.my_orders.no_available_volume').html_safe)
+                |&nbsp;
+
+            .of-info
+              .of-row
+
+        .control
+          = f.button t('private.markets.ask_entry.action_v2'), id:"btn_sell", type:"submit" , class: "btn btn-block btn-lg btn-red", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i>"}
+        .switch-container
+          |&nbsp;
+          |&nbsp;
+          |&nbsp;
+          |&nbsp;
+          .sc-text align="center" = t('private.markets.ask_entry.information_fee') << ' ' << market.bid['fee'].to_s  << '%'
+
+    javascript:
+      var ask_order_type = "ask-limit";
+      $("[rel='betahint'], .fas.fa-info-circle").tooltip();
+      $("[rel='betahint'], .betahint").tooltip();
+      $("#icon_infoS").hide();
+      $("#volume-message").hide();
+
+      $("#ask-of-limit").addClass("active");
+      
+      $("#order_ask_origin_volume").on("keyup input", function(e) {
+
+        var volume = parseFloat($("#bestSell").text());
+
+        if ($("#order_ask_origin_volume").val() > volume) {
+            $("#volume-message").show();
+        } else if ($("#order_ask_origin_volume").val() <= volume) {
+            $("#volume-message").hide();
+        }
+
+        if($("#order_ask_ord_type").val() === 'market') {
+          $("#order_ask_price").val();
+          $("#order_ask_total").val($("#order_ask_last_ask").val() * $("#order_ask_origin_volume").val());
+
+        }
+
+
+      });            
+      
+
+      function changeAskTab(id) {
+
+        ask_order_type = 'ask-'+id;
+        $('#order_ask_ord_type').val(id);
+        
+        if(id == 'market') {
+          $("#icon_infoS").show();
+          if(!$("#ask-type-of-market").hasClass("hidden")) {
+            $("#ask-type-of-market").addClass("hidden");
+          }
+
+          if(!$("#ask-of-market").hasClass("active")) {
+            $("#ask-of-market").addClass("active");
+          }
+
+          if($("#ask-of-limit").hasClass("active")) {
+            $("#ask-of-limit").removeClass("active");
+          }
+        }
+        else if(id == 'limit') {
+          $('#order_ask_price').val('');
+            $("#icon_infoS").hide();
+          if($("#ask-type-of-market").hasClass("hidden")) {
+            $("#ask-type-of-market").removeClass("hidden");
+          }
+
+          if($("#ask-of-market").hasClass("active")) {
+            $("#ask-of-market").removeClass("active");
+          }
+
+          if(!$("#ask-of-limit").hasClass("active")) {
+            $("#ask-of-limit").addClass("active");
+          }
+        }
+      }

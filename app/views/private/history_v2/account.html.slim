@@ -1,0 +1,98 @@
+- content_for :frame do
+  .container.history-pages
+    = render 'tabs', active: :account
+
+    .panel.panel-default#transactions
+      .panel-body
+        .col-xs-24
+          table.table.table-condensed
+            thead: tr
+              th = t('.type')
+              th = t('.timestamp')
+              th = t('.currency')
+              th = t('.amount')
+              th = t('.fee')
+              th = t('.txid')
+            tbody.list
+              = render partial: 'transaction', collection: @transactions
+          .pull-right
+            = paginate @transactions
+
+      div id="account_summary_tab" class="column register_content_tab account_summary_filters"
+        div class="account_summary_header"
+          div class="column"
+            div class="mobile100"
+              div class="inblock"
+
+                input class="input_small" type="text"
+                p
+                  = 'Start'
+                  a class="open_calendar"
+                    i class="far fa-calendar-alt"
+
+                  div class="inblock"
+                    input class="input_small" type="text"
+                    p
+                      = 'End'
+                      a class="open_calendar"
+                        i class="far fa-calendar-alt"
+
+          div class="column"
+            div class="select"
+              select
+                option = 'Select Currency'
+                option = 'USD'
+
+          div class="column"
+            div class="mobile100"
+              button class="is-link" = 'Generate Report'
+              button class="is-link" = 'Export as PDF'
+
+          div class="column"
+            div class="control"
+              label class="radio"
+                input type="radio" name="answer" = 'All'
+
+              label class="radio"
+                input type="radio" name="answer" = 'Today'
+
+              label class="radio"
+                input type="radio" name="answer" = 'Yesterday'
+
+              label class="radio"
+                input type="radio" name="answer" = 'One Week'
+
+              label class="radio"
+                input type="radio" name="answer" = 'One Month'
+
+        div id="account_summary_profit_and_loss column"
+          h2 class="subtitle is-3" = 'Profit and Loss'
+          div class="notification is-primary"
+            = 'No data for selected period.'
+
+          div class="notification is-primary"
+            = 'No data for selected period.'
+
+          a id="show_older_reports" = 'show older reports'
+          div id="account_summary_profit_and_loss_older" class="column"
+
+            h2 class="subtitle is-3" = 'Opening Balance 2018-05-07'
+            div class="notification is-primary"
+              = 'No data for selected period.'
+
+            h2 class="subtitle is-3" = 'Closing Balance 2018-06-07'
+            div class="notification is-primary"
+              = 'No data for selected period.'
+
+            h2 class="subtitle is-3" = 'Daily Trades'
+            div class="notification is-primary"
+              = 'No data for selected period.'
+
+            h2 class="subtitle is-3" = 'Performance Analysis'
+            h2 class="subtitle is-5" = 'Total Volume'
+            div class="notification is-primary"
+              = 'No data for selected period.'
+
+            h2 class="subtitle is-5" = 'Profit and Loss Analysis (realized)'
+            div class="notification is-primary"
+              = 'No data for selected period.'

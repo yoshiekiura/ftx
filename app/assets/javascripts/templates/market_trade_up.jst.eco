@@ -1,0 +1,7 @@
+<% trend = formatter.trend @type %>
+
+<tr class="<%= @variationColor %>up" id='market-trade-<%= @tid %>'>
+  <td><%- formatter.fulltime @date %></td>
+  <td><%- formatter.mask_fixed_price @price %></td>
+  <td><%- formatter.mask_fixed_volume @amount %></td>
+</tr>

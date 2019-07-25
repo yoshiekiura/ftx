@@ -1,0 +1,34 @@
+= simple_form_for @identity do |f|
+  #settings.user-wrapper
+    = render 'shared/flash'
+    = render partial: "private/settings/settings_menu"
+    .tab-content
+      .user-container
+        .settings-panel
+          .sp-content
+            .container-sm
+              h2
+                = t('helpers.submit.reset_password.update')
+
+              .form-group
+                label
+                  = t('simple_form.labels.identity.old_password')
+                = f.input :old_password, label: false, :input_html => { :class => 'form-control' }
+
+              .form-group
+                label
+                  = t('simple_form.labels.identity.password')
+                = f.input :password, label: false, hint: false, :input_html => { :class => 'form-control' }
+
+              .form-group
+                label
+                  = t('simple_form.labels.identity.password_confirmation')
+                = f.input :password_confirmation, label: false, :input_html => { :class => 'form-control' }
+
+              .clearfix
+              .form-group.submit-gp
+                .buttons.center
+                  = link_to t('actions.cancel'), settings_path, {:class=>"btn btn-lg btn-pair btn-red"}
+
+                  = f.button :submit, t('helpers.submit.identity.update'), class:"btn btn-lg btn-pair btn-green"
+    .clearfix

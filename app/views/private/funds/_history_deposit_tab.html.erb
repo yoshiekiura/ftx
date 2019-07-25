@@ -1,0 +1,57 @@
+<div ng-if="currentAction == 'deposits'" id="dep-history" ng-class="{ 'in active': curr == 'history'}" class="user-container tab-pane">
+
+  <div class="table-responsive table-area">
+    <table id="deposit_history" class="table" ng-controller="DepositHistoryController as dhCtrl" align="center">
+      <thead>
+      <tr>
+        <th style="text-align: center">{{ "funds.deposit_history.identification" | t }}</th>
+        <th style="text-align: center">{{ "funds.deposit_history.time" | t }}</th>
+        <th style="text-align: center">{{ "funds.deposit_history.coin" | t }}</th>
+        <th>{{ "funds.deposit_history.imformation_from" | t }}</th>
+        <th style="text-align: center">{{ "funds.deposit_history.amount" | t }}</th>
+        <th style="text-align: center">{{ "funds.deposit_history.confirmations" | t }}</th>
+        <th style="text-align: center">{{ "funds.deposit_history.transaction_type" | t }}</th>
+        <th style="text-align: center">{{ "funds.deposit_history.validator" | t }}</th>
+<!--        <th>{{ "funds.deposit_history.inserted_txid" | t }}</th>-->
+        <th>{{ "funds.deposit_history.state_and_action" | t }}</th>
+      </tr>
+      </thead>
+
+      <tr ng-repeat="deposit in dhCtrl.deposits | orderBy:predicate">
+        <td style="text-align: center">{{deposit.id}}</td>
+        <td style="text-align: center">{{deposit.created_at | date:'yyyy-MM-dd HH:mm' }}</td>
+        <td style="text-align: center"> {{deposit.currency_name | uppercase}}</td>
+        <!--td name="deposit.fund_uid" value="{{deposit.fund_extra}}"><a target="_blank" ng-href="{{deposit.fund_extra}}">{{deposit.fund_extra}}</a> @ {{deposit.fund_uid}}</td-->
+        <td><a href="#" ng-click="dhCtrl.explore(deposit.txid, deposit.currency_name)">{{deposit.txid}}</a></td>
+
+        <td ng-if=" deposit.currency_name == 'brl'" style="text-align: center">{{deposit.amount | number: 2}}</td>
+        <td ng-if=" deposit.currency_name == 'xrp'" style="text-align: center">{{deposit.amount | number: 6}}</td>
+        <td ng-if=" deposit.currency_name != 'brl' &&  deposit.currency_name != 'xrp'" style="text-align: center">{{deposit.amount | number: 8}}</td>
+
+        <td  style="text-align: center">{{deposit.confirmations}}</td>
+        <td class="txid" style="text-align: center">{{deposit.title}}</td>
+
+<!--        <td ng-if="deposit.txid_by_user" align="center"><%#= image_tag('user_insert_icon.svg', draggable: "true", id: "user_icon") %></td>-->
+        <td align="center"><%= image_tag('stratum_insert_icon.svg', draggable: "true", id: "stratum_icon") %></td>
+
+
+
+
+        <td style="vertical-align: center"><i class="fas fa-info-circle {{deposit.aasm_state}}"  data-html="true" style="margin-right: 15px;"
+               title="<div style='display:flex;'><div style='display:flex; align-items:center; font-size:15px; margin-right:10px;'>{{ 'funds.tooltip_status.' + deposit.aasm_state + '.icon'| t }}</div><div>{{ 'funds.tooltip_status.' + deposit.aasm_state + '.text'| t }}</div></div>"
+               data-placement="top"
+               onmouseenter="$(this).tooltip('show')"></i>{{"funds.deposit_history." + deposit.aasm_state | t}}
+          <span ng-if="dhCtrl.canCancel(deposit.aasm_state) &&  !deposit.fund_extra == 'BankSlip'">
+              <a ng-click="dhCtrl.cancelDeposit(deposit); $event.preventDefault()" href="#" class="cancel_link">{{ "funds.deposit_history.cancel" | t }}</a>
+              </span>
+        </td>
+      </tr>
+      <tr ng-if="dhCtrl.noDeposit()">
+        <td colspan="7"> <span class="help-block text-center">{{ "funds.deposit_history.no_data" | t }}</span></td>
+      </tr>
+
+
+    </table>
+  </div>
+
+</div><!--history-->

@@ -1,0 +1,18 @@
+.row
+  .col-xs-12
+    .panel.panel-primary
+      .panel-heading
+        span = t('.deposit', sn: @iota.id)
+      .panel-body
+        = description_for :deposit do
+          = item_for @iota, :id
+          = item_for @iota, :created_at
+          = item_for @iota, :aasm_state_text
+          hr.split
+          = item_for @iota, :amount
+
+  .col-xs-12
+    = render partial: 'shared/admin/member', locals: {member: @iota.member}
+    = render partial: 'shared/admin/account', locals: {account: @iota.account}
+    - if @iota.txout_info
+	  = render partial: 'shared/admin/txout_info', locals: {info: @iota.txout_info}

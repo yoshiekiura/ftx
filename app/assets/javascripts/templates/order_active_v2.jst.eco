@@ -1,0 +1,28 @@
+<% trade_state = if @order.origin_volume == @order.volume then 'new' else 'partial' %>
+<div data-id="<%= @order.id %>" data-kind="<%= @order.kind %>" class="order-pair-row columns">
+    <div class="column td">
+        <i class="fas fa-circle <%= formatter.color_bid_ask @order.kind %>"></i>
+    </div>
+
+    <div class="column td">
+        <%= @market_pair %>
+    </div>
+
+    <div class="column td">
+        <%- formatter.mask_fixed_volume @order.volume %>
+    </div>
+
+    <div class="column td">
+        <%- formatter.mask_fixed_price @order.price %>
+    </div>
+
+    <div class="column td">
+        <%- formatter.fulltime @order.at %>
+    </div>
+
+    <div class="column td">
+        <i class="fas fa-times" onclick="deleteOrder(<%= @order.id %>)" data-toggle="tooltip" title="" data-original-title="<%= @cancel %>" onmouseenter="$(this).tooltip('show')"></i>
+    </div>
+
+    <div class="is-clearfix"></div>
+</div>

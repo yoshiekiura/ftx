@@ -1,0 +1,36 @@
+#footer
+  .footer-links
+    a style="display:none"   href= t('footer.link_help')
+      = t('footer.help')
+    -#a href="#" Submit Ticket
+
+
+.clearfix
+  .col-sm-4
+    .support-time
+      = t('private.settings.index.suppot_info').html_safe
+  .col-sm-4 align="center"
+    .copyright
+      | Copyright © 2019 COINTRADE. All rights reserved.
+  .col-sm-4 style="display:flex; justify-content:flex-end;"
+    .logo-footer
+      a href="https://www.xlabs.com.br/" target='_blank'
+        img.logo-partner src='#{image_path 'xlabs_logo_gray.svg'}'
+        img.seg src='#{image_path 'xlabs_logo_color.svg'}'
+    .logo-footer
+      a href="https://stratum.hk/" target='_blank'
+        img.logo-partner src='#{image_path 'stratum_logo_gray.svg'}'
+        img.seg src='#{image_path 'stratum_logo_color.svg'}'
+    .logo-footer
+      a href="https://bktc.com.br/" target='_blank'
+        img.logo-partner src='#{image_path 'bktc_logo_gray.svg'}'
+        img.seg src='#{image_path 'bktc_logo_color.svg'}'
+    .footer-right
+      li.dropdown style="list-style: none;"
+        a.dropdown-toggle href="#" data-toggle="dropdown"
+          img src='#{language_path}'
+          b.caret
+        ul#languages.dropdown-menu style="list-style: none;position: relative;position: relative; top: -80px;min-width: 0px; background-color:#29363e;"
+          - I18n.available_locales.each do |lang|
+            li: a href="?lang=#{lang}": img src="/languages/#{lang || I18n.locale}.png"
+  .clearfix

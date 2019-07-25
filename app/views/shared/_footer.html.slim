@@ -1,0 +1,29 @@
+#footer
+  .footer-links
+    a style="display:none"   href= t('footer.link_help')
+      = t('footer.help')
+    -#a href="#" Submit Ticket
+
+  .clearfix
+    .col-sm-4
+      .support-time
+        = t('private.settings.index.suppot_info').html_safe
+    .col-sm-4 align="center"
+      .copyright
+        | Copyright © 2019 COINTRADE. All rights reserved - Version #
+        = ENV['RELEASE_VERSION']
+        | .
+    .col-sm-4 style="display:flex; justify-content:flex-end;"
+      .logo-footer
+        a href="https://www.xlabs.com.br/" target='_blank'
+          img.logo-partner src='#{image_path 'xlabs_logo_gray.svg'}' style="width:70%;"
+          img.seg src='#{image_path 'xlabs_logo_color.svg'}' style="width:70%;"
+      .logo-footer
+        a href="https://stratum.hk/" target='_blank'
+          img.logo-partner src='#{image_path 'stratum_logo_gray.svg'}' style="width:70%;"
+          img.seg src='#{image_path 'stratum_logo_color.svg'}' style="width:70%;"
+      .logo-footer
+        a href="https://bktc.com.br/" target='_blank'
+          img.logo-partner src='#{image_path 'bktc_logo_gray.svg'}' style="width:70%;"
+          img.seg src='#{image_path 'bktc_logo_color.svg'}' style="width:70%;"
+    .clearfix

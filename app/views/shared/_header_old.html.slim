@@ -1,0 +1,18 @@
+header.navbar.navbar-default.navbar-static-top role = "navigation"
+
+  ul#menu.nav.navbar-nav.navbar-left
+    a.text-center.navbar-brand href='#{welcome_path}'
+      img src='#{image_path 'logo.png'}' width='125px'
+    = top_nav_link(t('header.trading'), market_v2_path(current_market.id), 'main-nav-links', target: true) if current_user
+    = top_nav_link(t('header.reports'), order_history_v2_path, controllers: ['reports']) if current_user
+    = top_nav_link(t('header.support') , t('footer.link_help'), 'main-nav-links') if current_user
+    / = top_nav_link(t('header.markets'), "", "")
+
+  ul.nav.navbar-nav.navbar-right
+    = top_nav_link(t('header.funds'), funds_path, 'fas fa-money') if current_user
+    / | &nbsp;
+    / = top_nav_link(t('header.withdraw'), funds_path, 'fas fa-minus-circle') if current_user
+    | &nbsp;
+    = render partial: 'shared/header_profile_setting' if current_user
+    | &nbsp;
+    = top_nav_link('',main_app.signout_path, 'fas fa-sign-out') if current_user

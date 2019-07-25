@@ -1,0 +1,29 @@
+#orderbook.feature
+  .column
+    .feature-header
+      .feature-title data-target="#ob-container" data-toggle="collapse"
+        i.fas.fa-chevron-up.mobile.mobile-sm
+        i.fas.fa-list-ul
+        |&nbsp;
+        = t('private.markets.order_book.title').upcase
+  #ob-container.feature-container.collapse.in
+    .columns
+      .column.orderbook_buy_column
+        table#buy-ob.table.is-fullwidth
+          thead
+            tr.feature-subheader style="border-top:0"
+              th = t('private.markets.order_book.count').upcase
+              th = t('private.markets.order_book.amount').upcase
+              th = t('private.markets.order_book.total').upcase
+              th = t('private.markets.order_book.bid').upcase
+          tbody#buy-ob_table.bids
+
+      .column.orderbook_sell_column
+        table#sell-ob.table.is-fullwidth
+          thead
+            tr.feature-subheader style="border-top:0"
+              th = t('private.markets.order_book.ask').upcase
+              th = t('private.markets.order_book.total').upcase
+              th = t('private.markets.order_book.amount').upcase
+              th = t('private.markets.order_book.count').upcase
+          tbody#sell-ob_table.asks

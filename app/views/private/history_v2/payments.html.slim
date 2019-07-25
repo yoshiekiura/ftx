@@ -1,0 +1,20 @@
+- content_for :frame do
+  .user-wrapper
+    = render 'tabs', active: :payment
+  .tab-content
+    #payments.user-container.tab-pane.in.active
+      .table-responsive.table-area
+        table.table
+          thead
+            tr
+              th = t('.side')
+              th = t('.created_at')
+              th = t('.base_currency')
+              th = t('.base_amount')
+              th = t('.quote_currency')
+              th = t('.quote_amount')
+              th = t('.price')
+            tbody.list
+              = render partial: 'payment', collection: @payments
+        .nav.tar
+          = paginate @payments

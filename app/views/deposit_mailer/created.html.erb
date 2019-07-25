@@ -1,0 +1,13 @@
+<p>
+  <%= t('.content_header', type_transfer_description: @type_transfer_description, expire: @expire ).strip.html_safe +
+          t('.content_' + @type.downcase , samurai_code: @samurai_code, valor_deposito: @amount ).strip.html_safe +
+          t('.content_footer_' + @type.downcase).strip.html_safe %>
+</p>
+
+<p>
+  <%= raw t("mailer.please_contact", contact_mail: ENV['SUPPORT_MAIL']) %>
+</p>
+
+
+
+

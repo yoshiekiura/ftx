@@ -1,0 +1,95 @@
+doctype html
+html
+  head
+    link rel="shortcut icon" href="/favicon.ico"
+    = include_gon
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = javascript_include_tag "locales/#{I18n.locale}"
+    = render 'shared/html5'
+    = render 'shared/meta'
+    = csrf_meta_tags
+
+  body id='#{body_id}' data-lang="#{locale_name}"
+
+    .entrance-wrapper
+      / -if browser_detect()
+      /   .menssagem-browser
+      /     .browser-text
+      /       .text-right
+      /         = t('activerecord.browser_message.icon').html_safe
+      /       .text-left
+      /         = t('activerecord.browser_message.info')
+      /     .browser-icons  align="center"
+      /       = t('activerecord.browser_message.info_browser')
+      /       .icon-cont
+      /         -if locale_name == 'pt-br'
+      /           a target="_blank" href="https://www.google.com/intl/pt-br_ALL/chrome/"
+      /             .icon-inside-right
+      /               img src="#{image_path 'chrome.svg'}"
+      /               br
+      /               | Chrome
+      /           a target="_blank" href="https://www.mozilla.org/pt-br/firefox/new/"
+      /             .icon-inside-left
+      /               img src="#{image_path 'mozilla.svg'}"
+      /               br
+      /               | Firefox
+      /         -else
+      /           a target="_blank" href="https://www.google.com/intl/en-us_ALL/chrome/"
+      /             .icon-inside-right
+      /               img src="#{image_path 'chrome.svg'}"
+      /               br
+      /               | Chrome
+      /           a target="_blank" href="https://www.mozilla.org/en-US/firefox/new/"
+      /             .icon-inside-left
+      /               img src="#{image_path 'mozilla.svg'}"
+      /               br
+      /               | Firefox
+      /
+      / -if mobile_device()
+      /   .menssagem-device style="width:100%;"
+      /     .device-text
+      /       .device-text-right
+      /         = t('activerecord.browser_message.icon').html_safe
+      /       .device-text-left
+      /         = t('activerecord.divice_message.info').html_safe
+      /     .device-icons align="center"
+      /       = t('activerecord.divice_message.info_device')
+      /       span style="font-size:4vw"
+      /         = t('activerecord.divice_message.icon').html_safe
+      /       = t('activerecord.divice_message.device')
+
+
+      .main-lobby
+        .entrance-container style="display:flex; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.10) ;"
+          .entrance-sub-container style="background-color:#1F2B31; display:flex; flex-direction:column; justify-content:center" align="center"
+            .entrance-logo-img style="margin-bottom:60px;"
+              img src="#{image_path 'cointrade_logo.svg'}" class="logo-partner" style="height:150px;"
+            .entrance-body
+              h2
+                = t('activerecord.landing.welcome')
+
+              - unless is_financial?
+                .ttsdiv
+                  a.circle-icon.circle-icon-trading href="#{market_v2_path(current_market)}"
+                    i.fas.fa-lg.fa-chart-bar
+                  br
+                  |
+                  = t('activerecord.landing.trading')
+              .ttsdiv
+                a.circle-icon.circle-icon-profile href="#{settings_path}"
+                  i.fas.fa-lg.fa-user
+                br
+                |
+                = t('activerecord.landing.profile')
+              .ttsdiv
+                a.circle-icon.circle-icon-wallet href="#{funds_path}#/deposits"
+                  i.fas.fa-lg.fa-wallet
+                br
+                |
+                = t('activerecord.landing.resources')
+
+          .entrance-sub-container style="padding: 0px 10px 10px 20px;"
+            = yield
+      .footer-main
+        = t('private.settings.index.suppot_info').html_safe

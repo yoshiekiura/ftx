@@ -1,0 +1,23 @@
+= simple_form_for @google_auth, as: 'google_auth', url: verify_google_auth_path, method: :delete do |f|
+  #settings.user-wrapper
+    = render 'shared/flash'
+    = render partial: "private/settings/settings_menu"
+
+    .tab-content
+      .user-container
+        .settings-panel
+          .sp-content
+            .container-sm
+              h2
+                = t('sessions.delete_with_two_factor_auth.title')
+
+              .form-group
+
+                = render partial: 'shared/two_factor_app'
+              .clearfix
+              .form-group.submit-gp
+                .buttons.center
+                  = link_to t('actions.cancel'), settings_path, {:class => "btn btn-lg btn-pair btn-red"}
+                  = f.button :submit, t('.submit'), class: "btn btn-lg btn-pair btn-green"
+
+    .clearfix

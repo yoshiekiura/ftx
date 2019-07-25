@@ -1,0 +1,278 @@
+
+<body id="bankSlip_deposit">
+
+<div class="tab">
+	<h1 class="panel-title" ng-controller="DepositBankController as dhCtrl">
+		<button class="tablinks active" ng-click="dhCtrl.change_tab($event, '1'); $event.preventDefault()" href="#" id="defaultOpen">{{ "payment_slip.label_tabDeposit" | t }}</button>
+
+		<button class="tablinks" ng-click="dhCtrl.change_tab($event, '2'); $event.preventDefault()" href="#" >{{ "payment_slip.label_tabBank" | t }}</button>
+	</h1>
+</div>
+
+<div id="1" class="tabcontent" style="padding-top: 30px; display: block">
+	<div class="help-block">
+		<h3 ng-bind="'funds.deposit_brl.desc' | t"></h3>
+		<ul>
+			<li>{{ "funds.deposit_brl.desc_item_1" | t }}</li>
+			<li>{{ "funds.deposit_brl.desc_item_2" | t }} </li>
+			<li>{{ "funds.deposit_brl.desc_item_3" | t }}</li>
+			<li>{{ "funds.deposit_brl.desc_item_4" | t }}</li>
+			<li>{{ "funds.deposit_brl.desc_item_5" | t }}</li>
+			<li>{{ "funds.deposit_brl.desc_item_6" | t }}</li>
+			<li>{{ "funds.deposit_brl.desc_item_7" | t }}</li>
+			<li>{{ "funds.deposit_brl.desc_item_8" | t }}</li>
+		</ul>
+		<span class="text-danger">{{ "funds.deposit_brl.attention" | t }}</span>
+	</div>
+
+	<form id="brl_deposit" name="deposit_form" class="form form-horizontal transfer-form"
+		  ng-controller="DepositsController as depositsCtrl"
+		  ng-submit="depositsCtrl.createDeposit(currency)">
+		<div class="text-center" >
+			<label class="control-label">{{ "funds.deposit_brl.label_deposit_vlr" | t}}</label>
+		</div>
+		<div class="form-group">
+			<div class="col-xs-7 text-right">
+				<label class="optional control-label">{{ "funds.deposit_brl.amount" | t}}</label>
+			</div>
+
+
+			<div class="col-xs-10">
+				<input class="numeric decimal required form-control ng-valid ng-valid-min ng-valid-max ng-touched"
+					   id="deposit_sum"
+					   name="deposit[sum]"
+					   placeholder="{{'funds.deposit_brl.min_amount' | t}}"
+					   type="number"
+					   min="25"
+					   step="any"
+					   allow-only-numbers
+					   ng-model="depositsCtrl.deposit.amount" required>
+
+			</div>
+			<label class="optional control-label">,08</label>
+
+		</div>
+		<div class="text-center" >
+			<label class="control-label">{{ "funds.deposit_brl.label_desc" | t}}</label>
+		</div>
+		<div class="form-group">
+
+			<div class="col-xs-7 text-right">
+				<label class="select required control-label" for="deposit_fund_source">{{"funds.deposit_brl.deposit_account"
+					| t}}</label>
+
+			</div>
+			<div class="input-group">
+
+
+				<select id="fund_source" class="select required form-control" name="fund_source"
+						ng-model="depositsCtrl.deposit.fund_source"
+						ng-options="fs.id as fs.label for fs in fund_sources | filter:{currency:currency}"
+						required>
+				</select>
+
+			</div>
+			<label class="optional control-label"><u><strong><a href="javascript:;"  style="color: #e5e5e5" ng-click="openFundSourceManagerPanel()">{{
+				"funds.deposit_brl.manage" | t }}</a></strong></u></label>
+		</div>
+		<div class="text-center" >
+			<label class="control-label">{{ "funds.deposit_brl.label_deposit_value" | t}}</label>
+		</div>
+
+		<div class="form-group required">
+			<div class="col-xs-8 text-right">
+
+			</div>
+
+			<div class="col-xs-14">
+				<label class="radio-inline">
+					<strong>
+						<input value="TEF" type="radio" name="deposit[type]" ng-model="depositsCtrl.deposit.type" >TEF
+					</strong>
+				</label>
+				<label class="radio-inline">
+					<strong>
+						<input value="TED" checked type="radio" name="deposit[type]" ng-model="depositsCtrl.deposit.type" >TED
+					</strong>
+				</label>
+			</div>
+		</div>
+		</br>
+		<div class="form-group">
+			<div class="col-xs-30">
+				<div class="form-submit">
+					<button class="btn btn-primary" name="commit" type="submit"> {{'submit' | t}} </button>
+				</div>
+			</div>
+
+		</div>
+		<br>
+	</form>
+</div>
+
+<div id="2" class="tabcontent" style="padding-top: 30px;">
+	<h3 ng-bind="'payment_slip.title' | t"></h3>
+	<h5 ng-bind="'payment_slip.desc' | t"></h5>
+
+	<form class="form form-horizontal transfer-form"
+		  ng-controller="DepositBankSlipController as dbsCtrl"
+		  ng-submit="dbsCtrl.createDeposit(currency)"
+		  novalidate>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-6 col-md-10">
+					<input readonly class="form-control" style="background-color: #c1e2b3" id="email_user" value="{{email}}"></input>
+				</div>
+			</div>
+			<div style="margin-bottom: 10px"></div>
+			<div class="row">
+				<div class="col-xs-6 col-md-6">
+					<label class="string required" for="dbsCtrl.deposit.amount">{{'payment_slip.amount' | t}}</label>
+					<input class="string required form-control"
+						   id="deposit.amount"
+						   ng-model="dbsCtrl.deposit.amount"
+						   mask='R$ 9?9?9?9?9?9?9,?9?9?9?.99'
+						   ng-change="dbsCtrl.calculate_tax();"
+						   placeholder="{{'payment_slip.label_amount' | t}}" required/>
+				</div>
+				<div class="col-xs-4 col-md-4">
+					<label class="string " for="dbsCtrl.deposit_slip.tax">{{'payment_slip.tax' | t}}</label>
+					<input class="form-control" id="deposit_slip.tax" ng-model="dbsCtrl.deposit_slip.tax" readonly placeholder="2.5%" style="background-color: #c1e2b3" />
+				</div>
+				<div class="col-xs-6 col-md-6">
+					<label class="string " for="dbsCtrl.deposit_slip.amount_sum">{{'payment_slip.amount_total' | t}}</label>
+					<input class="form-control"
+						   id="deposit_slip.amount_sum"
+						   ng-model="dbsCtrl.deposit_slip.amount_sum"
+						   placeholder="{{'payment_slip.label_amount' | t}}" readonly style="background-color: #c1e2b3" />
+				</div>
+			</div>
+			<div class="row">
+				<span class="text-danger " >{{'payment_slip.tax_percent' | t}}</span>
+			</div>
+			<div style="margin-bottom: 10px"></div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-14">
+					<label class="string required" for="dbsCtrl.deposit_slip.person_name">{{'payment_slip.label_name' | t}}</label>
+					<input class="string required form-control" id="deposit_slip.person_name" ng-model="dbsCtrl.deposit_slip.person_name"
+						   placeholder="{{'payment_slip.label_name' | t}}" required/>
+				</div>
+				<div class="col-xs-6 col-md-8">
+					<label class="string required" for="dbsCtrl.deposit_slip.person_doc">{{'payment_slip.label_cpfcnpj' | t}}</label>
+					<input class="string required form-control"
+						   id="deposit_slip.person_doc"
+						   name="dbsCtrl.deposit_slip.person_doc"
+						   ng-model="dbsCtrl.deposit_slip.person_doc"
+						   placeholder="{{'payment_slip.label_cpfcnpj' | t}}" required  maxlength="18" />
+				</div>
+			</div>
+			<div style="margin-bottom: 10px"></div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-6">
+					<label class="string required" for="dbsCtrl.deposit_slip.postal_code">{{'payment_slip.label_cep' | t}}</label>
+					<input class=" form-control"
+						   id="deposit_slip.postal_code"
+						   ng-model="dbsCtrl.deposit_slip.postal_code"
+						   mask='99999-999'
+						   ng-change="dbsCtrl.fill_by_postal_code();"
+						   placeholder="{{'payment_slip.label_cep' | t}}" required/>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-16">
+					<label class="string required" for="deposit_slip.address_name">{{'payment_slip.label_address' | t}}</label>
+					<input class="string required form-control"
+						   id="dbsCtrl.deposit_slip.address_name"
+						   name="dbsCtrl.deposit_slip.address_name"
+						   ng-model="dbsCtrl.deposit_slip.address_name" required
+						   placeholder="{{'payment_slip.label_address' | t}}"/>
+				</div>
+			</div>
+			<div style="margin-bottom: 10px"></div>
+			<div class="row">
+
+				<div class="col-xs-6 col-sm-5">
+					<label class="string required" for="dbsCtrl.deposit_slip.address_number">{{'payment_slip.label_number' | t}}</label>
+					<input class=" form-control"
+						   id="deposit_slip.address_number"
+						   name="dbsCtrl.deposit_slip.address_number"
+						   ng-model="dbsCtrl.deposit_slip.address_number"
+						   placeholder="{{'payment_slip.label_number' | t}}" required/>
+				</div>
+				<div class="col-xs-6 col-sm-6">
+					<label class="string required" for="dbsCtrl.deposit_slip.address_complement">{{'payment_slip.label_complement' | t}}</label>
+					<input class=" form-control"
+						   id="deposit_slip.address_complement"
+						   name="dbsCtrl.deposit_slip.address_complement"
+						   ng-model="dbsCtrl.deposit_slip.address_complement"
+						   placeholder="{{'payment_slip.label_complement' | t}}" required/>
+				</div>
+
+				<div class="col-xs-6 col-sm-7">
+					<label class="string required" for="dbsCtrl.deposit_slip.phone">{{'payment_slip.label_phone' | t}}</label>
+					<input class=" form-control"
+						   id="deposit_slip.phone"
+						   name="dbsCtrl.deposit_slip.phone"
+						   ng-model="dbsCtrl.deposit_slip.phone"
+						   mask='(99) 9?9999-9999'
+						   placeholder="{{'payment_slip.label_phone' | t}}" required/>
+				</div>
+			</div>
+			<div style="margin-bottom: 10px"></div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-3">
+					<label class="string required" for="dbsCtrl.deposit_slip.state">{{'payment_slip.label_uf' | t}}</label>
+					<input class=" form-control"
+						   id="deposit_slip.state"
+						   name="dbsCtrl.deposit_slip.state"
+						   ng-model="dbsCtrl.deposit_slip.state"
+						   placeholder="{{'payment_slip.label_uf' | t}}" required/>
+				</div>
+				<div class="col-xs-6 col-sm-10">
+					<label class="string required" for="dbsCtrl.deposit_slip.city">{{'payment_slip.label_city' | t}}</label>
+					<input class=" form-control"
+						   id="deposit_slip.city"
+						   name="dbsCtrl.deposit_slip.city"
+						   ng-model="dbsCtrl.deposit_slip.city"
+						   placeholder="{{'payment_slip.label_city' | t}}" required/>
+				</div>
+
+			</div>
+			<div style="margin-bottom: 15px"></div>
+			<div class="clearfix visible-xs-block"></div>
+			<div class="row">
+				<div class="form-submit">
+					<button class="confirm btn btn-default right" type="submit" ng-bind="'payment_slip.btn_generete_slip' | t"></button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+<h2 class="panel-title">{{ "funds.deposit_history.title" | t }}</h2>
+<table id="deposit_history" class="table" ng-controller="DepositHistoryController as dhCtrl">
+	<tr>
+		<th>{{ "funds.deposit_history.identification" | t }}</th>
+		<th>{{ "funds.deposit_history.time" | t }}</th>
+		<th>{{ "funds.deposit_history.from" | t }}</th>
+		<th>{{ "funds.deposit_history.amount" | t }}</th>
+		<th>{{ "funds.deposit_history.state_and_action" | t }}</th>
+	</tr>
+	<tr class="deposit_item" ng-class="{ 'new-row':dhCtrl.newRecord(deposit) }"
+		ng-repeat="deposit in dhCtrl.deposits | orderBy:predicate">
+		<td><span class="outlined-label">{{deposit.id}}</span></td>
+		<td>{{deposit.created_at | date:'yyyy-MM-dd HH:mm' }}</td>
+		<td name="deposit.fund_uid" value="{{deposit.fund_extra}}">{{deposit.fund_extra}} @ {{deposit.fund_uid}}</td>
+		<td>{{deposit.amount}}</td>
+		<td>{{"funds.deposit_history." + deposit.aasm_state | t}}
+			<span ng-if="dhCtrl.canCancel(deposit.aasm_state) &&  !deposit.fund_extra == 'BankSlip'">/
+		<a ng-click="dhCtrl.cancelDeposit(deposit); $event.preventDefault()" href="#" class="cancel_link">{{ "funds.deposit_history.cancel" | t }}</a>
+	  </span>
+		</td>
+	</tr>
+	<tr ng-show="dhCtrl.canCancel(deposit.aasm_state)">
+		<td colspan="6"><span class="help-block text-center">{{ "funds.deposit_history.no_data" | t }}</span></td>
+	</tr>
+</table>
+
+
+</body>

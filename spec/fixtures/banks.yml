@@ -1,0 +1,31 @@
+- id: 1
+  code: bank_code_1
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0
+
+- id: 2
+  code: _001
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0
+
+- id: 3
+  code: bank_code_3
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0
+
+- id: 4
+  code: _341
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 0
+  fee_percent: 0

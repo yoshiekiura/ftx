@@ -1,0 +1,80 @@
+#ticker.feature
+  .feature-header.split
+    .feature-title data-toggle="collapse" data-target="#ticker-container"
+      i.fas.fa-chevron-up.mobile.mobile-smd
+      |&nbsp;
+      i.fas.fa-coins
+      |&nbsp;
+      = t('shared.market.ticker.title').upcase
+    .control.search
+    .clearfix
+
+  #ticker-container.feature-container.collapse.in
+    div
+      ul.nav.nav-tabs.feature-subheader
+        - if @market.quote_unit == 'brl'
+          li#brl-ticker-button.ticker-toggle.nav-item.active
+            a.nav-link href=market_v2_path('btcbrl') BRL
+        - else
+          li#brl-ticker-button.ticker-toggle.nav-item
+            a.nav-link href=market_v2_path('btcbrl') BRL
+        - if @market.quote_unit == 'btc'
+          li#btc-ticker-button.ticker-toggle.nav-item.active
+            a.nav-link href=market_v2_path('bchbtc') BTC
+        - else
+          li#btc-ticker-button.ticker-toggle.nav-item
+            a.nav-link href=market_v2_path('bchbtc') BTC
+        - if @market.quote_unit == 'tusd'
+          li#btc-ticker-button.ticker-toggle.nav-item.active
+            a.nav-link href=market_v2_path('btctusd') TUSD
+        - else
+          li#btc-ticker-button.ticker-toggle.nav-item
+            a.nav-link href=market_v2_path('btctusd') TUSD
+
+    #style-4.tab-content style = 'overflow-y: scroll; height: 472px;'
+      #brl.tab-pane.fade.in.active
+        table style = "min-width: 360px"
+          tr
+            th =t('private.markets.account_balance.coin')
+            th =t('private.markets.account_balance.last')
+            th 
+              a data-toggle="tooltip" href="#" title="#{t('shared.market.ticker.24h_tooltip')}" =t('private.markets.account_balance.24H')
+                span.glyphicon.glyphicon-info-sign
+            th =t('private.markets.account_balance.volbrl') << "(" << t(@market.bid['currency'], scope: 'market.currency').upcase << ")"
+          tbody
+            - @markets.each do |market|
+              - unless market.quote_unit != @market.quote_unit
+
+                - if market.maintenance == false
+                  tr.market id="market-list-#{market.id}" class="quote-#{market.quote_unit}" data-market=market.id
+                    td.name
+                      = link_to market.name, market_v2_path(market)
+                      - if market.id == 'zcrbrl' or market.id == 'tusdbrl'
+                        a.betahint data-placement="right" data-html="true" title="#{t('shared.market.beta_crypo.text')}" href="#" style=("font-size: 6pt;padding: 3px 1px 3px;color: #E87171;")   BETA
+
+
+                      td.last = Global[market.id].ticker[:last]
+                      td#last_24.positive24 = "%.2f%" % "#{Global[market.id].ticker[:last_24_percentage]}"
+                      td.vol = Global[market.id].ticker[:volume]
+
+                - else
+                  tr.market id="market-list-#{market.id}" data-market=market.id
+                    td.name.disabled style="width: 44%;"
+                      = market.name
+                      - if market.id == 'zcrbrl' or market.id == 'tusdbrl'
+                        a.betahint data-placement="right" data-html="true" title="#{t('shared.market.beta_crypo.text')}" href="#" style=("font-size: 6pt;padding: 3px 1px 3px;color: #E87171;")   BETA
+                      - if market.ask["currency"] == "rif" or market.ask["currency"] == "rbtc" or market.ask["currency"] == "xem"
+                        a.betahint data-placement="right" data-html="true" href="#" style=("font-size: 6pt;padding: 3px 1px 3px;color: #E87171;")  =t('private.markets.account_balance.soon')
+                      i.betahint.clearfix style=("font-size: 8px;color: #53616B;bottom: 0;")   Indisponível no momento
+
+
+                      td.last.disabled = Global[market.id].ticker[:last]
+                      td#last_24.positive24.disabled = "%.2f%" % "#{Global[market.id].ticker[:last_24_percentage]}"
+                      td.vol.disabled = Global[market.id].ticker[:volume]
+
+
+  javascript:
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+

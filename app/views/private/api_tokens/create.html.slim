@@ -1,0 +1,28 @@
+#settings.user-wrapper
+  = render 'shared/flash'
+  = render partial: "private/settings/settings_menu"
+  .tab-content
+    .user-container
+      .settings-panel
+        .sp-content
+          .container-sm
+            h2
+              = t('guides.private.api_tokens.new.title')
+            p
+              = t('private.api_tokens.create.desc')
+            .form-group
+              .input-group
+                span.input-group-addon Access Key
+                input#access_key.form-control aria-label="" type="text" value= @token.access_key
+                span.input-group-addon.clickable onclick="copyToClipBoard('access_key')"
+                  i.fas.fa-copy data-clipboard-text = @token.access_key
+            .form-group
+              .input-group
+                span.input-group-addon Secret Key
+                input#secret_key.form-control aria-label="" type="text" value= @token.secret_key
+                span.input-group-addon.clickable onclick="copyToClipBoard('secret_key')"
+                  i.fas.fa-copy data-clipboard-text = @token.secret_key
+            .form-group.submit-gp
+              a href=api_tokens_path
+                button.btn.btn-lg.btn-block.btn-green OK
+  .clearfix

@@ -1,0 +1,2 @@
+class DepositSlip < Deposit
+end

@@ -1,0 +1,53 @@
+<html>
+<body>
+<head>
+</head>
+
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" style=" background: #EEEEEE; font:14px/20px 'Helvetica', Arial, sans-serif;">
+  <tbody>
+  <tr>
+    <td style="padding: 30px 0;"><table cellspacing="0" cellpadding="0" width="550" align="center" border="0" style="background: #FFFFFF; border-radius: 10px">
+        <tbody>
+        <tr>
+          <td>
+            <table width="100%" style="background:#28363D;">
+              <tbody>
+              <tr align="center">
+                <td style="padding-top:5px"><%=email_image_tag('logo_cx_email.png')%></td>
+              </tr>
+              </tbody>
+          </table></td>
+        </tr>
+        <tr>
+          <td style="border-top:none; padding:30px; padding-top:0px; color: #666 !important;">
+            <!--body-->
+            <table>
+              <tbody>
+              <tr>
+                <td>
+                  <p style="color:#078ABA; font-size:30px; margin-bottom: -12px; font-weight: 500"><%= t('mailer.dear_user') %>
+                  </p>
+
+                  <%= yield %>
+
+                  <p style="color:#5F5F5F; font-weight: 500"><%= raw t('mailer.warning') %></p>
+                  <p style="color:#5F5F5F; font-weight: 500"><%= raw t('mailer.signature') %></p>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <!--body-->
+          </td>
+        </tr>
+        </tbody>
+        <tfoot>
+          <tr width="100%" style="background:#28363D;" align="center">
+            <td style="padding-top:5px"><%=email_image_tag('xlabs_logo_gray.png') %></td>
+          </tr>
+        </tfoot>
+      </table>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</body></html>

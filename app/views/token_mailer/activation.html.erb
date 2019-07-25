@@ -1,0 +1,22 @@
+<span style="color:#078ABA; font-size:30px; line-height: 100%; font-weight: 500">
+  <%= t(".click_to_verify") %>
+</span>
+
+<br/>
+<br/>
+<p>
+  <span style=" color:#5F5F5F; font-weight: 500"><%= t(".info") %></span><br/><br/>
+  <span style="margin-top:-25px; color:#078ABA; font-size:34px; font-weight: 500"><%= t('mailer.client_uuid') %> <%= @client_uuid %></span>
+</p>
+
+<p style="margin-top: 40px">
+  <b>VALIDE O SEU EMAIL</b> <br/>
+  <%= link_to @token_url, @token_url %>
+</p>
+
+<p style="font-size:12px; font-weight:500; color:#5F5F5F;">
+  <%= t(".unable_to_click") %>
+  <br/>
+  <%= t(".link_expire") %>
+</p>
+<br/>

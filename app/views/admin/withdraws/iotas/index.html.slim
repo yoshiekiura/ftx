@@ -1,0 +1,11 @@
+- unless @one_iotas.empty?
+  .panel.panel-primary
+    .panel-heading: span = t('.one')
+    = render partial: 'table', locals: {iotas: @one_iotas}
+- unless @all_iotas.empty?
+  .panel.panel-success
+    .panel-heading: span = t('.all')
+    = render partial: 'table', locals: {iotas: @all_iotas}
+
+- if @all_iotas.empty? and @one_iotas.empty?
+  h3.text-info.text-center = t('.empty')

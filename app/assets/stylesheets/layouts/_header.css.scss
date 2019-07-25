@@ -1,0 +1,67 @@
+
+/*Layout top and footer */
+
+/*TOP BAR*/
+
+.col-sm-6 {
+  width: 50%;
+}
+
+.top-bar {
+  padding: 10px 0px;
+  border-bottom: 1px solid #a1b5c1;
+}
+
+.nav a {
+  color:#a1b5c1;
+  padding: 0px 10px;
+}
+
+.nav a:hover,
+.nav a.active {
+  color:#b4cad6;
+}
+
+.nav a.active {
+  text-decoration: underline;
+
+}
+
+.main-nav .logo {
+  float: left;
+
+}
+
+.main-nav .logo a {
+  margin-right: 20px;
+  padding: 0px;
+}
+
+
+.main-nav .logo .desktop-md img{
+  max-width: 180px;
+}
+
+
+
+.main-nav .logo .mobile img{
+  max-width: 60px;
+}
+
+
+.top-bar .sec-nav{
+  text-align: right;
+}
+
+.top-bar .sec-nav i{
+  padding-right: 5px;
+}
+
+
+
+.main-nav-links,
+.sec-nav {
+  margin-top: 10px;
+}
+
+

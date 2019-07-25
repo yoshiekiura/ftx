@@ -1,0 +1,431 @@
+es:
+  js:
+    brand: Cointrade
+    submit: Enviar
+    cancel: Cancelar
+    confirm: Confirmar
+    banks:
+      _065: "Andbank"
+      _654: "Banco A.j. Renner S.A."
+      _246: "Banco Abc/brasil S.A."
+      _121: "Banco Agibank S.A."
+      _025: "Banco Alfa S.A."
+      _213: "Banco Arbi S.A."
+      _096: "Banco B3 S.A."
+      _036: "Banco Bem S.a.."
+      _122: "Banco Berj S.A."
+      _318: "Banco Bmg Comercial S.A."
+      _752: "Banco Bnp Paribas Brasil S.A."
+      _107: "Banco Bocom Bbm S.A."
+      _069: "Banco Bpn Brasil S.A."
+      _063: "Banco Bradescard S.A."
+      _237: "Banco Bradesco S.A."
+      _218: "Banco Bs2 S.A."
+      _473: "Banco Caixa Geral Brasil S.A."
+      _412: "Banco Capital S.A."
+      _040: "Banco Cargill S.A."
+      _266: "Banco Cedula S.A."
+      _745: "Banco Citibank S.A."
+      _756: "Banco Cooperativo do Brasil S.A."
+      _748: "Banco Cooperativo Sicredi S.A."
+      _505: "Banco Credit Suisse (brasil) S.A."
+      _003: "Banco da Amazonia S.A."
+      _083: "Banco da China Brasil S.A."
+      _707: "Banco Daycoval S.A."
+      _070: "Banco de Brasilia S.A."
+      _300: "Banco de La Nacion Argentina S.A."
+      _487: "Banco Deutsche Bank S.A."
+      _001: "Banco do Brasil S.A."
+      _047: "Banco do Estado de Sergipe S.A."
+      _021: "Banco do Estado do Espirito Santo S.A."
+      _037: "Banco do Estado do Para S.A."
+      _041: "Banco do Estado do Rio Grande do Sul S.A."
+      _004: "Banco do Nordeste do Brasil S.A."
+      _265: "Banco Fator S.A."
+      _224: "Banco Fibra S.A."
+      _626: "Banco Ficsa S.A."
+      _394: "Banco Finasa Bmc S.A."
+      _612: "Banco Guanabara S.A."
+      _604: "Banco Industrial do Brasil S.A."
+      _653: "Banco Indusval S.A."
+      _077: "Banco Intermedium"
+      _074: "Banco J. Safra S.A."
+      _376: "Banco Jp Morgan S.A."
+      _600: "Banco Luso Brasileiro S.A."
+      _389: "Banco Mercantil do Brasil S.A."
+      _755: "Banco Merrill Lynch S.A."
+      _746: "Banco Modal S.A."
+      _456: "Banco Mufg Brasil S.A."
+      _079: "Banco Original do Agronegocio S.A."
+      _212: "Banco Original S.A."
+      _208: "Banco Pactual S.A."
+      _623: "Banco Pan"
+      _254: "Banco Parana Banco S.A."
+      _611: "Banco Paulista S.A."
+      _643: "Banco Pine S.A."
+      _747: "Banco Rabobank International Br S.A."
+      _633: "Banco Rendimento S.A."
+      _741: "Banco Ribeirao Preto S.A."
+      _422: "Banco Safra S.A."
+      _033: "Banco Santander S.A."
+      _743: "Banco Semear S.A."
+      _366: "Banco Societe Generale Brasil S.A."
+      _637: "Banco Sofisa"
+      _243: "Banco Stock Maxima S.A."
+      _464: "Banco Sumitomo Mitsui Brasileiro S.A."
+      _634: "Banco Triangulo S.A."
+      _018: "Banco Tricury S.A."
+      _655: "Banco Votorantim S.A."
+      _610: "Banco Vr S.A."
+      _222: "Bco Credit Agricole Brasil S.A."
+      _017: "Bny Mellon Banco S.A."
+      _125: "Brasil Plural S.A."
+      _097: "Cc Centralcredi"
+      _136: "Cc Unicred do Brasil"
+      _320: "Ccb Brasil"
+      _098: "Cerdialinca Cooperativa Credito Rural"
+      _739: "Cetelem"
+      _163: "Commerzbank"
+      _085: "Cooperativa Central de Credito / Ailos"
+      _099: "Cooperativa Central Econ. Cred. Mutuo Un"
+      _089: "Cooperativa de Credito Rural da Regiao D"
+      _010: "Credicoamo Credito Rural Cooperativa"
+      _104: "Cx Economica Federal"
+      _094: "Finaxis"
+      _132: "Icbc do Brasil Banco Multiplo S.A."
+      _630: "Intercap"
+      _341: "Itaú Unibanco S.A."
+      _076: "Kdb do Brasil"
+      _757: "Keb Hana do Brasil"
+      _753: "Nbc Bank Brasil Sa/banco Multiplo"
+      _260: "Nu Pagamentos S.A."
+      _613: "Omni Banco S A"
+      _120: "Rodobens"
+      _751: "Scotiabank Brasil S.a. Banco Multiplo"
+      _082: "Topazio"
+      _084: "Uniprime Norte do Parana Cc"
+      _119: "Western Union"
+      _124: "Woori Bank"
+    fund_sources:
+      manage_bank_account: Gestión de Cuentas Bancarias
+      manage_bank_account_desc: Para facilitar la elección de la dirección de retiros bancarios
+      manage_bank_account_alert: Su número brasileño de CPF es obligatorio para el retiro de Reals
+      manage_bank_account_info: "* Atención Si el dígito de su banco es X, por favor sustituya 0."
+      manage_bank_account_required: Todos los campos son obligatorios.
+
+      manage_coin_address: Gestión de Direcciones de Monedas
+      manage_coin_address_desc: Para facilitar la elección de la dirección de retiros de monedas
+      bank: Banco
+      account: "Cuenta"
+      cpf: CPF/CNPJ
+      agency: Agencia
+      account-dig: Cuenta-dig
+      digit: dig
+      label: Etiqueta
+      address: Dirección
+      action: Acción
+      add: Añadir
+      remove: Retirar
+      default: Estándar
+    payment_slip:
+      bank: Banco
+      label_name: Nome
+      label_cpf: CPF
+      label_cnpj: CNPJ
+      label_cpfcnpj: CPF ou CNPJ
+      label_phone: Num.Celular
+      label_email: E-mail
+      label_address: Direccion
+      label_city: Ciudad
+      label_uf: UF
+      label_state: Estado
+      label_cep: CEP
+      label_complement: Complemento
+      label_number: Número
+      title : Generación del boleto
+      label: Apelido
+      address: Endereço
+      action: Acción
+      add: Añadir
+      remove: Retirar
+      default: Estándar
+      desc: Los datos aquí informados serán utilizados en la generación del boleto.
+      btn_generete_slip: Gerar Boleto
+      label_amount: R$ 00000
+      value_req: Los datos aquí
+      label_tabDeposit: Depósitos
+      label_tabBank: Boleto
+      amount: Valor
+      tax: Taxa
+    funds:
+      deposit: Depósito
+      withdraw: Retirar
+
+      tooltip_status:
+        accepted:
+          text: El Txid informado se procesó correctamente. Por favor verifique en su Saldo.
+          icon: <i class="far fa-check-circle"></i>
+
+        checked:
+          text: Ordenada por el administrador.
+          icon: <i class="far fa-check-circle"></i>
+
+        submitting:
+          text: Se está procesando el Txid.
+          icon: <i class="far fa-clock"></i>
+
+        submitted:
+          text: Se ha enviado la orden de depósito.
+          icon: <i class="far fa-clock"></i>
+
+        cancelled:
+          text: Orden cancelada.
+          icon: <i class="far fa-times-circle"></i>
+
+        rejected:
+          text: Orden rechazado. Por favor, contacte nuestro soporte.
+          icon: <i class="far fa-times-circle"></i>
+
+        warning:
+          text: El Txid no ha sido procesado en las últimas 2 horas. Por favor, contacte nuestro soporte.
+          icon: <i class="fas fa-exclamation-triangle"></i>
+
+      currency_name:
+        btc: BTC
+        brl: BRL
+        doge: DOGE
+        pts: PTS
+        ltc: LTC
+        bch: BCH
+        btg: BTG
+        dash: DASH
+        eth: ETH
+        zec: ZEC
+        dgb: DGB
+        xrp: XRP
+        smart: Smart
+        iota: IOTA
+        ltc: LTC
+        zcr: ZCR
+        tusd: TUSD
+        xem: XEM
+        rbtc: RBTC
+        rif: RIF
+        xar: XAR
+      deposit_brl:
+        title: Depósito Real Brasileño
+        desc: "Siga los pasos siguientes:"
+        desc_item_1: "1. Vaya a la opción (Administrar cuentas) y agregue su información bancaria."
+        desc_item_2: "2. Ingrese el monto de su depósito y haga clic en el botón Enviar"
+        desc_item_3: "3. Continúe con su transferencia bancaria a la cuenta bancaria de COINBR SERVICOS DIGITAIS LTDA"
+        desc_item_4: "SIEMPRE usar nuestra cuenta ITAÚ para TEDs y TEFs"
+        desc_item_5: 
+        desc_item_6: "(Información provista a continuación)"
+        desc_item_7: "4. SIEMPRE envíe su recibo de depósito a <comprovante@cointrade.cx>. Su depósito será confirmado tan pronto como recibamos su dinero"
+        attention: "Atención: NO aceptamos transferencias de diferentes titulares de cuentas, sujeto a una tarifa de reembolso del 10%. El nombre de su cuenta bancaria debe coincidir con el nombre de su Registro de Cointrade; de lo contrario, no se identificará su depósito."
+        from: Desde
+        to: Hasta
+        deposit_name: Tu nombre
+        deposit_account: Cuenta de depósito
+        add: Añadir
+        manage: GESTIONAR
+        amount: VALOR
+        type: Tipo
+        document: CPF
+        document_mask: 000.000.000-00
+        min_amount: Al menos 25,00 Reais brasileños
+        to_account: TED/DOC
+        account_detail: "Itaú Ag: 7307 Conta: 08782-0"
+        to_name: Nombre
+        to_bank_name: Nombre del banco
+        opening_bank_name: Registro Brasileño CNPJ
+        remark: 'Código de Referencia (Código de identificación de transferencia)'
+        label_deposit_value: Valor de depósito
+        label_deposit_ammount: Seleccione el tipo de transacción?
+        label_deposit_vlr: Valor del depósito.
+        label_desc : ¿De qué tipo se hará la transacción?
+        deposit_information_title: ¡ADVERTENCIA! INFORMACIÓN DE COMO REALIZAR EL DEPOSITO
+      deposit_btc:
+        title: Depósito de BTC
+      deposit_bch:
+        title: Depósito de BCH
+      deposit_btg:
+        title: Depósito de BTG
+      deposit_dash:
+        title: Depósito de DASH
+      deposit_eth:
+        title: Depósito de ETH
+      deposit_zec:
+        title: Depósito de ZEC
+      deposit_dgb:
+        title: Depósito de DGB
+      deposit_xrp:
+        title: Depósito de XRP       
+      deposit_smart:
+        title: Depósito de Smart
+      deposit_iota:
+        title: Depósito de IOTA
+      deposit_ltc:
+        title: Depósito de LTC      
+      deposit_zcr:
+        title: Depósito de ZCR
+      deposit_tusd:
+        title: Depósito de TUSD
+      deposit_xem:
+        title: XEM Deposit
+      deposit_rbtc:
+        title: RBTC Deposit
+      deposit_rif:
+        title: RIF Deposit
+      deposit_xar:
+        title: XAR Deposit
+        
+      deposit_coin:
+        address: Dirección
+        new_address: Nueva direccion
+        confirm_gen_new_address: ¿Seguro que quieres generar una nueva dirección de depósito?
+        open-wallet: Utilice sus servicios comunes de billetera, billetera local, terminal móvil o billetera virtual, seleccione un pago y envíe.
+        detail: Por favor, pegue la dirección abajo en su cartera, llene el valor que desea depositar, confirme y envíe.
+        scan-qr: Escanear el código QR para pagar en la billetera de la terminal móvil.
+        after_deposit: Una vez que complete el envío, puede verificar el estado de su nuevo depósito a continuación.
+        generate-new: Generar nueva dirección
+        copy: Copiar
+      deposit_history:
+        title: Historial de depósitos
+        number: '#'
+        identification: Código de identificación
+        time: Hora
+        txid: ID de transacción
+        confirmations: Confirmaciones
+        from: Desde
+        imformation_from: Información de la transacción
+        amount: Cantidad
+        state_and_action: "Estado/Acción"
+        cancel: cancelar
+        no_data: No hay datos de historial
+        validator: Validador
+
+        submitting: Sumisión
+        cancelled: Cancelado
+        submitted: Presentada
+        accepted: Aceptado
+        rejected: Rechazado
+        checked: Comprobado
+        warning: Advertencia
+        suspect: Sospechoso
+
+      withdraw_brl:
+        title: Retiro Real Brasileño
+        intro: Seleccione el banco para rescatar el valor y entre el número de cuenta corriente para completar el envío.
+        intro_2: Su cuenta bancaria y su nombre deben ser consistentes con el nombre de autentificación del nombre real.
+        attention: "Horas laborales: 9:00 - 18:00"
+        account_name: Nombre de la cuenta
+        withdraw_address: Cuenta de destino
+        balance: Balance
+        withdraw_amount: Valor de Rescate
+        manage_withdraw: Administrar Retirada
+        fee_explain: Sobre la tarifa
+        min: Al menos
+        withdraw_all: Retirar todo
+
+      withdraw_btc:
+        title: Retirada de BTC
+      withdraw_bch:
+        title: Retirada de BCH
+      withdraw_btg:
+        title: Retirada de BTG
+      withdraw_dash:
+        title: Retirada de DASH
+      withdraw_eth:
+        title: Retirada de ETH
+      withdraw_zec:
+        title: Retirada de ZEC
+      withdraw_dgb:
+        title: Retirada de DGB
+      withdraw_xrp:
+        title: Retirada de XRP
+      withdraw_smart:
+        title: Retirada de Smart
+      withdraw_iota:
+        title: Retirada de IOTA
+      withdraw_ltc:
+        title: Retirada de LTC
+      withdraw_zcr:
+        title: Retirada de ZCR
+      withdraw_tusd:
+        title: Retirada de TUSD
+        
+      withdraw_coin:
+        intro: Por favor, complete la dirección y el monto, luego envíe el formulario. 
+        label: Etiqueta
+        balance: Balance
+        amount: Cantidad
+        manage_withdraw: Administrar dirección
+        min: Al menos
+        withdraw_all: Retirar todo
+        fee_explain: Sobre la tarifa
+        with: Amount of withdrawal fee.
+
+      withdraw_history:
+        title: Historial de Resgates
+        number: Número
+        withdraw_time: Hora
+        withdraw_account: Cuenta de rescate
+        withdraw_address: Dirección
+        withdraw_amount: Cantidad
+        actual_amount: Cantidad Actual
+        fee: Cuota
+        miner_fee: Cuota
+        state_and_action: "Estado/Acción"
+        cancel: Cancelar
+        no_data: No hay datos de historial
+
+        submitting: Sumisión
+        submitted: Presentada
+        rejected: Rechazado
+        accepted: Aceptado
+        suspect: Sospechoso
+        processing: En proceso
+        coin_ready: Moneda Lista
+        coin_done: Moneda Hecha
+        done: Hecho
+        almost_done: Casi termino
+        canceled: Cancelado
+        failed: Ha fallado
+
+    auth:
+      please_active_two_factor: Primero configure el número de móvil o el autenticador de Google.
+      submit: Enviar
+      otp_placeholder: Contraseña de 6 dígitos
+      google_app: Google Authenticator
+      sms: Mensajes de verificación de SMS
+      send_code: Enviar código
+      send_code_alt: Reenviar en COUNT segundos
+      hints:
+        app: Google Authenticator volverá a generar una nueva contraseña cada treinta segundos, ingrese a tiempo.
+        sms: Le enviaremos un mensaje de texto a su teléfono con el código de verificación.
+
+    markets:
+      market_list:
+        all: Todo el mercado
+        brl: BRL Mercado
+        btc: BTC Mercado
+        bch: BCH Mercado
+        btg: BTG Mercado
+        dash: DASH Mercado
+        eth: ETH Mercado
+        zec: ZEC Mercado
+        dgb: DGB Mercado
+        xrp: XRP Mercado
+        smart: Smart Mercado
+        iota: IOTA Mercado
+        ltc: LTC Mercado
+        zcr: ZCR Mercado
+        tusd: TUSD Mercado
+        xem: XEM Mercado
+        rbtc: RBTC Mercado
+        rif: RIF Mercado
+        xar: XAR Mercado
+
+    markets_overview:
+        market_depth: Profundidad del Mercado

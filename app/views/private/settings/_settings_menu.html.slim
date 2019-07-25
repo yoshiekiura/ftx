@@ -1,0 +1,20 @@
+#settings-menu.sidebar-offcanvas
+  .userid
+    = t('private.markets.account_summary.user_id');
+    |:&nbsp;
+    = current_user.client_uuid
+    - if is_admin?
+      span.user-flag
+        |ADMIN
+    - if is_financial?
+      span.user-flag
+        |FINANCIAL
+  .list-group
+    a.list-group-item.active href=settings_path
+      i.fas.fa-lock
+      span.desktop.desktop-lg
+        = t('private.markets.account_summary.account');
+    / a.list-group-item href="#"
+    /   i.fas.fa-cogs
+    /   span.desktop.desktop-lg Preferências
+

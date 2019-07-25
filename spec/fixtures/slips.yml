@@ -1,0 +1,26 @@
+- id: 1
+  code: tronipay
+  name: 'TroniPay'
+  host: 'https://tronipay.com'
+  merchant_id: 'RAkrhPfTXGowuZYK1WSVaeD2gyHUsc'
+  auth_token: ''
+  tax: 2.5
+  allowed_callback_ips: '5.100.154.160,5.100.154.151,162.251.82.251,162.251.82.119,162.251.82.253,162.251.82.120,169.51.42.165'
+  
+- id: 2
+  code: pagpay
+  name: 'Pague Pay'
+  host: 'https://www.pagpay365.com'
+  merchant_id: 'bla'
+  auth_token: ''
+  tax: 2.5
+  allowed_callback_ips: '127.0.0.1'
+
+- id: 3
+  code: pagueveloz
+  name: 'Pague Veloz'
+  host: 'https://www.pagueveloz.com.br'
+  merchant_id: 'bla'
+  auth_token: ''
+  tax: 2.5
+  allowed_callback_ips: '127.0.0.1'

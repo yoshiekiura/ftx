@@ -1,0 +1,20 @@
+development: &defaults
+  adapter: mysql2
+  host: mysql_host
+  encoding: utf8
+  database: cointrade_development
+  username: mysql_username
+  password: mysql_password
+  pool: 10
+  reconnect: true
+
+test:
+  <<: *defaults
+  database: cointrade_test
+
+production:
+  <<: *defaults
+  host: <%= ENV['DB_HOST'] %>
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASSWORD'] %>

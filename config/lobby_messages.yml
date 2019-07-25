@@ -1,0 +1,46 @@
+- id: 1
+  date: '2019-01-21'
+  title: Novidades na plataforma
+  title1: What's new on the platform
+  version: 1.3
+  assets:
+    messages:
+      -
+        title: Endereços de carteiras atualizados
+        title1: Updated Wallet Addresses
+        message: Todos os endereços de depósitos foram atualizados. Antes de efetuar um novo depósito na plataforma, certifique-se de estar utilizando o correto.
+        message1: All deposit addresses have been updated. Before making a new deposit on the platform, make sure you are using the correct one.
+      -
+        title: Zcore (Beta) - nova moeda
+        title1: Zcore (Beta) - new Crypto Coin
+        message: Foi adicionado o suporte a moeda Zcore na
+                 plataforma. Esta moeda está em versão Beta,
+                 portanto ela pode apresentar instabilidades.
+        message1: Zcore currency support has been added to the
+                  platform. This coin is in Beta version,
+                  therefore it may present instabilities.
+      -
+        title: TUSD (Beta) - nova moeda
+        title1: TUSD (Beta) - new Crypto Coin
+        message: Foi adicionado o suporte a moeda TUSD na
+                 plataforma. Esta moeda está em versão Beta,
+                 portanto ela pode apresentar instabilidades.
+        message1: TUSD currency support was added to the
+                  platform. This coin is in Beta version,
+                  therefore it may present instabilities.
+      -
+        title: Novos pares disponíveis
+        title1: New pairs available
+        message: Agora também possuímos o pareamento das moedas
+                 a partir de BTC e TUSD. Acesse a área de Negócios e confira.
+        message1: Now we also have the matching of coins
+                 from BTC and TUSD. Access the Business area and check it out.
+      -
+        title: Informações de saldo disponível
+        title1: Balance information available
+        message: Agora você poderá conferir na tela de saque, os valores
+                 discriminados para saque e ou em operações, facilitando
+                 assim a leitura de quanto você tem disponível em BRL.
+        message1: You will now be able to check the
+                  broken down for withdrawal and / or operations, facilitating
+                  so read how much you have available in BRL.

@@ -1,0 +1,83 @@
+#marketdepth.user-container.tab-pane
+  .filter-area
+    .filter-row
+      .form-inline
+        .form-group.stats
+          .stats-info.highlight.highlight-green
+            span
+              | BCH/BRL
+              i.fas.fa-arrow-alt-circle-up
+            | Top increase
+            .center 11,000.56 BRL
+          .stats-info.highlight.highlight-red
+            span
+              | BTC/BRL
+              i.fas.fa-arrow-alt-circle-down
+            | Top Decrease
+            .center +12.50%
+          .stats-info.highlight.highlight-blue
+            span
+              | BCH/BRL
+              i.far.fa-chart-bar
+            | Top Volume
+            .center -12.50%
+        .fright.mkt-select
+          select.form-control
+            option Default
+            option BRL
+  /! form-inline
+  /! filter-area
+  .table-responsive.table-area
+    table.table.market-table
+      thead
+        tr
+          th
+            | Market
+            span.sort
+              i.fa.fa-sort-down
+              i.fa.fa-sort-up.active
+          th
+            | Total Sum Sell
+            span.sort
+              i.fa.fa-sort-down
+              i.fa.fa-sort-up
+          th
+            | Total Sum Buy
+            span.sort
+              i.fa.fa-sort-down
+              i.fa.fa-sort-up
+      /! -head.......
+      tbody
+        tr
+          td BTC/BRL
+          td 100000.34 BTC
+          td 100000.34 BTC
+        tr
+          td BCH/BRL
+          td 900000.34 BCH
+          td 100000.34 BTC
+        tr
+          td XRP/BRL
+          td 456000.34 BTC
+          td 100000.34 BTC
+        tr
+          td XMR/BRL
+          td 345000.34 BTC
+          td 100000.34 BTC
+  /! table responsive
+  nav.tar aria-label=("Page navigation example")
+    ul.pagination
+      li.page-item
+        a.page-link aria-label="Previous" href="#"
+          span aria-hidden="true"  &laquo;
+          span.sr-only Previous
+      li.page-item
+        a.page-link href="#"  1
+      li.page-item
+        a.page-link href="#"  2
+      li.page-item
+        a.page-link href="#"  3
+      li.page-item
+        a.page-link aria-label="Next" href="#"
+          span aria-hidden="true"  &raquo;
+          span.sr-only Next

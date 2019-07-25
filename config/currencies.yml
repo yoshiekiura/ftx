@@ -1,0 +1,211 @@
+- id: 1
+  key: real
+  code: brl
+  symbol: "R$"
+  coin: false
+  quick_withdraw_max: 999_999_999_999
+  precision: 2
+  assets:
+    accounts:
+      -
+        bank: 'AAAA'
+        address: '8888 8888 8888 8888'
+        password: '888888'
+        tel: '+88 88 88888 8888'
+
+- id: 2
+  key: btc
+  code: btc
+  symbol: "฿"
+  coin: true
+  quick_withdraw_max: 2
+  stratum_wallet_id: 40
+  ## Oficial ##
+  #rpc: http://nodes:nodes@172.16.19.22:8333  
+  blockchain: https://blockchain.info/tx/#{txid}
+  address_url: https://blockchain.info/address/#{address}
+  maintenance: false
+        
+- id: 3
+  key: bch
+  code: bch
+  symbol: "Ƀ"
+  coin: true
+  quick_withdraw_max: 2
+  stratum_wallet_id: 41
+  rpc: http://nodes:nodes@172.16.19.22:8332
+  blockchain: https://blockchain.info/tx/#{txid}
+  address_url: https://blockchain.info/address/#{address}
+  maintenance: false
+
+- id: 4
+  key: btg
+  code: btg
+  symbol: "Ƀ"
+  coin: true
+  quick_withdraw_max: 2
+  stratum_wallet_id: 42
+  rpc: http://nodes:nodes@172.16.19.22:8331
+  blockchain: https://test-explorer.bitcoingold.org/insight/tx/#{txid}
+  address_url: https://test-explorer.bitcoingold.org/insight/address/#{address}
+  maintenance: false
+
+- id: 5
+  key: dash
+  code: dash
+  symbol: "D"
+  coin: true
+  quick_withdraw_max: 2
+  stratum_wallet_id: 43
+  rpc: http://nodes:nodes@172.16.19.22:8335
+  blockchain: https://test.insight.dash.siampm.com/tx/#{txid}
+  address_url: https://test.insight.dash.siampm.com/address/#{address}
+  maintenance: false
+
+- id: 6
+  key: eth
+  code: eth
+  symbol: "Ξ"
+  coin: true
+  quick_withdraw_max: 2
+  stratum_wallet_id: 44
+  rpc: http://localhost
+  blockchain: https://etherscan.io/tx/#{txid}
+  address_url: https://etherscan.io/address/#{address}
+  maintenance: false
+
+- id: 7
+  key: zec
+  code: zec
+  symbol: "Z"
+  coin: true
+  quick_withdraw_max: 2
+  stratum_wallet_id: 45
+  rpc: http://nodes:nodes@172.16.19.22:8336
+  blockchain: https://blockchain.info/tx/#{txid}
+  address_url: https://blockchain.info/address/#{address}
+  maintenance: false
+
+- id: 8
+  key: dgb
+  code: dgb
+  symbol: "D"
+  coin: true
+  quick_withdraw_max: 2
+  stratum_wallet_id: 46
+  rpc: http://nodes:nodes@172.16.19.22:8334
+  blockchain: https://blockchain.info/tx/#{txid}
+  address_url: https://blockchain.info/address/#{address}
+  maintenance: false
+
+- id: 9
+  key: xrp
+  code: xrp
+  symbol: "X"
+  coin: true
+  quick_withdraw_max: 2
+  stratum_wallet_id: 47
+  rpc: http://nodes:nodes@172.16.19.22:8337
+  blockchain: https://blockchain.info/tx/#{txid}
+  address_url: https://blockchain.info/address/#{address}
+  maintenance: false
+
+- id: 10
+  key: smart
+  code: smart
+  symbol: "S"
+  coin: true
+  quick_withdraw_max: 2
+  stratum_wallet_id: 48
+  rpc: http://nodes:nodes@172.16.19.22:8337
+  blockchain: https://blockchain.info/tx/#{txid}
+  address_url: https://blockchain.info/address/#{address}
+  maintenance: false
+
+#- id: 11
+#  key: iota
+#  code: iota
+#  symbol: "S"
+#  coin: true
+#  quick_withdraw_max: 1
+#  stratum_wallet_id: 0
+#  blockchain: https://blockchain.info/tx/#{txid}
+#  address_url: https://blockchain.info/address/#{address}
+
+- id: 12
+  key: ltc
+  code: ltc
+  symbol: "S"
+  coin: true
+  quick_withdraw_max: 2
+  stratum_wallet_id: 49
+  blockchain: https://blockchain.info/tx/#{txid}
+  address_url: https://blockchain.info/address/#{address}
+  maintenance: false
+
+- id: 13
+  key: zcr
+  code: zcr
+  symbol: "Z"
+  coin: true
+  quick_withdraw_max: 2
+  stratum_wallet_id: 54
+  rpc: http://nodes:nodes@172.16.19.22:8336
+  blockchain: http://explorer.zcore.cash/tx/#{txid}
+  address_url: http://explorer.zcore.cash/address/#{address}
+  maintenance: false
+
+- id: 14
+  key: tusd
+  code: tusd
+  symbol: "T"
+  coin: true
+  quick_withdraw_max: 2
+  stratum_wallet_id: 65
+  blockchain: https://blockchain.info/tx/#{txid}
+  address_url: https://blockchain.info/address/#{address}
+  maintenance: false
+
+- id: 15
+  key: xem
+  code: xem
+  symbol: "X"
+  coin: true
+  quick_withdraw_max: 999_999_999_999
+  stratum_wallet_id: 00
+  blockchain: https://blockchain.info/tx/#{txid}
+  address_url: https://blockchain.info/address/#{address}
+  maintenance: false
+
+- id: 16
+  key: rbtc
+  code: rbtc
+  symbol: "X"
+  coin: true
+  quick_withdraw_max: 999_999_999_999
+  stratum_wallet_id: 00
+  blockchain: https://blockchain.info/tx/#{txid}
+  address_url: https://blockchain.info/address/#{address}
+  maintenance: false
+
+- id: 17
+  key: rif
+  code: rif
+  symbol: "X"
+  coin: true
+  quick_withdraw_max: 999_999_999_999
+  stratum_wallet_id: 00
+  blockchain: https://blockchain.info/tx/#{txid}
+  address_url: https://blockchain.info/address/#{address}
+  maintenance: false
+
+#- id: 18
+#  key: xar
+#  code: xar
+#  symbol: "X"
+#  coin: true
+#  quick_withdraw_max: 999_999_999_999
+#  stratum_wallet_id: 00
+#  blockchain: https://blockchain.info/tx/#{txid}
+#  address_url: https://blockchain.info/address/#{address}
+#  maintenance: false

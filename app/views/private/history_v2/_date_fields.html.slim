@@ -1,0 +1,30 @@
+
+.filter-row
+  .form-inline
+    .form-group
+      = select_tag :select_date, options_for_select([ \
+        [t('private.history.filters.all'), 'all'], \
+        [t('private.history.filters.today'), 'today'], \
+        [t('private.history.filters.one_week'), 'one_week'], \
+        [t('private.history.filters.one_month'), 'one_month']], @selected_date), {class: "form-control"}
+    .form-group
+      .input-group
+        input#start.form-control placeholder= t('private.history.filters.start') name="start" type="date" /
+        a.input-group-addon onclick="document.getElementById('start').focus()"
+          i.far.fa-calendar-alt
+    .form-group
+      .input-group
+        input#end.form-control placeholder= t('private.history.filters.end') name="end" type="date" /
+        a.input-group-addon onclick="document.getElementById('end').focus()"
+          i.far.fa-calendar-alt
+
+= content_for :scripts
+javascript:
+    $(function() {
+        $("#start").change( function() {
+            var d = new Date();
+            var datestring = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
+            $("#end").text(datestring);
+            $("#end").val(datestring);
+        });
+    });

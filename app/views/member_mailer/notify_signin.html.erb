@@ -1,0 +1,51 @@
+
+<% member = @sign_up_data.first %>
+<% user_agent = UserAgent.parse(member.ua) %>
+<% week_day = Date.today.wday %>
+
+<p style="color:#078ABA; font-size:15px;">
+  <%= t('mailer.client_uuid') %> <%= @client_uuid %>
+</p>
+
+<p style="color:#078ABA; font-size:30px; font-weight: 500">
+  <%= t(".just_signed_in") %>
+</p>
+
+<p style="font-size:17px">
+  <span style="color:#5F5F5F; font-weight: 500">
+    Data:
+    <%= member.created_at.strftime("%d/%m/%Y") %>, <%= I18n.t('date.formats.day_names')[week_day] %>
+  </span>
+  <br/>
+
+  <span style="color:#5F5F5F; font-weight: 500">
+    Hora:
+    <%=member.created_at.strftime("%H:%M") %>
+  </span>
+  <br/>
+
+  <span style="color:#5F5F5F; font-weight: bold">
+    Endereço IP:
+    <%= member.ip %>
+  </span>
+  <br/>
+
+  <span style="color:#5F5F5F; font-weight: 500">
+    Navegador:
+    <%= user_agent.browser %>
+  </span>
+
+  <br/>
+  <br/>
+  <br/>
+  <span style="color:#5F5F5F; font-weight: 500">
+  Últimos Acessos:</span> <br/>
+
+    <% @sign_up_data.each do |members| %>
+      <span style="color:#9A9A9A; font-size: 15px; font-weight: 500">Endereço IP: <%= members.ip %>&nbsp;&nbsp;&nbsp; </span> <span style="color:#9A9A9A; font-size: 15px; font-weight: 500;"> Data: <%= members.created_at.strftime("%d/%m/%Y") %>, hora: <%= members.created_at.strftime("%H:%M") %></span><br/>
+    <% end %>
+
+
+  <br/>
+</p>
+

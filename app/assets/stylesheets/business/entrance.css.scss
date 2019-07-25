@@ -1,0 +1,332 @@
+.entrance-wrapper{
+   // background-image: url(image_path('login_bg.jpg'));
+    background-color: #171F27;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    width: 100%;
+   // display: grid;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.entrance-top {
+    display: table-row;
+    color: #a1b5c1;
+    height: 64px;
+}
+
+.entrance-top-left {
+    float: left;
+}
+
+.entrance-top-right {
+    float: right;
+    padding-top: 30px;
+    padding-right: 20px;
+}
+
+.entrance-top-right .nav a {
+    float: left;
+    color:#a1b5c1;
+    padding: 0px 10px;
+}
+
+.entrance-top-right .nav a:hover,
+.entrance-top-right .nav a.active {
+    color:#b4cad6;
+}
+
+.entrance-top-right .nav a.active {
+    text-decoration: underline;
+    
+}
+
+
+.entrance-top .logo {
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
+
+.entrance-top .logo img {
+    max-width: 200px;
+}
+
+#entrance-lg-ddm {
+    float: right;
+    margin-left: 20px;
+}    
+
+#entrance-lg-ddm select {
+    background: transparent;
+    color: #a1b5c1;
+    border-color: #a1b5c1;
+}
+
+.entrance-container{
+  //  margin: auto;
+  //  height: 100%;
+    vertical-align: middle;
+    display: table-cell;
+    padding-bottom: 60px;
+}
+
+.entrance-sub-container {
+    // margin: auto;
+    max-width: 450px;
+    padding: 40px 40px;
+    color:#fff;
+    text-align: center;
+    background-color: rgb(41, 54, 62);
+    height: 114%;
+}
+
+.entrance-sub-container h2{
+    font-size: 24px;
+    padding-bottom: 20px;
+    font-weight: 300;
+    color: #fff;
+    margin-top: 0px;
+}
+
+
+/*entrance*/
+
+.announcements {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.announcement-title {
+    float: left;
+    font-size: 20px;
+}
+
+.announcement-date {
+    float: right;
+    padding-top: 5px;
+}
+
+.announcements-top {
+    border-bottom: 1px solid #fff;
+}
+
+.announcements-content p {
+    padding: 20px 0px;
+}
+
+.entrance-wrapper{
+  display:flex;
+  flex-direction:column
+}
+
+.main-lobby{
+  display:flex;
+  justify-content:center;
+}
+
+.container-left{
+  padding-right:100px;
+  display:flex;
+  align-items:center;
+}
+
+.container-right{
+  display:flex;
+  padding-left:100px;
+  align-items:center
+}
+
+.container-right-sub{
+  display:flex;
+  flex-direction:column
+}
+
+.label-entrance{
+  margin-top:50px;
+  display:flex;
+  justify-content:space-between;
+  heigth:45px;
+}
+
+.tag-label{
+  background-color:#5aa87e;
+  width:10%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.tag-title{
+  width:87%;
+  text-align:left;
+  border-bottom: 5px solid #5aa87e;
+}
+
+.tag-version{
+  color:#93a7b2;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.body-entrance{
+  max-height:300px;
+  margin-top:30px;
+  overflow:auto;
+}
+
+.footer-main{
+  color:#93A7B2;
+  position:absolute;
+  bottom:10px;
+  width:100%;
+  padding-left:10px;
+}
+
+.logo-partner{
+  width:150px;
+}
+
+/*circle icons*/
+
+.ttsdiv {
+    display: inline-block;
+    margin: 5px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.circle-icon {
+    display: inline-block;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding-top: 17px;
+    cursor: pointer;
+    line-height: 25px;
+    color: #fff!important;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.circle-icon-trading {
+    background: #3aa567;
+}
+
+.circle-icon-profile {
+    background: #af733b;
+}
+
+.circle-icon-wallet {
+    background: #6078b5;
+}
+
+.circle-icon-trading:hover {
+    background: #38b16a;
+}
+
+.circle-icon-profile:hover {
+    background: #be7c3d;
+}
+
+.circle-icon-wallet:hover {
+    background: #627ec4;
+}
+
+
+
+/*Foter*/
+
+.entrance-footer {
+    color: #a1b5c1;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.entrance-footer ul {
+    padding-left: 0px;
+}
+
+.entrance-footer li {
+  display: inline-block;
+  padding: 10px 7px;
+    
+}
+
+#myModal .modal-content
+{
+  height:500px;
+  overflow:auto;
+}
+
+@media screen and (max-width:480px){
+
+    .entrance-top {
+        padding-bottom: 20px;
+    }
+
+    .entrance-top-right {
+        float: left;
+        width: 100%;
+    }
+
+    .entrance-container {
+        padding-top: 20px;
+    }
+
+}
+
+#style-2::-webkit-scrollbar-track
+{
+  background-color: rgba(41, 54, 62, 0.8);
+}
+
+#style-2::-webkit-scrollbar
+{
+  width: 8px;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  background-color: #222F36;
+}
+
+
+#style-3::-webkit-scrollbar-track
+{
+  background-color: rgba(41, 54, 62, 0.8);
+}
+
+#style-3::-webkit-scrollbar
+{
+  width: 8px;
+}
+
+#style-3::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  background-color: #222F36;
+}
+
+
+
+#style-4::-webkit-scrollbar-track
+{
+  background-color: rgba(41, 54, 62, 0.8);
+}
+
+#style-4::-webkit-scrollbar
+{
+  width: 8px;
+}
+
+#style-4::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  background-color: #33424c;
+}

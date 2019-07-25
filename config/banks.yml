@@ -1,0 +1,807 @@
+- id: 13
+  code: _065
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 14
+  code: _654
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 15
+  code: _246
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 16
+  code: _121
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 17
+  code: _025
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 18
+  code: _213
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 19
+  code: _096
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 20
+  code: _036
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 21
+  code: _122
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 22
+  code: _318
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 23
+  code: _752
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 24
+  code: _107
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 25
+  code: _069
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 26
+  code: _063
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 27
+  code: _237
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 28
+  code: _218
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 29
+  code: _473
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 30
+  code: _412
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 31
+  code: _040
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 32
+  code: _266
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 4
+  code: _745
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 34
+  code: _756
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 11
+  code: _748
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 35
+  code: _505
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 36
+  code: _003
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 37
+  code: _083
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 38
+  code: _707
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 39
+  code: _070
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 40
+  code: _300
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 41
+  code: _487
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 1
+  code: _001
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 43
+  code: _047
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 44
+  code: _021
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 45
+  code: _037
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 46
+  code: _041
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 47
+  code: _004
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 48
+  code: _265
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 49
+  code: _224
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 50
+  code: _626
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 51
+  code: _394
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 52
+  code: _612
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 53
+  code: _604
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 54
+  code: _653
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 8
+  code: _077
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 56
+  code: _074
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 57
+  code: _376
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 58
+  code: _600
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 59
+  code: _389
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 60
+  code: _755
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 61
+  code: _746
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 62
+  code: _456
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 65
+  code: _079
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 5
+  code: _212
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 66
+  code: _208
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 67
+  code: _623
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 68
+  code: _254
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 69
+  code: _611
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 70
+  code: _643
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 71
+  code: _747
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 72
+  code: _633
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 73
+  code: _741
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 74
+  code: _422
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 2
+  code: _033
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 76
+  code: _743
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 78
+  code: _366
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 7
+  code: _637
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 80
+  code: _243
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 81
+  code: _464
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 82
+  code: _634
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 83
+  code: _018
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 84
+  code: _655
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 85
+  code: _610
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 87
+  code: _222
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 88
+  code: _017
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 89
+  code: _125
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 90
+  code: _097
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 91
+  code: _136
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 92
+  code: _320
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 93
+  code: _098
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 94
+  code: _739
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 95
+  code: _163
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 96
+  code: _085
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 97
+  code: _099
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 98
+  code: _089
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 99
+  code: _010
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 6
+  code: _104
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 101
+  code: _094
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 102
+  code: _132
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 103
+  code: _630
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 3
+  code: _341
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 0
+  fee_percent: 0.25
+
+- id: 105
+  code: _076
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 106
+  code: _757
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 107
+  code: _753
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 108
+  code: _260
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 109
+  code: _613
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 110
+  code: _120
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 111
+  code: _751
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 112
+  code: _082
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 113
+  code: _084
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 114
+  code: _119
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25
+
+- id: 115
+  code: _124
+  currency: brl
+  deposit: true
+  withdraw: true
+  fee_brute: 10.90
+  fee_percent: 0.25

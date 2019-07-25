@@ -1,0 +1,75 @@
+<div class="user-wrapper">
+
+  <div style="display: flex; justify-content: space-between; max-height: 40px;">
+    <ul class="nav nav-pills">
+      <li id="brl-ticker-button" ng-class="{ 'active': curr != 'brl' && curr != 'history' }" class="ticker-toggle nav-item">
+        <a class="nav-link" data-toggle="tab" href="#dep-crypto">CRYPTO</a>
+      </li>
+      <li id="fav-ticker-button" ng-class="{ 'active': curr == 'brl' }" class="ticker-toggle nav-item">
+        <a class="nav-link" data-toggle="tab" href="#fiat"><%= t('js.funds.deposit_history.fiat') %></a>
+      </li>
+      <li id="fav-ticker-button" ng-class="{ 'active': curr == 'history' }" class="ticker-toggle nav-item">
+        <a class="nav-link" data-toggle="tab" href="#dep-history"><%= t('js.funds.deposit_history.title') %></a>
+      </li>
+    </ul>
+    <div>
+      <div id="div_alert" class="alert alert-danger" style="border-radius: 0px; color: white; padding: 0px; margin-top: -13px; display: none;
+          font-family: Helvetica Neue,Helvetica,Arial,sans-serif;border-color: #A85A5A; background-color: #A85A5A; font-size: 11pt;padding: 2px 5px 1px 5px;">
+        <button type="button" style="opacity: unset;text-shadow: none; border-radius: 1px;border-color: #FFFFFF;color: #FFFFFF;top: 10px;font-size: 13pt;" data-dismiss="alert" class="close">&times;</button>
+        <div style="display: flex">
+          <div style="display: flex; align-items: center; padding: 10px; margin-right: 10px;">
+            <i class="fas fa-exclamation-triangle" data-html="true" style="opacity: 1.0; color: #FFFFFF;float: left; "></i>
+          </div>
+          <label style="font-weight: 400; line-height: normal; margin-right: 80px;">
+            <%= t('js.funds.deposit_history.describe3').html_safe %></label>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="tab-content">
+
+    <div id="dep-crypto" ng-class="{ 'in active': curr != 'brl' && curr != 'history'}" class="user-container tab-pane">
+      <div class="panel-group" id="accordion">
+        <accounts></accounts>
+      </div>
+    </div>
+
+    <%= render 'deposit_fiat_tab' %>
+    <%= render 'withdraw_fiat_tab' %>
+
+    <%= render 'history_deposit_tab' %>
+    <%= render 'history_withdraw_tab' %>
+
+
+    </div>
+  </div>
+
+<% content_for :scripts do %>
+  <script type="text/javascript" charset="utf-8">
+
+
+      $.ajax({
+          type: "post",
+          url: "<%= gen_address_funds_path %>"
+      });
+
+      $(window).load(function(){
+          $('.collapse').on('shown.bs.collapse', function(){
+              console.log('expand');
+              $(this).parent().find(".fa-chevron-down").removeClass("fa-chevron-down").addClass("fa-chevron-up");
+          }).on('hidden.bs.collapse', function(){
+              $(this).parent().find(".fa-chevron-up").removeClass("fa-chevron-up").addClass("fa-chevron-down");
+          }); //to change icon on accordion
+
+      });
+
+      $().ready(function(){
+         $("#div_alert").delay(3500);
+         $("#div_alert").show(3000);
+
+       });
+  </script>
+  <%= javascript_include_tag "jquery.qrcode.min.js" %>
+
+<% end %>

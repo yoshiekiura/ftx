@@ -1,0 +1,8 @@
+Member e-mail: <%= @deposit.member.email %>
+Transaction ID: <%= @deposit.txid %>
+Amount: <%= Currency.find_by_code(@deposit.currency).symbol %> <%= @deposit.amount %>
+Created at: <%= @deposit.created_at %>
+Updated at: <%= @deposit.updated_at %>
+Status: <%= @deposit.aasm_state %>
+
+Source: <%= @ips.inspect %>

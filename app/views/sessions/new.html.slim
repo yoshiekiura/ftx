@@ -1,0 +1,69 @@
+.auth-wrapper
+  .auth-top
+    .auth-top-left
+      .logo
+        img src='#{image_path 'cointrade-logo.png'}'
+    .auth-top-right.nav
+      a.active href=signin_path
+        = t('header.signin')
+      a href=signup_path
+        = t('header.signup')
+
+      .clearfix
+  .auth-container
+    .auth-sub-container
+      h2 = t('header.signin').upcase
+      .auth-data
+        = simple_form_for @identity, :url => '/auth/identity/callback', :method => :post do |f|
+          .form-group
+            label
+              = t('simple_form.labels.session.client_uuid')
+              = f.input :client_uuid, :input_html => {:name => 'auth_key', :autofocus => 'true', type: "number"}, label: false, hint: false, placeholder: t('simple_form.labels.session.place_holder_client_uuid')
+            span.invalid-feedback
+              - if flash[:alert]
+                = flash[:alert]
+          .form-group
+            label
+              = t('simple_form.labels.session.password').html_safe
+            = f.input :password, :as => 'password', :input_html => {:name => 'password'}, label: false, hint: false, placeholder: t('simple_form.labels.session.place_holder_password')
+            p.help-text
+              .form-group style="padding-left: 13%"
+                = recaptcha_tags
+              .form-group
+                = f.button :submit, t('header.signin').upcase, class: "btn btn-lg btn-block btn-orange submit"
+      p.center
+        a href=new_remember_path  = t('activerecord.attributes.identity.forget_client_id')
+      p.center
+        a href=new_reset_password_path  = t('activerecord.attributes.identity.forget_password')
+      p.center
+        = t('private.settings.index.not_registered').html_safe
+        |&nbsp;
+        = ENV['RELEASE_VERSION']
+        a href=signup_path  = t("header.signup")
+    /! auth sub
+    .auth-footer
+      p
+        = t('private.settings.index.maintance_by').html_safe
+        |&nbsp;
+        a href="https://cointrade.cx/sobre-nos/" = t('private.settings.index.team_cointrade').html_safe
+        |&nbsp;
+        = t('private.settings.index.maintance_by_and').html_safe
+      ul
+        li
+          a href="https://cointrade.cx/plataforma/#porque-usar" = t('private.settings.index.why_use').html_safe
+        li
+          a href="https://cointrade.cx/plataforma/#funcionalidades" = t('private.settings.index.functionalities').html_safe
+        li
+          a href="https://cointrade.cx/faq/" = t('private.settings.index.faq').html_safe
+        li
+          a href="https://cointrade.cx/wp-content/uploads/2018/08/TERMOS-DE-SERVIC%CC%A7O.pdf" = t('private.settings.index.service_terms').html_safe
+        li
+          a href="https://cointrade.cx/wp-content/uploads/2018/08/POLI%CC%81TICA-DE-PRIVACIDADE.pdf" = t('private.settings.index.privacy').html_safe
+        li
+          = t('private.settings.index.support_link').html_safe
+
+
+
+
+
+

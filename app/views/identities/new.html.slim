@@ -1,0 +1,82 @@
+.auth-wrapper
+  .auth-top
+    .auth-top-left
+      .logo
+        img src='#{image_path 'cointrade-logo.png'}'
+    .auth-top-right.nav
+      a href=signin_path
+        = t('header.signin')
+      a.active href=signup_path
+        = t('header.signup')
+      .clearfix
+  .auth-container
+    .auth-sub-container
+      h2 = t('header.signup').upcase
+      .auth-data
+        - if !@identity.nil?
+          = simple_form_for @identity, :url => '/auth/identity/register' do |f|
+            .form-group
+              label
+                = t('activerecord.attributes.identity.email')
+              = f.input :email, :input_html => {:name => 'email', :autofocus => 'true'}, label: false, hint: false, placeholder: false
+              span.invalid-feedback
+                - if flash[:alert]
+                  = flash[:alert]
+              p.help-text
+                = t('identities.new.email-hint')
+            .form-group
+              label
+                = t('activerecord.attributes.identity.password').html_safe
+              = f.input :password, :as => 'password', :input_html => {:name => 'password'}, label: false, hint: false, placeholder: false
+              p.help-text
+                = t('private.settings.index.passwords.title')
+            .form-group
+              label
+                = t('activerecord.attributes.identity.password_confirmation').html_safe
+                = f.input :password_confirmation, :input_html => {:name => 'password_confirmation'}, label: false, hint: false, placeholder: false
+            .form-group style="padding-left: 14%"
+              = recaptcha_tags
+            .checkbox
+              input name="agree_terms" id="agree_terms_ckb" required="true" type="checkbox"  value="1"  data-toggle="modal" data-target="#myModal" onchange=("document.getElementById('btn_subscribe').disabled = !this.checked;")
+              span style="padding-left: 13%"
+              a.button data-toggle="modal" href="#myModal" = t('private.settings.index.terms_use').html_safe
+            .form-group
+              = f.button :submit, t('header.signup').upcase, id:"btn_subscribe",  disabled: true , class: "btn btn-lg btn-block btn-orange submit"
+      p.center
+        = t('private.settings.index.already_register').html_safe
+        |&nbsp;
+        a href=signin_path = t("header.signin")
+    .auth-footer
+      p
+        = t('private.settings.index.maintance_by').html_safe
+        |&nbsp;
+        a href="https://cointrade.cx/sobre-nos/" = t('private.settings.index.team_cointrade').html_safe
+        |&nbsp;
+        = t('private.settings.index.maintance_by_and').html_safe
+      ul
+        li
+          a href="https://cointrade.cx/plataforma/#porque-usar" = t('private.settings.index.why_use').html_safe
+        li
+          a href="https://cointrade.cx/plataforma/#funcionalidades" = t('private.settings.index.functionalities').html_safe
+        li
+          a href="https://cointrade.cx/faq/" = t('private.settings.index.faq').html_safe
+        li
+          a href="https://cointrade.cx/wp-content/uploads/2018/08/TERMOS-DE-SERVIC%CC%A7O.pdf" = t('private.settings.index.service_terms').html_safe
+        li
+          a href="https://cointrade.cx/wp-content/uploads/2018/08/POLI%CC%81TICA-DE-PRIVACIDADE.pdf" = t('private.settings.index.privacy').html_safe
+        li
+          a href="https://cointrade.zendesk.com/hc/pt-br/requests/new" target="_blank" = t('private.settings.index.support').html_safe
+
+  #myModal.modal
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close aria-hidden="true" data-dismiss="modal" type="button"  ×
+          h4.modal-title = t('private.settings.index.service_terms').html_safe
+        .modal-body
+          p = t('js.auth.term_agree').html_safe
+        .modal-footer
+          span style="padding-left: 11%;color: #35d59d" = t('private.settings.index.igree').html_safe
+          input name="agree_terms" id="agree_terms" data-dismiss="modal" required="true" type="checkbox"  value="1"  onchange=("document.getElementById('btn_subscribe').disabled = !this.checked;")
+          / button.btn-success  id="btn_close_term"   data-dismiss="modal" Fechar
+

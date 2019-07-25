@@ -1,0 +1,18 @@
+.row
+  .col-xs-12
+    .panel.panel-primary
+      .panel-heading
+        span = t('.deposit', sn: @dash.id)
+      .panel-body
+        = description_for :deposit do
+          = item_for @dash, :id
+          = item_for @dash, :created_at
+          = item_for @dash, :aasm_state_text
+          hr.split
+          = item_for @dash, :amount
+
+  .col-xs-12
+    = render partial: 'shared/admin/member', locals: {member: @dash.member}
+    = render partial: 'shared/admin/account', locals: {account: @dash.account}
+    - if @dash.txout_info
+	  = render partial: 'shared/admin/txout_info', locals: {info: @dash.txout_info}

@@ -1,0 +1,45 @@
+
+<div class="deposit-info col-sm-8" >
+  <p class="address-label"><b>{{'funds.deposit_coin.address' | t}}</b></p>
+  <div class="input-group mb-3" style="display: flex">
+    <input type="text"  id="deposit_address" class="input-tag-custom" aria-describedby="button-addon2" value="{{account.deposit_address.split('_')[0]}}" readonly>
+    <button data-clipboard-text="{{account.deposit_address.split('_')[0]}}" onclick="copyToClipBoard('deposit_address', this)" class="btn btn-dark" style="width: 77px"><i class="fas fa-copy"></i> {{'funds.deposit_coin.copy' | t}}</button>
+  </div>
+  <br>
+  <p class="address-label"><b>*TAG</b></p>
+  <div class="input-group mb-3" style="display: flex">
+    <input type="text"  id="tag_xrp" class="input-tag-custom"  aria-describedby="button-addon2" value="{{account.deposit_address.split('_')[1]}}" readonly>
+    <button onclick="copyToClipBoard('tag_xrp', this)" class="btn btn-dark" style="width: 77px"><i class="fas fa-copy"></i> {{'funds.deposit_coin.copy' | t}}</button>
+  </div>
+
+  <div style="color: #EA5E6E; margin-top: 5px; font-size: 13px">
+    <span  class="address" id="tag_xrp_tip">{{'funds.deposit_coin.tag_xrp_tip' | t}}</span><br/>
+    <span  class="address" id="tag_xrp_tip_2">{{'funds.deposit_coin.tag_xrp_tip_2' | t}}</span>
+  </div>
+  <br>
+  <br>
+
+ <!-- <p class="address-label"><b>{{'funds.deposit_coin.insertTxid' | t}}</b></p>
+  <div class="input-group mb-3" style="display: flex" ng-controller="DepositTxidInformedController">
+    <form ng-submit="myFunc()">
+      <div style="display: flex;">
+        <input type="text"  ng-model="txid_by_user" id="txid" class="input-tag-custom" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-orange" type="submit" data-placement="right" style="width: 77px"> {{'submit' | t}} </button>
+      </div>
+    </form>
+  </div>-->
+  <!--<p style="color:#eaa45e">
+    {{'funds.deposit_coin.txidText' | t}} <br>
+    {{'funds.deposit_coin.txidText2' | t}}
+    <a href="#dep-history" data-toggle="tab">  {{'funds.deposit_coin.click' | t}} </a>
+  </p>-->
+
+
+  <!--<p class="address-label"><b>TAG ID</b></p>-->
+  <!--<p  class="address" id="id_ripple">TAG ID</p>-->
+  <!--<br>-->
+</div>
+
+
+</div>
+

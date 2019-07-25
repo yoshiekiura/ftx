@@ -1,0 +1,22 @@
+- unless banks.empty?
+  = table_for(banks, class: 'table table-condensed') do |t|
+    - t.column :sn, class: 'col-xs-2'
+    - t.column :created_at, class: 'col-xs-4'
+    - t.column :currency_obj_key_text, t('.currency'), class: 'col-xs-2'
+    - t.column :member_name, t('.name'), class: 'col-xs-3' do |x|
+      = link_to x.member_name, url_for([:admin, x.member]), target: '_blank'
+    - t.column :fund_source, t('.fund_source'), class: 'col-xs-5' do |x|
+      - if x.fund_uid.nil? or x.fund_uid.exclude? "Deposits::Slips::"
+        span #{bank_code_to_name x.fund_extra} # #{x.fund_uid}
+        - else
+        span #{x.fund_uid}
+    - t.column :amount, class: 'col-xs-3' do |x|
+      code.text-info = x.amount
+    - t.column :state_and_actions, t('.action'), class: 'col-xs-3' do |x|
+      span = "#{x.aasm_state_text} / "
+      - if x.fund_uid.nil? or x.fund_uid.exclude? "Deposits::Slips::"
+        = link_to t("actions.view"), url_for([:admin, x])
+      - else
+        = link_to t("actions.view"), admin_deposits_deposit_slip_path(x)
+
+.pull-right = paginate banks

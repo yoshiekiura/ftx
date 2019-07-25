@@ -1,0 +1,36 @@
+doctype html
+html lang="en" ng-app="app"
+  head
+    link href="/favicon.ico" rel="shortcut icon"
+    = include_gon
+    - stylesheet = content_for?(:stylesheet) ? yield(:stylesheet) : "application"
+    = stylesheet_link_tag stylesheet, media: "all"
+    - if body_id == "sessions-new" or body_id == "identities-new" or body_id == "reset_passwords-new" or body_id == "reset_passwords-edit" or body_id=="remembers-new"
+      = stylesheet_link_tag "auth", media: "all"
+    = javascript_include_tag "application"
+    = javascript_include_tag "locales/#{I18n.locale}"
+    = yield(:scripts) if content_for?(:scripts)
+    = render 'shared/html5'
+    = render 'shared/meta'
+    = csrf_meta_tags
+
+  body id='#{body_id}' data-lang="#{locale_name}"
+    = render 'shared/alert'
+    - unless body_id == "sessions-new" or body_id == "identities-new" or body_id == "reset_passwords-new" or body_id == "reset_passwords-edit" or body_id=="remembers-new"
+      .container-fluid
+        - if content_for?(:header)
+          = yield(:header)
+        - else
+          = render 'shared/header'
+
+        - if content_for?(:frame)
+          = yield(:frame)
+        - else
+          = render 'shared/frame'
+
+        - if content_for?(:footer)
+          = yield(:footer)
+        - else
+          = render 'shared/footer'
+    - else
+      = render 'shared/frame'

@@ -1,0 +1,175 @@
+defaults: &defaults
+  SERVER_TYPE: 'live'
+
+  # sites hosts
+  URL_HOST: <%= ENV['URL_HOST'] %>
+  INSTITUTIONAL_HOST: 'http://cointrade.cx'
+  HOST_PILOT: 'https://pilot.cointrade.cx'
+  URL_SCHEMA: http
+
+  #Captcha google
+  SITE_CAPTCHA_KEY: ''
+  SITE_CAPTCHA_SECRET_KEY: ''
+
+  # session expire seconds
+  SESSION_EXPIRE: 30
+  DEPOSIT_MODAL_EXPIRE: 300
+
+  # admin role account
+  ADMIN: ''
+  FINANCIAL: ''
+  SUPPORT: ''
+  TIMEZONE: 'America/Sao_Paulo'
+
+  # Stratum API config
+  STRATUM_USER: ''
+  STRATUM_SECRET: ''
+  STRATUM_HOST: ''
+  STRATUM_DEV: false
+  
+  # Samurai API config
+  SAMURAI_HOST: ''
+  SAMURAI_AUTHORIZATION: ''
+
+  # Notifications API configs
+  NOTIFICATIONS_API:  ''
+  NOTIFICATIONS_API_USER: ''
+  NOTIFICATIONS_API_PWD64: '
+
+  # Ignore specific domains on validation csrf_token
+  CSRF_SKIP_DOMAIN: 'webshare.com.br,cointradesite.webshare.com.br,tronipay.com,localhost,devel.cointrade.local,rc.cointrade.local,exchange.cointrade.cx,cointrade.cx'
+  
+  # Limitation account registers - Creator jira:[CO-5]
+  # set -1 to unlimited
+  LIMIT_ACCOUNT: 999999999999
+
+  REDIS_URL: redis://<%= ENV['REDIS_ADDR'] %>
+
+  # below settings only in production env
+  # system notify mail settings
+  # --------------------------------------------------------------
+ # Mailgun configs
+   # N = dont send
+   # Y = send
+   #-------------
+  MAILGUN_SEND_DEPOSIT: 'Y'
+   #-DEPOSIT
+   # accepted
+   # created
+  MAILGUN_SEND_MEMBER: 'Y'
+   #-MEMBER
+   # notify_signin
+   # google_auth_deactivated
+   # google_auth_activated
+   # reset_password_done
+  MAILGUN_SEND_WITHDRAW: 'Y'
+   #WITHDRAW
+   # submitted
+   # processing
+   # done
+   # withdraw_state
+  MAILGUN_SEND_TOKEN: 'Y'
+   #TOKEN
+   #reset_password
+   #activation
+   #remember_id
+  NOTIFICATION_SEND_SYSTEM: 'Y'
+  #balance_warning
+  #notification_error
+  #samurai_persistence_error
+  #samurai_status_error
+  #deposit_slip_status_error
+  #samurai_status_change
+  #withdraw_status_change
+  #wallet_mapping_error
+  #address_generator_error
+  #stratum_balance_none
+  #stratum_withdraw_error
+  #stratum_operation_error
+  #trade_execute_error
+  #order_processor_error
+  MAILGUN_API_KEY: ''
+  MAILGUN_SECRET_KEY: ''
+  MAILGUN_PUBLIC_KEY: ''
+  MAILGUN_FROM: ''
+
+  MAILGUN_SMTP_PORT: 587
+  SMTP_DOMAIN: ''
+  MAILGUN_SMTP_SERVER: ''
+  MAILGUN_SMTP_LOGIN: ''
+  MAILGUN_SMTP_PASSWORD: ''
+  SMTP_AUTHENTICATION: plain
+
+  SUPPORT_MAIL: ''
+  SYSTEM_MAIL_FROM: ''
+  SYSTEM_MAIL_TO: ''
+  OPERATE_MAIL_TO: ''
+
+  # WebSocket Streaming API settings
+  # --------------------------------------------------------------
+  WEBSOCKET_HOST: 0.0.0.0
+  WEBSOCKET_PORT: 8080
+  # Uncomment below to enable secure WebSocket (wss)
+
+
+  # pusher settings
+  # --------------------------------------------------------------
+  # peatio dependence Pusher (http://pusher.com) service
+  # you can change your key for production environment.
+  # we support development key and secret
+  # uncomment below line only development or test
+  #
+
+  PUSHER_APP: 546880
+  PUSHER_KEY: 
+  PUSHER_SECRET: 
+  PUSHER_ENCRYPTED: true
+  PUSHER_CLUSTER: us2
+
+  # twilio setting
+  # --------------------------------------------------------------
+  # https://github.com/twilio/twilio-ruby
+  #
+  #TWILIO_NUMBER: YOUR_TWILIO_NUMBER
+  #TWILIO_SID: YOUR_TWILIO_SID
+  #TWILIO_TOKEN: YOUR_TWILIO_TOKEN
+
+
+  # Third party auth
+
+  # Weibo
+  # --------------------------------------------------------------
+  WEIBO_AUTH: off # on/off
+  #WEIBO_KEY: 3820920586
+  #WEIBO_SECRET: 2d6174dc698e86860c75d75b1e8a01c8
+
+  #Turn doc validation on/off
+  KYC_SETTINGS: off
+
+  #Turn phone settings on/off
+  PHONE_SETTINGS: off
+
+  #turn api settings on/off
+  # when "admin" the api settings will be shown just for administrators
+  API_ENABLED: admin
+
+  #Turn solvency menu on/off
+  SOLVENCY_MENU: on
+  SOLVENCY_MENU_ADMIN_OLNY: on
+
+  # chat setting
+  # --------------------------------------------------------------
+  # Do you want chat feature in your exchange ?
+  # send mail to community@peatio.com
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+
+pilot:
+  <<: *defaults

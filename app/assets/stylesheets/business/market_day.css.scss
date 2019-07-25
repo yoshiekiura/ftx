@@ -1,0 +1,303 @@
+/*All Features */
+
+.feature {
+    background: #fff;
+}
+
+
+.feature-header {
+    color: #3c656d;
+}
+
+.feature-container {
+    border-top: 1px solid #7d8e98;
+}
+
+.split .header-pill a {
+    color: #7d8e98;
+  }
+  
+.split .header-pill a.active {
+      color: #3c656c;
+    }
+  
+.split .header-pill a:hover {
+      color: #3c656c;
+    }
+
+.feature input {
+    border: 1px solid #7d8e98;
+    background-color: transparent;
+    color: #333;
+}
+
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #333;
+    opacity: 1; 
+}
+
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #333;
+}
+
+input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #a1b5c1;
+}
+
+.feature input:hover {
+    border: 1px solid #7d8e98;
+}
+
+.feature-header input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:  #7d8e98;
+    opacity: 1; /* Firefox */
+}
+
+ /* Tooltip */
+ .betahint > .tooltip-inner {
+    max-width: 600px;
+    padding: 3px 8px;
+    color: white;
+    text-align: center;
+    background-color: #A85A5A;
+    border-radius: 4px;
+  }
+
+ .tooltip > .tooltip-inner {
+    background-color: #242c31; 
+    color: #ddd; 
+    border: 1px solid #242c31;
+}
+.tooltip.top > .tooltip-arrow {
+    border-top: 5px solid #242c31;
+}
+
+.tooltip.right > .tooltip-arrow {
+    border-right: 5px solid #242c31;
+}
+
+.tooltip.bottom > .tooltip-arrow {
+    border-bottom: 5px solid #242c31;
+}
+
+/*Feature Tabs*/
+
+
+.nav-tabs {
+    border-bottom: 1px solid #7d8e98;
+}
+
+.nav-tabs>li>a {
+    color: #7d8e98;
+    border:none;
+    
+}
+
+.nav-tabs>li>a:hover {
+    background: transparent;
+    color: #3c656c;
+    border:none;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    color: #3c656c;
+    background: transparent;
+}
+
+/*Feature Tables*/
+
+
+.feature table td {
+    color: #333;
+}
+
+.feature table th,
+.feature .column.th
+
+{
+    color: #3c656c;
+    border-bottom: 1px solid #7d8e98;
+}
+
+.feature table th .sort i.active {
+    color:rgb(77, 168, 183);
+}
+
+
+.feature table tr.active td {
+    background: #dae1e2  !important;
+}
+
+.feature table tr.bought td {
+    background: #24b7405e !important;
+}
+
+.feature table tr.sold td {
+    background: #ce4f3d4f !important;
+}
+
+
+
+/*Balances*/
+
+
+#balances-container tr:nth-child(even) td{
+    background: #f4f5fa;
+}
+
+
+
+/*TICKER*/
+
+
+#ticker-container tr:nth-child(even) td{
+    background: #f4f5fa;
+}
+
+
+#ticker tr:hover {
+    background: #d4dad6;
+}
+
+.ticker-fav-links a {
+    color: #a1b5c1;
+}
+
+.ticker-fav-links a:hover,
+.ticker-fav-links a.active
+ {
+    color: #ddd;
+}
+
+
+/*ORDER FORMS*/
+
+
+
+    .of-container {
+        color: #3c656d;
+    }
+
+    .of-inputs .input-group-addon {
+        color: #fff;
+        background-color: #3c656e;
+        border: 1px solid #3c656e;
+    }
+
+    .of-inputs input {
+        border: 1px solid #3c656e;
+        background-color: transparent;
+    }
+
+
+    /*spinner......................................................................................................*/
+
+
+    .spinner-field .input {
+        color: #333;
+    }
+
+    .spinner .btn {
+        background: transparent;
+        color: #3c656d;
+
+    }
+
+
+    /*stop checkbox............................................................................................................*/
+
+
+    .custom_checkbox label {
+        background: #f25757;
+        color: #fff;
+        border: 1px solid #f25757;
+    }
+
+    .custom_checkbox  label span::before {
+        border: solid 1px #fff;
+        color: #fff;  
+    }
+
+
+
+/*ORDERS*/
+
+/*Orders Table*/
+
+
+
+#orders .pairSwitch, .allSwitch{
+    background-color: #ff8d01;
+    color: #fff;
+}
+
+#orders .feature-table .column.td {
+    color: #333;
+}
+
+
+.order-pair-header .td.open{
+    background: #eaebf3;
+}
+
+.order-pair-row:nth-child(even) .td  {
+    background: #f4f5fa;
+}
+
+
+/*ORDERBOOK*/
+
+#orderbook tbody{
+    background-color: #fff;
+}
+
+#buy-ob tr:nth-child(even) td {
+    background: #f4f5fa;
+}
+
+
+/*Trades*/
+
+
+#orderbook tr:nth-child(2n+1) {
+    background: transparent;
+}
+
+
+#tb-trades .fa-angle-down {
+    color: #c84332;
+}
+
+#tb-trades .fa-angle-up {
+    color:#00b36b;
+}
+
+
+/*MARKET MODALS*/
+
+    /*Deposit Modal*/
+
+
+    #ledger-modal table tr:nth-child(odd) td {
+        background: #f4f5fa;
+    }
+
+
+
+/*Features Responsive*/
+
+
+
+@media screen and (max-width:767px){
+
+    /*all features*/
+
+
+    .split  .header-pill {
+        background: #f4f5fb;
+    }
+
+
+}

@@ -1,0 +1,47 @@
+.top-bar
+  .nav.main-nav.col-sm-6
+    .logo
+      a.desktop-md href='#{welcome_path}'
+        img src='#{image_path 'logo.png'}'
+      a.mobile.mobile-md href='#{welcome_path}'
+        img src='#{image_path 'cointrade-symbol.png'}'
+
+    #menu.main-nav-links
+      .header-left
+        = link_to(t('header.trading'), market_v2_path(current_market.id)) if current_user and !is_financial?
+        = link_to(t('header.reports'), order_history_v2_path, controllers: ['reports']) if current_user and !is_financial?
+        / = link_to(t('header.markets_overview'), market_overview_path ) if current_user
+        - if locale_name == 'pt-br'
+          a href=t('footer.link_help') target="_blank"
+            = t('header.support')
+        - else
+          a href=t('footer.link_help_en') target="_blank"
+            = t('header.support')
+
+  .nav.sec-nav.col-sm-6 ng-controller="TabsController"
+    .nav-right-aling
+      - if !is_financial?
+        a ng-click="changeLocationToDeposits()" style="cursor: pointer" ng-class="{activemenu: {{deposit}} }"
+          i.fas.fa-plus
+          = t('private.history.transaction.Deposit')
+
+      a ng-click="changeLocationToWithdraws();showBtnSubmit()" style="cursor: pointer;" ng-class="{activemenu: {{withdraw}} }"
+
+        i.fas.fa-minus-circle
+        = t('private.history.transaction.Withdraw')
+      a href=settings_path data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Settings"
+        i.fas.fa-cog
+      - if is_admin? or is_supporter?
+        a#admin_icon href=admin_dashboard_path
+          i.fas.fa-user-lock
+      a href=signout_path
+        i.fas.fa-sign-out-alt
+      .header-right
+        li.dropdown style="list-style: none;"
+          a.dropdown-toggle href="#" data-toggle="dropdown" style="background-color:#38434a; margin-left:10px;"
+            img src='#{language_path}'
+            b.caret
+          ul#languages.dropdown-menu style="list-style: none; min-width: 0px; background-color:#29363e;"
+            - I18n.available_locales.each do |lang|
+              li: a href="?lang=#{lang}": img src="/languages/#{lang || I18n.locale}.png"
+        .clearfix

@@ -1,0 +1,56 @@
+#balances.feature
+  .feature-header
+    .feature-title data-toggle="collapse" data-target="#balances-container"
+      i.fas.fa-chevron-up.mobile.mobile-smd
+      |&nbsp;
+      i.fas.fa-wallet
+      |&nbsp;
+      = t('private.shared.balances.balance').upcase
+
+  #balances-container.feature-container.collapse.in
+    table
+      thead
+        tr.feature-subheader
+          th.clickable = t('private.markets.account_balance.coin')
+          th.clickable = t('private.markets.account_balance.available')
+          th.clickable = t('private.markets.account_balance.action')
+      tbody#mybalance
+        - if current_user
+          - current_user.accounts.each do |account|
+            - currency = account.currency_obj.code_text
+            tr
+              - if account.currency_obj[:maintenance]
+                td.disabled
+                  - if currency == 'ZCR' or currency == 'TUSD'
+                    = currency
+                    i.betahint style=("font-size: 8px;color: #E87171;bottom: 0;float: left;")   Indisponível no momento
+                    a.betahint data-placement="right" data-html="true" title="#{t('shared.market.beta_crypo.text')}" href="#" style=("position: absolute;font-size: 6pt;padding: 3px 1px 3px;color: #E87171;")   BETA
+                  - else
+                    = currency
+                    i.betahint style=("font-size: 8px;color: #E87171;bottom: 0;float: left;")   Indisponível no momento
+                td.account.disabled class = currency.downcase
+                  span.balance
+              - else
+                td
+                  - if currency == 'ZCR' or currency == 'TUSD'
+                    = currency
+                    a.betahint data-placement="right" data-html="true" title="#{t('shared.market.beta_crypo.text')}" href="#" style=("position: absolute;font-size: 6pt;padding: 3px 1px 3px;color: #E87171;")   BETA
+                  - else
+                    = currency
+                    - if currency == 'XEM' or currency == 'RBTC' or currency == 'RIF'
+                      a.betahint data-placement="right" data-html="true" href="#" style=("position: absolute;font-size: 6pt;padding: 3px 1px 3px;color: #E87171;")   =t('private.markets.account_balance.soon')
+                  td.account class = currency.downcase
+                    span.balance
+
+              td
+                - if currency == 'BRL'
+                  a href='#{funds_path}#deposits/#{currency.downcase}'
+                    i.fa.fa-plus
+                  a href='#{funds_path}#withdraws/#{currency.downcase}'
+                    i.fa.fa-minus-circle
+                - else
+                  a href='#{funds_path}#deposits/#{currency.downcase}'
+                    i.fa.fa-qrcode
+                  a href='#{funds_path}#withdraws/#{currency.downcase}'
+                    i.fas.fa-paper-plane
+

@@ -1,0 +1,148 @@
+
+- id: 400
+  key: bank
+  currency: brl
+  fixed: 2
+  fee_max: 0
+  min: 100
+  max: 50000
+  fee: 0.0000
+  proportion: true
+  inuse: true
+  type: WithdrawChannelBank
+
+- id: 500
+  key: btc
+  currency: btc
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChannelbtc
+
+- id: 600
+  key: bch
+  currency: bch
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChannelbch
+
+- id: 700
+  key: btg
+  currency: btg
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChannelbtg
+
+- id: 800
+  key: dash
+  currency: dash
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChanneldash
+
+- id: 900
+  key: eth
+  currency: eth
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChanneleth
+
+- id: 1000
+  key: zec
+  currency: zec
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChannelzec
+
+- id: 1100
+  key: dgb
+  currency: dgb
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChanneldgb
+
+- id: 1200
+  key: xrp
+  currency: xrp
+  fixed: 6
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChannelxrp
+
+- id: 1300
+  key: smart
+  currency: smart
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChannelsmart
+
+#- id: 1400
+#  key: iota
+#  currency: iota
+#  fixed: 8
+#  fee: 0.0000
+#  inuse: true
+#  type: WithdrawChanneliota
+
+- id: 1500
+  key: ltc
+  currency: ltc
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChannelltc
+  
+- id: 1600
+  key: zcr
+  currency: zcr
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChannelzcr
+
+- id: 1700
+  key: tusd
+  currency: tusd
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChanneltusd
+
+- id: 1800
+  key: xem
+  currency: xem
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChannelxem
+
+- id: 1900
+  key: rbtc
+  currency: rbtc
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChannelrbtc
+
+- id: 2000
+  key: rif
+  currency: rif
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChannelrif
+
+- id: 2100
+  key: xar
+  currency: xar
+  fixed: 8
+  fee: 0.0000
+  inuse: true
+  type: WithdrawChannelxar

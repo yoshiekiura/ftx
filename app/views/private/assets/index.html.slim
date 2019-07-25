@@ -1,0 +1,31 @@
+= content_for :frame do
+  .container
+    ul.nav.nav-justified.assets-nav
+      li.active data-scroll-nav='0'
+        a = t('.liability-proof')
+      li        data-scroll-nav='1'
+        a = t('.btc-assets')
+      li        data-scroll-nav='2'
+        a = t('.brl-assets')
+
+    - if current_user
+      div data-scroll-index=0 = render 'liability_proof'
+
+    div data-scroll-index=1 = render 'btc_assets'
+    div data-scroll-index=2 = render 'brl_assets'
+
+    div data-scroll-index=3 = render 'bch_assets'
+    div data-scroll-index=4 = render 'btg_assets'
+    div data-scroll-index=5 = render 'dash_assets'
+    div data-scroll-index=6 = render 'eth_assets'
+    div data-scroll-index=7 = render 'dgb_assets'
+    div data-scroll-index=8 = render 'zec_assets'
+    div data-scroll-index=9 = render 'xrp_assets'
+    div data-scroll-index=10 = render 'smart_assets'
+	div data-scroll-index=11 = render 'zcr_assets'
+	div data-scroll-index=12 = render 'tusd_assets'
+    div data-scroll-index=13 = render 'xem_assets'
+    div data-scroll-index=14 = render 'rbtc_assets'
+    div data-scroll-index=15 = render 'rif_assets'
+    div data-scroll-index=16 = render 'xar_assets'
+

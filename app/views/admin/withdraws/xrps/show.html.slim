@@ -1,0 +1,32 @@
+.row
+  .col-xs-12
+    .panel.panel-primary
+      .panel-heading
+        span = t('.withdraw', sn: @xrp.id)
+      .panel-body
+        = description_for :withdraw do
+          = item_for @xrp, :id
+          = item_for @xrp, :created_at
+          = item_for @xrp, :aasm_state_text
+          hr.split
+          = item_for @xrp.member, :name
+          = item_for @xrp, :fund_extra
+          = item_for @xrp, :fund_uid do
+            span = @xrp.fund_uid.truncate(22)
+          = item_for @xrp, :amount
+          hr.split
+          = item_for @xrp, :remark
+          hr.split
+          ul.list-inline.pull-right
+            - if @xrp.may_reject?
+              li
+              = link_to t('.reject'), url_for([:admin, @xrp]), class: 'btn btn-danger', method: 'DELETE', confirm: t('.reject_confirm')
+            - if @xrp.may_process?
+              li
+                = link_to t('.process'), url_for([:admin, @xrp]), class: 'btn btn-primary', method: 'PATCH'
+
+  .col-xs-12
+    = render partial: 'shared/admin/member', locals: {member: @xrp.member}
+    = render partial: 'shared/admin/account', locals: {account: @xrp.account}
+    - if @xrp.txout_info
+	  = render partial: 'shared/admin/txout_info', locals: {info: @xrp.txout_info}

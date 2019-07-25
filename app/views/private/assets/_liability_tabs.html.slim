@@ -1,0 +1,149 @@
+.tabbable
+  ul.nav.nav-tabs
+    li.active: a.btc-proof href="#btc-proof" data-toggle="tab" == t('.verify-btc')
+    li:        a.brl-proof href="#brl-proof" data-toggle="tab" == t('.verify-brl')
+
+    li:        a.bch-proof href="#bch-proof" data-toggle="tab" == t('.verify-bch')
+    li:        a.btg-proof href="#btg-proof" data-toggle="tab" == t('.verify-btg')
+    li:        a.dash-proof href="#dash-proof" data-toggle="tab" == t('.verify-dash')
+    li:        a.eth-proof href="#eth-proof" data-toggle="tab" == t('.verify-eth')
+    li:        a.dgb-proof href="#dgb-proof" data-toggle="tab" == t('.verify-dgb')
+    li:        a.zec-proof href="#zec-proof" data-toggle="tab" == t('.verify-zec')
+    li:        a.xrp-proof href="#xrp-proof" data-toggle="tab" == t('.verify-xrp')
+    li:        a.smart-proof href="#smart-proof" data-toggle="tab" == t('.verify-smart')
+	li:        a.zcr-proof href="#zcr-proof" data-toggle="tab" == t('.verify-zcr')
+	li:        a.tusd-proof href="#tusd-proof" data-toggle="tab" == t('.verify-tusd')
+    li:        a.xem-proof href="#xem-proof" data-toggle="tab" == t('.verify-xem')
+    li:        a.rbtc-proof href="#rbtc-proof" data-toggle="tab" == t('.verify-rbtc')
+    li:        a.rif-proof href="#rif-proof" data-toggle="tab" == t('.verify-rif')
+    li:        a.xar-proof href="#xar-proof" data-toggle="tab" == t('.verify-xar')    
+    
+
+  .tab-content
+    #btc-proof.tab-pane.active: .trade-wrapper
+      .assets
+        span.title = t('.btc-assets-total')
+        span.currency
+          == t("currency.icon.btc")
+          = @btc_proof.sum
+      = render 'liability_data', account: @btc_account, proof: @btc_proof
+
+    #brl-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.brl-assets-total')
+        span.currency
+          == t("currency.icon.brl")
+          = @brl_proof.sum
+      = render 'liability_data', account: @brl_account, proof: @brl_proof
+
+    #bch-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.bch-assets-total')
+        span.currency
+          == t("currency.icon.bch")
+          = @bch_proof.sum
+      = render 'liability_data', account: @bch_account, proof: @bch_proof
+
+    #btg-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.btg-assets-total')
+        span.currency
+          == t("currency.icon.btg")
+          = @btg_proof.sum
+      = render 'liability_data', account: @btg_account, proof: @btg_proof
+
+    #dash-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.dash-assets-total')
+        span.currency
+          == t("currency.icon.dash")
+          = @dash_proof.sum
+      = render 'liability_data', account: @dash_account, proof: @dash_proof
+
+    #eth-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.eth-assets-total')
+        span.currency
+          == t("currency.icon.eth")
+          = @eth_proof.sum
+      = render 'liability_data', account: @eth_account, proof: @eth_proof
+
+    #dgb-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.dgb-assets-total')
+        span.currency
+          == t("currency.icon.dgb")
+          = @dgb_proof.sum
+      = render 'liability_data', account: @dgb_account, proof: @dgb_proof
+
+    #zec-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.zec-assets-total')
+        span.currency
+          == t("currency.icon.zec")
+          = @zec_proof.sum
+      = render 'liability_data', account: @zec_account, proof: @zec_proof
+
+    #xrp-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.xrp-assets-total')
+        span.currency
+          == t("currency.icon.xrp")
+          = @xrp_proof.sum
+      = render 'liability_data', account: @xrp_account, proof: @xrp_proof
+
+    #smart-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.smart-assets-total')
+        span.currency
+          == t("currency.icon.smart")
+          = @smart_proof.sum
+      = render 'liability_data', account: @smart_account, proof: @smart_proof
+	
+	#zcr-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.zcr-assets-total')
+        span.currency
+          == t("currency.icon.zcr")
+          = @zcr_proof.sum
+      = render 'liability_data', account: @zcr_account, proof: @zcr_proof
+	  
+	#tusd-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.tusd-assets-total')
+        span.currency
+          == t("currency.icon.tusd")
+          = @tusd_proof.sum
+      = render 'liability_data', account: @tusd_account, proof: @tusd_proof
+
+    #xem-proof.tab-pane: .trade-wrapper
+      .assets
+        span.title = t('.tusd-assets-total')
+        span.currency
+          == t("currency.icon.xem")
+          = @xem_proof.sum
+      = render 'liability_data', account: @xem_account, proof: @xem_proof        
+
+    #rbtc-proof.tab-pane: .trade-wrapper
+      .assets
+        span.title = t('.rbtc-assets-total')
+        span.currency
+          == t("currency.icon.rbtc")
+          = @rbtc_proof.sum
+      = render 'liability_data', account: @rbtc_account, proof: @rbtc_proof  
+
+    #rif-proof.tab-pane: .trade-wrapper
+      .assets
+        span.title = t('.rif-assets-total')
+        span.currency
+          == t("currency.icon.rif")
+          = @rif_proof.sum
+      = render 'liability_data', account: @rif_account, proof: @rif_proof    
+      
+    #xar-proof.tab-pane: .trade-wrapper
+      .assets
+        span.title = t('.xar-assets-total')
+        span.currency
+          == t("currency.icon.xar")
+          = @xar_proof.sum
+      = render 'liability_data', account: @xar_account, proof: @xar_proof        

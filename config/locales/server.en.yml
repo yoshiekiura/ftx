@@ -1,0 +1,3407 @@
+en:
+  activerecord:
+    browser_message:
+      info: Your browser is not compatible with this version. We are not responsible for any problems that occur occasionally in the operation of the platform.
+      icon: <i class="fas fa-exclamation-triangle"></i>
+      info_browser: Compatible browsers
+    divice_message:
+      info: Your device is not compatible with this version.<br> We are not responsible for any problems that may cause a malfunction of the platform.
+      info_device: Compatible device
+      icon: <i class="fas fa-desktop"></i>
+      device: Computer
+    models:
+      api_tokens: API Token
+      partner: Partner
+      trade: Trades
+      order: Orders
+      order_bid: BID
+      order_ask: ASK
+      document: Document
+      withdraw: Withdraw
+      deposit: Deposit
+      payment_transaction: Payment
+      id_document: ID Document
+      statistic/orders_grid: Orders Stat
+      statistic/trades_grid: Trading Stat
+      statistic/members_grid: Members Stat
+      statistic/deposits_grid: Deposits Stat
+      statistic/withdraws_grid: Withdraws Stat
+      admin/deposits_grid: Deposits
+      admin/withdraws_grid: Withdraws
+      deposits/bank: Deposit Bank
+      withdraws/bank: Withdraw Bank
+      withdraws/satoshi: Withdraw
+    attributes:
+      api_token:
+        access_key: Access Key
+        trusted_ip_list: IP Whitelist
+        ip_whitelist: IP Whitelist
+        label: Label
+        actions: Actions
+      identity:
+        email: Email
+        client_uuid: Client ID
+        password: New Password
+        password_confirmation: Confirm Password
+        forget_password: Forgot your password?
+        forget_client_id: Forgot your client id?
+      document:
+        zh_cn_body: Chinese content
+        zh_cn_title: Chinese title
+        zh_cn_desc: Chinese description
+        zh_cn_keywords: Chinese keyword
+        en_body: English content
+        en_title: English title
+        en_desc: English description
+        en_keywords: English keyword
+        key: Key
+        is_auth: Is Auth
+      fund_source:
+        address: Address
+        category: Category
+        label: Label
+      account:
+        currency: Currency
+        currency_text: Currency
+        balance_and_locked: Balance / Locked
+        balance: Balance
+        locked: Frozen
+      deposit:
+        state: State
+        tx_id: TxID
+        member_id: Member ID
+        created_at: Submitted at
+        address: Address
+        amount: Amount
+        done_at: Completed at
+        sn: SN
+      withdraw:
+        id: ID
+        sn: SN
+        withdraw_id: ID
+        created_at: Created At
+        done_at: Done At
+        sum: Sum
+        fee: Fee
+        currency: Currency
+        amount: Amount
+        address: Address
+        state: Status
+        state_text: Status
+        tx_id: TxID
+        fund_source_id: Withdraw address
+        detail: Detail
+      account_version:
+        id: ID
+        locked: Forzen
+        amount: Amount
+        balance: Balance
+        reason: Reason
+        reason_text: Reason
+        modifiable_id: LINK ID
+        modifiable_type: LINK
+        created_at: Created At
+        in: Income
+        out: Expenses
+        fee: Fee
+      token/reset_password:
+        email: Sign in email
+        client_uuid: Client ID
+        member: Member
+      token/remember_id:
+        email: Sign in email
+        sign_email: Enter your email address
+        client_uuid: Client ID
+        member: E-mail
+      trade:
+        bid: Bid
+        ask: Ask
+        fee: Fee
+        price: Strike Price
+        volume: Strike Volume
+        category: Bid/Ask
+        order: Order
+      order:
+        bid: Bid
+        ask: Ask
+        price: Price
+        total: Total
+        volume: Volume
+        origin_volume: Volume
+        sum: Sum
+        category: Bid/Ask
+        kind: Kind
+        at: At
+        id: ID
+        state: State
+        operation: Operation
+      payment_transaction:
+        at: Date Time
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmations
+        state: State
+        state_done: Done
+        state_wait: Wait
+      member:
+        id: ID
+        name: Real Name
+        display_name: Display Name
+        email: Email
+        client_uuid: Client ID
+        created_at: Register At
+        sn: SN
+        id_document_number: Id Document Number
+        tag_list: Tags
+        activated: Activated
+        activated?: "Activated?"
+        id_document_verified?: "Id Document Verified?"
+        two_factor_activated?: "Tow Factor Activated?"
+        phone_number: Phone Number
+      two_factor/sms:
+        country: Country
+        phone_number: Phone Number
+        otp: Verify Code
+      withdraws/bank:
+        id: ID
+        member_name: Member
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_source: Bank
+        fund_extra: Bank
+        fund_extra_text: Bank
+        fund_uid: Bank Account
+        sum: Amount
+        fee: Fee
+        amount: Amount
+        remark: Remark
+        created_at: Created At
+      deposits/bank:
+        created_at: Created At
+        holder: Holder
+        fund_extra: Sender Bank
+        fund_uid: Sender Account
+        member_sn: Member SN
+        member_name: Sender Name
+        amount: Amount
+        sn: SN
+        state_and_action: State/Action
+        label: Label
+        fund_source: Fund Source
+      deposits/satoshi:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
+      withdraws/satoshi:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+    errors:
+      models:
+        order_bid:
+          attributes:
+            sum:
+              expensive: Expensive Account
+            price:
+              range: Invalid Price Range
+        order_ask:
+          attributes:
+            origin_volume:
+              expensive: Expensive Account
+            price:
+              range: Invalid Price Range
+        account:
+          attributes:
+            balance:
+              less: Blance Less
+        identity:
+          attributes:
+            email:
+              invalid: Invalid Email
+            client_uuid: 
+              invalid: Invalid ID
+            password:
+              invalid: Invalid Password
+            password_confirmation:
+              confirmation: Inconsistent with the new password you enter, please re-enter.
+        token/reset_password:
+          attributes:
+            base:
+              too_soon: Visit too soon, please try it later.
+            email:
+              not-member: Invalid Email
+              match: Invalid Sign in Email
+            client_uuid:
+              not-member: Invalid ID
+              match: Invalid Sign in ID
+            password:
+              invalid: Invalid Password
+            member:
+              blank: E-mail not registered in the database!
+        token/remember_id:
+          attributes:
+            base:
+              too_soon: You have already requested your ID, check your e-mail.
+            email:
+              not-member: Invalid Email
+              match: Invalid Sign in Email
+            client_uuid:
+              not-member: Invalid ID
+              match: Invalid Sign in ID
+            password:
+              invalid: Invalid Password
+            member:
+              blank: Not exist!
+        activation:
+          attributes:
+            base:
+              too_soon: An activation email was sent to your email address less than
+                5 minutes ago.
+        fund_source:
+          attributes:
+            address:
+              satoshi_ismine: Used Address
+              satoshi_invalid: Invalid Address
+        deposit:
+          bank:
+            ted: Deposit rejected, it is only possible to create a TED deposit order per day with same value.
+        withdraw:
+          account_balance_is_poor: Account balance is insufficient
+          attributes:
+            password:
+              match: invalid
+            amount:
+              poor: insufficient
+              bank_min: Less 5000.00
+        withdraws/satoshi:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
+        two_factor:
+          attributes:
+            otp:
+              invalid: Wrong Password!Please re-enter.
+        application:
+          attributes:
+            redirect_uri:
+              fragment_present: cannot contain a fragment.
+              invalid_uri: must be a valid URI.
+              relative_uri: must be an absolute URI.
+      messages:
+        invalid_email: Invalid Email Address
+        invalid_client_uuid: Invalid client ID
+        undef: unknown reason
+        less: balance less
+        verify: verify error
+        strength: is invalid password strength
+        password: Please enter a password at least 6 characters and it's better to
+          contain uppercase and lowercase letters and numbers.
+        limit_excedent: Our limit of users has been exceeded, send us an e-mail so that when the creation of new accounts is released you have your place guaranteed. Please e-mail to support@cointrade.cx
+        orders:
+          price: limit price %{l} ~ %{h}
+          sum: limit sum price %{l} ~ %{h}
+          precision: minimum precision %{p}
+  banks:
+      _065: "Andbank"
+      _654: "Banco A.j. Renner S.A."
+      _246: "Banco Abc/brasil S.A."
+      _121: "Banco Agibank S.A."
+      _025: "Banco Alfa S.A."
+      _213: "Banco Arbi S.A."
+      _096: "Banco B3 S.A."
+      _036: "Banco Bem S.a.."
+      _122: "Banco Berj S.A."
+      _318: "Banco Bmg Comercial S.A."
+      _752: "Banco Bnp Paribas Brasil S.A."
+      _107: "Banco Bocom Bbm S.A."
+      _069: "Banco Bpn Brasil S.A."
+      _063: "Banco Bradescard S.A."
+      _237: "Banco Bradesco S.A."
+      _218: "Banco Bs2 S.A."
+      _473: "Banco Caixa Geral Brasil S.A."
+      _412: "Banco Capital S.A."
+      _040: "Banco Cargill S.A."
+      _266: "Banco Cedula S.A."
+      _745: "Banco Citibank S.A."
+      _756: "Banco Cooperativo do Brasil S.A."
+      _748: "Banco Cooperativo Sicredi S.A."
+      _505: "Banco Credit Suisse (brasil) S.A."
+      _003: "Banco da Amazonia S.A."
+      _083: "Banco da China Brasil S.A."
+      _707: "Banco Daycoval S.A."
+      _070: "Banco de Brasilia S.A."
+      _300: "Banco de La Nacion Argentina S.A."
+      _487: "Banco Deutsche Bank S.A."
+      _001: "Banco do Brasil S.A."
+      _047: "Banco do Estado de Sergipe S.A."
+      _021: "Banco do Estado do Espirito Santo S.A."
+      _037: "Banco do Estado do Para S.A."
+      _041: "Banco do Estado do Rio Grande do Sul S.A."
+      _004: "Banco do Nordeste do Brasil S.A."
+      _265: "Banco Fator S.A."
+      _224: "Banco Fibra S.A."
+      _626: "Banco Ficsa S.A."
+      _394: "Banco Finasa Bmc S.A."
+      _612: "Banco Guanabara S.A."
+      _604: "Banco Industrial do Brasil S.A."
+      _653: "Banco Indusval S.A."
+      _077: "Banco Intermedium"
+      _074: "Banco J. Safra S.A."
+      _376: "Banco Jp Morgan S.A."
+      _600: "Banco Luso Brasileiro S.A."
+      _389: "Banco Mercantil do Brasil S.A."
+      _755: "Banco Merrill Lynch S.A."
+      _746: "Banco Modal S.A."
+      _456: "Banco Mufg Brasil S.A."
+      _079: "Banco Original do Agronegocio S.A."
+      _212: "Banco Original S.A."
+      _208: "Banco Pactual S.A."
+      _623: "Banco Pan"
+      _254: "Banco Parana Banco S.A."
+      _611: "Banco Paulista S.A."
+      _643: "Banco Pine S.A."
+      _747: "Banco Rabobank International Br S.A."
+      _633: "Banco Rendimento S.A."
+      _741: "Banco Ribeirao Preto S.A."
+      _422: "Banco Safra S.A."
+      _033: "Banco Santander S.A."
+      _743: "Banco Semear S.A."
+      _366: "Banco Societe Generale Brasil S.A."
+      _637: "Banco Sofisa"
+      _243: "Banco Stock Maxima S.A."
+      _464: "Banco Sumitomo Mitsui Brasileiro S.A."
+      _634: "Banco Triangulo S.A."
+      _018: "Banco Tricury S.A."
+      _655: "Banco Votorantim S.A."
+      _610: "Banco Vr S.A."
+      _222: "Bco Credit Agricole Brasil S.A."
+      _017: "Bny Mellon Banco S.A."
+      _125: "Brasil Plural S.A."
+      _097: "Cc Centralcredi"
+      _136: "Cc Unicred do Brasil"
+      _320: "Ccb Brasil"
+      _098: "Cerdialinca Cooperativa Credito Rural"
+      _739: "Cetelem"
+      _163: "Commerzbank"
+      _085: "Cooperativa Central de Credito / Ailos"
+      _099: "Cooperativa Central Econ. Cred. Mutuo Un"
+      _089: "Cooperativa de Credito Rural da Regiao D"
+      _010: "Credicoamo Credito Rural Cooperativa"
+      _104: "Cx Economica Federal"
+      _094: "Finaxis"
+      _132: "Icbc do Brasil Banco Multiplo S.A."
+      _630: "Intercap"
+      _341: "Itaú Unibanco S.A."
+      _076: "Kdb do Brasil"
+      _757: "Keb Hana do Brasil"
+      _753: "Nbc Bank Brasil Sa/banco Multiplo"
+      _260: "Nu Pagamentos S.A."
+      _613: "Omni Banco S A"
+      _120: "Rodobens"
+      _751: "Scotiabank Brasil S.a. Banco Multiplo"
+      _082: "Topazio"
+      _084: "Uniprime Norte do Parana Cc"
+      _119: "Western Union"
+      _124: "Woori Bank"
+  market:
+    currency:
+      btc: BTC
+      brl: BRL
+      doge: DOGE
+      pts: PTS
+      ltc: LTC
+      bch: BCH
+      btg: BTG
+      dash: DASH
+      eth: ETH
+      zec: ZEC
+      dgb: DGB
+      xrp: XRP
+      smart: SMART
+      iota: IOTA
+      zcr: ZCR
+      tusd: TUSD
+      xem: XEM
+      rbtc: RBTC
+      rif: RIF
+      xar: XAR
+  currency:
+    btc:
+      key: BTC
+      code: BTC
+      name: Bitcoin
+      format: '0,0.00000000'
+    bch:
+      key: BCH
+      code: BCH
+      name: Bitcoin Cash
+      format: '0,0.00000000'
+    btg:
+      key: BTG
+      code: BTG
+      name: Bitcoin Gold
+      format: '0,0.00000000'
+    dash:
+      key: DASH
+      code: DASH
+      name: Dash
+      format: '0,0.00000000'
+      
+    eth:
+      key: ETH
+      code: ETH
+      name: Ethereum
+      format: '0,0.00000000'
+    zec:
+      key: ZEC
+      code: ZEC
+      name: ZCash
+      format: '0,0.00000000'
+    dgb:
+      key: DGB
+      code: DGB
+      name: Digibyte
+      format: '0,0.00000000'
+    xrp:
+      key: XRP
+      code: XRP
+      name: Ripple
+      format: '0,0.00000000'
+    smart:
+      key: Smart
+      code: SMART
+      name: SmartCash
+      format: '0,0.00000000'
+    ltc:
+      key: LTC
+      code: LTC
+      name: Litecoin
+      format: '0,0.00000000'
+    iota:
+      key: Iota
+      code: Iota
+      name: Iota
+      format: '0,0.00000000'
+    zcr:
+      key: ZCR
+      code: ZCR
+      name: ZCore
+      format: '0,0.00000000'
+    tusd:
+      key: TUSD
+      code: TUSD
+      name: TrueUSD
+      format: '0,0.00000000'
+    xem:
+      key: XEM
+      code: XEM
+      name: XEM
+      format: '0,0.00000000'
+    rbtc:
+      key: RBTC
+      code: RBTC
+      name: RBTC
+      format: '0,0.00000000'
+    rif:
+      key: RIF
+      code: RIF
+      name: RIF
+      format: '0,0.00000000'
+    xar:
+      key: XAR
+      code: XAR
+      name: XAR
+      format: '0,0.00000000'
+      
+    satoshi:
+      key: BTC
+      code: BTC
+      name: Bitcoin
+      format: '0,0.00000000'
+    bitsharesx:
+      key: BTS
+      code: BTSX
+      name: BitsharesX
+      format: '0,0.00000000'
+    real:
+      key: BRL
+      code: BRL
+      name: Brazilian Real
+      format: '0,0.00'
+    dogecoin:
+      key: DOG
+      code: DOGE
+      name: Dogecoin
+      format: '0,0.00000000'
+    protoshare:
+      key: PTS
+      code: PTS
+      name: Protoshare
+      format: '0,0.00000000'
+  datagrid:
+    empty: no data found
+    filters:
+      date:
+        range_separator: " to "
+      datetime:
+        range_separator: " to "
+    form:
+      submit: Search
+    admin_deposits_grid:
+      columns:
+        sn: SN
+        created_at: At
+        channel_key_text: Channel
+        fund_extra_text: Extra
+        fund_uid: UID
+        txid: TXID
+        amount: Amount
+        fee: Fee
+        currency_text: Currency
+        aasm_state_text: State
+        member_name: Member
+    bank_deposits_grid:
+      columns:
+        sn: SN
+        created_at: At
+        channel_key_text: Category
+        fund_extra_text: Bank
+        fund_uid: Account
+        amount: Amount
+        fee: Fee
+        aasm_state_text: State
+    coin_deposits_grid:
+      columns:
+        sn: SN
+        txid: Transaction ID
+        created_at: At
+        amount: Amount
+        aasm_state_text: State
+        confirmations: Confirm
+    withdraws_grid:
+      columns:
+        sn: SN
+        name: Name
+        currency_text: Currency
+        amount: Amount
+        fee: Fee
+        created_at: Created at
+        done_at: Completed at
+        state_text: State
+    members_grid:
+      columns:
+        sn: Serial number
+        email: Email
+        client_uuid: Client ID
+        created_at: Created at
+        actions: Actions
+    account_versions_grid:
+      columns:
+        created_at: Created at
+        currency_text: Currency
+        balance: Balance
+        in: In
+        out: Out
+        amount: Amount
+        reason_text: Reason
+        modifiable_type: Link
+        fee: Fee
+      filters:
+        reason: Reason
+        currency: Currency
+    statistic_members_grid:
+      columns:
+        sn: Serial number
+        id: ID
+        email: Email
+        client_uuid: Client ID
+        created_at: Created at
+        activated: Active
+        detail: Detail
+        action: Action
+      filters:
+        sn: Serial number
+        activated: Active
+        created_at: Created at
+        email: Email
+        client_uuid: Client ID
+    statistic_orders_grid:
+      columns:
+        id: Serial number
+        price: Price
+        volume: Volume
+        created_at: Created at
+        state_text: State
+        member_id: Member
+      filters:
+        state: State
+        currency: Currency
+        created_at: Created at
+        type: Ask/Bid
+    statistic_trades_grid:
+      columns:
+        id: ID
+        price: Price
+        volume: Volume
+        strike_amount: Amount
+        created_at: Created at
+      filters:
+        currency: Currency
+        created_at: Created at
+    statistic_deposits_grid:
+      columns:
+        member: Member
+        tx_id: TxID
+        amount: Amount
+        currency: Currency
+        created_at: Created at
+        state_text: State
+      filters:
+        currency: Currency
+        state: State
+        created_at: Created at
+    statistic_withdraws_grid:
+      columns:
+        member: Member
+        address: Adress
+        amount: Amount
+        currency: Currency
+        created_at: Created at
+        state_text: State
+      filters:
+        state: State
+        created_at: Created at
+  deposit_channel:
+    bank:
+      key: Bank transfer
+      title: Bank transfer
+      intro: Bank transfer deposits, recommend for large recharge
+      latency: 10 minutes
+      transfer: Manual
+      go: Deposit
+    btc:
+      key: Bitcoin Deposits
+      title: Deposit from Bitcoin
+      intro: Deposit bitcoin from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    bch:
+      key: BCH Deposits
+      title: Deposit from Bitcoin Cash
+      intro: Deposit bitcoin from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    btg:
+      key: BTG Deposits
+      title: Deposit from Bitcoin Gold
+      intro: Deposit bitcoin from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    dash:
+      key: DASH Deposits
+      title: Deposit from DASH
+      intro: Deposit DASH from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    eth:
+      key: Ethereum Deposits
+      title: Deposit from Ethereum
+      intro: Deposit Ethereum from your own wallet address to Cointrade accounte
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    zec:
+      key: Zcash Deposits
+      title: Deposit from Zcash
+      intro: Deposit Zcash from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    dgb:
+      key: Digibyte Deposits
+      title: Deposit from Digibyte
+      intro: Deposit Digibyte from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    xrp:
+      key: Ripple Deposits
+      title: Deposit from Ripple
+      intro: Deposit Ripple from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    smart:
+      key: SmartCash Deposits
+      title: Deposit from SmartCash
+      intro: Deposit SmartCash from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    ltc:
+      key: Litecoin Deposits
+      title: Deposit from Litecoin
+      intro: Deposit Litecoin from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    iota:
+      key: Iota Deposits
+      title: Deposit from Iota
+      intro: Deposit Iota from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    zcr:
+      key: Zcore Deposits
+      title: Deposit from Zcore
+      intro: Deposit Zcore from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    tusd:
+      key: TrueUSD Deposits
+      title: Deposit from TrueUSD
+      intro: Deposit TrueUSD from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    xem:
+      key: XEM Deposits
+      title: Deposit from XEM
+      intro: Deposit XEM from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    rbtc:
+      key: RBTC Deposits
+      title: Deposit from RBTC
+      intro: Deposit RBTC from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    rif:
+      key: RIF Deposits
+      title: Deposit from RIF
+      intro: Deposit RIF from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    xar:
+      key: XAR Deposits
+      title: Deposit from XAR
+      intro: Deposit XAR from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+      
+    satoshi:
+      key: Block Chain
+      title: Bitcoin Deposits
+      intro: Deposit bitcoin from your own wallet address to Cointrade account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+  deposits/bank:
+    aasm_state:
+      submitting: Submitting
+      cancelled: Cancelled
+      submitted: Submitted
+      accepted: Accepted
+      rejected: Rejected
+      checked: Checked
+      warning: Warning
+  private:
+    deposits:
+      satoshi:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      btcs:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      bches:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      btgs:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      dashes:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      dgbs:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      eths:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      smarts:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      xrps:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      zecs:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.          
+      ltcs:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      iotas:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      zcrs:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      tusds:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      xems:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      rbtcs:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      rifs:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      xars:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+
+      banks:
+        destroy:
+          notice: Revocation request is successful.
+          alert: Request is successful.
+        create:
+          notice: Recharge request successfully submitted. Use the info below to complete the bank transfer.
+          submit: Submit
+        new:
+          fund_source: Select Fund Source
+          manage_fund_source: Manage Fund Source
+          submit: Submit
+        edit:
+          bank: Receive Bank Name
+          branch: Receive Bank Branch
+          hodler: Receive holder
+          account: Receive Account
+    history:
+      filters:
+        start: Start
+        end: End
+        select_market: Select Market
+        select_side: Select Side
+        per_page: Per page
+        all: All
+        today: Today
+        yesterday: Yesterday
+        one_week: One Week
+        one_month: One Mounth
+        search: Search
+      transaction:
+        Deposit: Deposit
+        Withdraw: Withdraw
+      account:
+        currency: Currency
+        buy: Buy
+        sell: Sell
+        filter_by_type: Filter by type
+        account_history: Account History
+        type: type
+        timestamp: date and time
+        fee: fee
+        currency: Currency
+        amount: Amount
+        txid: Txid
+      orders:
+        order_history: Order History
+        id: ID
+        type: Type
+        state: State
+        market: Market
+        price: Price
+        volume: Volume
+        average_price: Avg. Price
+        fullfilled_volume: Fullfilled
+        timestamp: Created At
+      order:
+        ask: Sell
+        bid: Buy
+        wait: Open
+        cancel: Cancelled
+        done: Done
+      trades:
+        trade_history: Trade History
+        side: Side
+        created_at: Time
+        base_currency: Base Currency
+        base_amount: Base Amount
+        quote_currency: Quote Currency
+        quote_amount: Quote Amount
+        price: Price
+        date_utc: Date (UTC)
+        market: Market
+        trade_id: Trade ID
+        order_id: Order ID
+        amount: Amount
+        total: Total
+        fees: Fees
+        rebate: Rebate
+        total_cost: Total Cost
+      trade:
+        sell: Sell
+        buy: Buy
+    trade:
+      trades:
+        orders:
+          title: Orders
+        trades:
+          title: Trades
+        charges:
+          title: Charges
+      orders:
+        index:
+          done: Done
+          cancel: Cancel
+          confirm: 'Are you sure cancel order #%{id}?'
+        destroy:
+          'true': "#%{id} Cancel Order Successful"
+          'false': "#%{id} Cancel Order Reject"
+    withdraws:
+      update:
+        request_accepted: Withdraw request accepted.
+      destroy:
+        request_canceled: Withdraw request canceled
+      index:
+        fee: Fee
+        total: Total
+        withdraw_history: Withdrawal History
+      create:
+        two_factors_error: Two factor authentication failed.
+      banks:
+        update:
+          notice: Bank Transfer withdrawal application has been submitted, we will process it as soon as possible
+          alert_two_factor: Two-Factor Authentication error
+        destroy:
+          notice: Bank Transfer withdraw has been cancelled, frozen amount has been
+            returned to your account.
+        new:
+          fund_source: Select Fund Source
+          manage_fund_source: Manage Fund Source
+          submit: Submit
+          allin: All-In
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the bank transfer.
+      satoshis:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon
+            as possible
+          alert_two_factor: Two-Factor Authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the bank transfer.
+    tickets:
+      index:
+        new_ticket: New Ticket
+      new:
+        intro: If you have any problems, start a new discussion so that our staff
+          can help you out as soon as possible. All discussions are private between
+          you and the support staff.
+      ticket_create_succ: Ticket created successfully.
+      ticket_create_fail: Failed to create ticket, please try again latter.
+      comment_succ: Comment successfully.
+      cooment_fail: Comment failed, please try again latter
+      me: me
+      supporter: Support
+      close: Close Ticket
+      close_succ: Ticket closed successfully
+      close_confirm: Are you sure to close this ticket?
+      title_content_both_blank: Title and content could be both be empty.
+      from: from
+      view_closed_tickets: View closed tickets
+      view_open_tickets: View open tickets
+    account_versions:
+      index:
+        description: Every transaction and every penny of income in Cointrade are well
+          documented and exhaustive.
+    api_tokens:
+      user_tokens:
+        no_token: You have no API token.
+        edit: Edit
+        destroy: Destroy
+        destroy-confirm: Are you sure?
+        create: Create New Token
+        http: HTTP API Document
+        websocket: Websocket API Document
+        more: 'For more information please check the API section on github:'
+      oauth_tokens:
+        panel_title: Authorizations
+        title: Authorized Applications
+        oauth: OAuth Integration
+        intro: Manage all your authorized applications.
+        no_token: No Application.
+        unbind: Revoke
+        unbind-confirm: Are you sure?
+        oauth_app_name: Name
+        oauth_app_expire: Expire At
+        oauth_app_scope: Scopes
+      unbind:
+        success: Successfully revoked.
+        failed: Revoke failed.
+      new:
+        label_hint: Label helps you remember token usage, optional.
+      create:
+        alert_two_factor: Two step authentication failed.
+        success: API token created successfully.
+        failed: Failed to create API token. Please try again later or contact admin.
+        desc: Please copy and paste keys below to a safe place and save. The secret key will never be displayed again.
+      edit:
+        access_key_hint: Created at %{created_at}
+        label_hint: Label helps you remember token usage, optional.
+        ip_whitelist_hint: Seperate IP by commas, leave this field blank means all IP are allowed.
+      update:
+        alert_two_factor: Two step authentication failed.
+        success: Saved successfully.
+        failed: Failed to save token. Please try again later or contact admin.
+      destroy:
+        success: The token has been successfully destroyed.
+        failed: Failed to destroy token.
+    assets:
+      index:
+        liability-proof: Proof of Liabilities
+        btc-assets: BTC Assets
+        brl-assets: BRL Assets
+        bch-assets: BCH Assets
+        btg-assets: BTG Assets
+        dash-assets: DASH Assets
+        eth-assets: ETH Assets
+        zec-assets: ZEC Assets
+        dgb-assets: DGB Assets
+        xrp-assets: XRP Assets
+        smart-assets: Smart Assets
+        iota-assets: Iota Assets
+        ltc-assets: LTC Assets
+        zcr-assets: ZCR Assets
+        tusd-assets: TUSD Assets
+        xem-assets: XEM Assets
+        rbtc-assets: RBTC Assets
+        rif-assets: RIF Assets
+        xar-assets: XAR Assets
+      liability_tabs:
+        verify-btc: Verify My BTC Assets
+        verify-brl: Verify My BRL Assets
+        verify-bch: Verify My BCH Assets
+        verify-btg: Verify My BTG Assets
+        verify-dash: Verify My DASH Assets
+        verify-eth: Verify My ETH Assets
+        verify-zec: Verify My ZEC Assets
+        verify-dgb: Verify My DGB Assets
+        verify-xrp: Verify My XRP Assets
+        verify-smart: Verify My Smart Assets
+        verify-iota: Verify My Iota Assets
+        verify-ltc: Verify My LTC Assets
+        verify-zcr: Verify My ZCR Assets
+        verify-tusd: Verify My TUSD Assets
+        verify-xem: Verify My XEM Assets
+        verify-rbtc: Verify My RBTC Assets
+        verify-rif: Verify My RIF Assets
+        verify-xar: Verify My XAR Assets
+        btc-assets-total: 'Total BTC assets of exchange: '
+        brl-assets-total: 'Total BRL assets of exchange: '
+        bch-assets-total: 'Total BCH assets of exchange: '
+        btg-assets-total: 'Total BTG assets of exchange: '
+        dash-assets-total: 'Total DASH assets of exchange: '
+        eth-assets-total: 'Total ETH assets of exchange: '
+        zec-assets-total: 'Total ZEC assets of exchange: '
+        dgb-assets-total: 'Total DGB assets of exchange: '
+        xrp-assets-total: 'Total XRP assets of exchange: '
+        smart-assets-total: 'Total Smart assets of exchange: '
+        iota-assets-total: 'Total Iota assets of exchange: '
+        ltc-assets-total: 'Total LTC assets of exchange: '
+        zcr-assets-total: 'Total ZCR assets of exchange: '
+        tusd-assets-total: 'Total TUSD assets of exchange: '
+        xem-assets-total: 'Total XEM assets of exchange: '
+        rbtc-assets-total: 'Total RBTC assets of exchange: '
+        rif-assets-total: 'Total RIF assets of exchange: '
+        xar-assets-total: 'Total XAR assets of exchange: '
+      liability_proof:
+        title: Proof of Liabilities
+        intro: As an exchange, our liabilities refer to the sum of money (in both
+          crypto currencies and fiat currencies) that our users trust us with. On
+          this page, we present you our liabilities. We also provide you a way to
+          verify that your account balance is indeed part of our liabilities.
+        how-to-verify: How to verify an exchange is solvent?
+        how-to-verify-uri: https://cointrade.cx/documents/liability_proof
+      liability_data:
+        liability-proof-generating: Proof of Liability generation in process, please
+          come back after 30 minutes.
+        root-json: Root node
+        partial-tree: 'My %{currency} Assets: '
+        get-partial-tree: Get my partial tree data
+        timestamp: The proof data is generated at %{time}.
+        go-verify: Verify
+      btc_assets:
+        title: BTC Assets
+        intro: All of exchange's BTC assets are listed here.
+        total: Total BTC Assets
+        address: Address
+      bch_assets:
+        title: BCH Assets
+        intro: All of exchange's BCH assets are listed here.
+        total: Total BCH Assets
+        address: Address
+      btg_assets:
+        title: BTG Assets
+        intro: All of exchange's BTG assets are listed here.
+        total: Total BTG Assets
+        address: Address
+      dash_assets:
+        title: DASH Assets
+        intro: All of exchange's DASH assets are listed here.
+        total: Total DASH Assets
+        address: Address
+        
+      eth_assets:
+        title: ETH Assets
+        intro: All of exchange's ETH assets are listed here.
+        total: Total ETH Assets
+        address: Address
+      zec_assets:
+        title: ZEC Assets
+        intro: All of exchange's ZEC assets are listed here.
+        total: Total ZEC Assets
+        address: Address
+      dgb_assets:
+        title: DGB Assets
+        intro: All of exchange's DGB assets are listed here.
+        total: Total DGB Assets
+        address: Address
+      xrp_assets:
+        title: XRP Assets
+        intro: All of exchange's XRP assets are listed here.
+        total: Total XRP Assets
+        address: Address
+      smart_assets:
+        title: Smart Assets
+        intro: All of exchange's Smart assets are listed here.
+        total: Total Smart Assets
+        address: Address
+      iota_assets:
+        title: Iota Assets
+        intro: All of exchange's Iota assets are listed here.
+        total: Total Iota Assets
+        address: Address
+      ltc_assets:
+        title: LTC Assets
+        intro: All of exchange's LTC assets are listed here.
+        total: Total LTC Assets
+        address: Address
+      zcr_assets:
+        title: ZCR Assets
+        intro: All of exchange's ZCR assets are listed here.
+        total: Total ZCR Assets
+        address: Address
+      tusd_assets:
+        title: TUSD Assets
+        intro: All of exchange's TUSD assets are listed here.
+        total: Total TUSD Assets
+        address: Address
+      xem_assets:
+        title: XEM Assets
+        intro: All of exchange's XEM assets are listed here.
+        total: Total XEM Assets
+        address: Address
+      rbtc_assets:
+        title: RBTC Assets
+        intro: All of exchange's RBTC assets are listed here.
+        total: Total RBTC Assets
+        address: Address
+      rif_assets:
+        title: RIF Assets
+        intro: All of exchange's RIF assets are listed here.
+        total: Total RIF Assets
+        address: Address
+      xar_assets:
+        title: XAR Assets
+        intro: All of exchange's XAR assets are listed here.
+        total: Total XAR Assets
+        address: Address
+        
+      brl_assets:
+        title: BRL Assets
+        intro: All of exchange's BRL assets are listed here.
+        total: Total BRL Assets
+        description: " <p>For supervision, you can inquiry the balance of our deposit
+          account:</p> <p>Bank: %{bank}</p> <p>Account： %{address}</p> <p>Inquiry
+          Password： %{password}</p> <p>Inquiry Tel.： %{tel}</p>"
+      partial_tree:
+        success: 'Success! Verification data generated at: %{timestamp}'
+    funds:
+      show:
+        account_history: Account History
+        brl_format: '0.00'
+        btc_format: '0.00000000'
+        bch_format: '0.00000000'
+        btg_format: '0.00000000'
+        dash_format: '0.00000000'
+        eth_format: '0.00000000'
+        zec_format: '0.00000000'
+        dgb_format: '0.00000000'
+        xrp_format: '0.00000000'
+        smart_format: '0.00000000'
+        iota_format: '0.00000000'
+        ltc_format: '0.00000000'
+        zcr_format: '0.00000000'
+        tusd_format: '0.00000000'
+        xem_format: '0.00000000'
+        rbtc_format: '0.00000000'
+        rif_format: '0.00000000'
+        xar_format: '0.00000000'
+        reason:
+          brl:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          btc:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          bch:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          btg:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          dash:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+            
+          eth:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          zec:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          dgb:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          xrp:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          smart:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          iota:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          ltc:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          zcr:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          tusd:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          xem:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          rbtc:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          rif:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          xar:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+        ref:
+          system: System
+          default: Default
+    id_documents:
+      edit:
+        state: State
+        state_unverified: UNVERIFIED
+        state_verifying: VERIFYING
+        state_verified: VERIFIED
+        name: Real Name
+        birth_date: Birth Date
+        address: Address
+        city: City
+        country: Country
+        zipcode: Zipcode
+        id_document_type: Document Type
+        id_document_number: Document Number
+        id_document_file: "* Document Photo"
+        id_bill_type: Proof Of Residence
+        id_bill_file: "* Proof Of Residence Photo"
+        warning: Include your personal information to proof your identity and address
+      update:
+        notice: Your account verification has been submitted.
+    markets:
+      show:
+        error: Failed
+        success: Success
+        success_mensagem: Sua ordem de compra foi realizada com sucesso!
+        analysis_panel: Analysis
+        help_panel: Help
+        done: DONE
+        cancel: CANCEL
+        cancel_confirm: Are your sure cancel order?
+        confirm: CONFIRM
+        ask_order: 'ASK ##sn#'
+        bid_order: 'BID ##sn#'
+        my_active_order: Active
+        my_done_order: Done
+        trades: Trading
+        chat: Chat Channel
+      market_list:
+        all: All Markets
+        all_html: "<i class='fa fa-check'></i><span>All Markets</span>"
+        brl_html: "<i class='fa fa-check'></i><span>BRL Markets</span>"
+        btc_html: "<i class='fa fa-check'></i><span>BTC Markets</span>"
+        bch_html: "<i class='fa fa-check'></i><span>BCH Markets</span>"
+        btg_html: "<i class='fa fa-check'></i><span>BTG Markets</span>"
+        dash_html: "<i class='fa fa-check'></i><span>DASH Markets</span>"
+        
+        eth_html: "<i class='fa fa-check'></i><span>ETH Markets</span>"
+        zec_html: "<i class='fa fa-check'></i><span>ZEC Markets</span>"
+        dgb_html: "<i class='fa fa-check'></i><span>DGB Markets</span>"
+        xrp_html: "<i class='fa fa-check'></i><span>XRP Markets</span>"
+        smart_html: "<i class='fa fa-check'></i><span>Smart Markets</span>"
+        iota_html: "<i class='fa fa-check'></i><span>Iota Markets</span>"
+        ltc_html: "<i class='fa fa-check'></i><span>LTC Markets</span>"
+        zcr_html: "<i class='fa fa-check'></i><span>ZCR Markets</span>"
+        tusd_html: "<i class='fa fa-check'></i><span>TUSD Markets</span>"
+        xem_html: "<i class='fa fa-check'></i><span>XEM Markets</span>"
+        rbtc_html: "<i class='fa fa-check'></i><span>RBTC Markets</span>"
+        rif_html: "<i class='fa fa-check'></i><span>RIF Markets</span>"
+        xar_html: "<i class='fa fa-check'></i><span>XAR Markets</span>"
+        
+        price: Price
+        change: "24h %"
+      range_switch:
+        switch_1: 1m
+        switch_5: 5m
+        switch_15: 15m
+        switch_30: 30m
+        switch_60: 1h
+        switch_120: 2h
+        switch_240: 4h
+        switch_360: 6h
+        switch_720: 12h
+        switch_1440: 1d
+        switch_4320: 3d
+        switch_10080: 1w
+      depths:
+        price: Price
+        amount: Amount
+        buy: Buy
+        sell: Sell
+        ask_orders: Sell
+        bid_orders: Buy
+      ticker:
+        last: Last Price
+        ask: ASK
+        bid: BID
+      account_balance:
+        title: Account Balance
+        available: AVAILABLE
+        coin: COIN
+        amount: AMOUNT
+        action: ACTION
+        last: LAST
+        24H : 24H
+        soon: SOON
+        volbrl: VOL
+      bid_entry:
+        action: "Buy %{currency}"
+        action_v2: Buy
+        price: Price
+        last_price: Last Price
+        amount: Amount
+        total: Total
+        information_fee: Transaction fee (purchases) made on the platform
+      ask_entry:
+        action: "Sell %{currency}"
+        action_v2: Sell
+        price: Price
+        last_price: Last Price
+        amount: Amount
+        total: Total
+        information_fee: Transaction fee (sales) made on the platform
+      place_order:
+        price_high: HIGH
+        price_low: LOW
+        full_bid: FULL
+        full_ask: EMPTY
+      order_book:
+        title: Order Book
+        amount: Amount
+        count: Count
+        ask: Ask
+        bid: Bid
+        total: Total
+        fade_toggle_depth: Market Depth
+      trade_state:
+        new: New
+        partial: Partial
+      market_trades:
+        all: All
+        my: Mine
+        all_html: "<i class='fa fa-check'></i><span>All</span>"
+        my_html: "<i class='fa fa-check'></i><span>Mine</span>"
+        time: Time
+        price: Price
+        volume: Volume
+        amount: Amount
+      header:
+        network: Connection State
+        vol: 24h Volume
+        high: High
+        low: Low
+        change: Change
+      settings:
+        sound: Sound
+        notification: Notify
+        funds: "Funds"
+        signout: "Sign Out"
+        settings: "Profile"
+        history: "History"
+      account_summary:
+        title: Summary
+        account: Account
+        amount: Amount
+        locked: Freeze
+        view_all_accounts: "View All"
+        hide_all_accounts: "Hide Other"
+      my_orders:
+        orders_wait: Latest Orders
+        orders_done: Completed Orders
+        orders_cancel: Cancel Orders
+        no_open_orders: You have no open orders.
+        clear_all_html: "<i class='fa fa-trash'></i><span>Cancel All</span>"
+        clear_bids_html: "<i class='fa fa-trash'></i><span>Cancel Bids</span>"
+        clear_asks_html: "<i class='fa fa-trash'></i><span>Cancel Asks</span>"
+        confirm_clear_all: Are you sure to cancel ALL orders?
+        confirm_clear_bids: Are you sure to cancel all BIDS?
+        confirm_clear_asks: Are you sure to cancel all ASKS?
+        cancel_order: Cancel
+        update_order: Update
+        pair: Pair
+        price: Price
+        volume: Volume
+        amount: Amount
+        time: Placed
+        action: Action
+        edit: Edit
+        order: Order
+        no_available_funds: "<div>Invalid Order: The righteous is not enough for this operation.<br> <a href='/funds#/deposits/brl'>Click here to deposit BRL.</a></div>"
+        no_available_volume: "<div>Invalid order: There is not enough amount for this operation.<br> <a href='/funds#/deposits/brl'>Click here to deposit.</a></div>"
+      mask:
+        warning: Please <a class=text-up href='/signup'>Sign up</a> or <a class=text-up
+          href='/signin'>Sign in</a> for operation
+      chart:
+        title: Charts
+      global:
+        global_orders_title: ORDERS
+        global_trades_title: TRADES
+      chat:
+        title: Chat Channel
+    settings:
+      success: Settings updated successfully.
+      failure: Invalid passcode. Please try again.
+      index:
+        client_uuid: Client
+        safety_instruction: In order to protect your bitcoins and personal information, we strongly suggest that you use Two-Factor Authentication.
+        maintance_by: Maintained by
+        maintance_by_and: and our partners.
+        suppot_info: Support from Monday to Friday from 9am to 6pm, except holidays.
+        team: Team
+        team_cointrade: Team Cointrade
+        email-hint: For your security, we recommend using an email for the exclusive use of this platform.
+        already_register: Already registered?
+        terms_use: Read Terms and conditions of use.
+        why_use: Why use?
+        functionalities: Functionalities
+        faq: FAQ
+        privacy: Privacy Policy
+        support: Support
+        support_link: "<a href='https://cointrade.zendesk.com/hc/en-us/requests/new'  target='_blank'>Support</a>"
+        igree: Agree.
+        send_instrution: We will send you instructions by email.
+        service_terms: Service Terms
+        not_registered: Not registered yet?
+        reset_password: Reset your Password
+        remember: Remember your client ID
+        reauthenticate: Authentication
+        activated: An  email has been sent to your mailbox, please check it for verification
+          as soon as possible. If you do not received it , please click "send it again"
+          button
+        auth-activated: Please confirm your email address first.
+        auth-verified: Please verify your account first.
+        email:
+          title: E-mail verification
+          description: Your e-mail has not been verified, click the "Send Mail" button
+            to complete the verification
+          description-activated: Your email adress has been verified successfully,
+            remember and protect this e-mail address, it is the single certificate
+            for your  account
+          resend: Send it again
+          activated: Verified
+          go: Set
+        phone_number:
+          title: Phone Number
+          description: Providing a phone number will make your account more secure.
+            You can quickly reset your password and your account operations will be
+            notified.
+          go: Set
+          verified: Verified
+          hint: "Verified number %{hint}"
+        two_factor_auth:
+          title: Two-Factor Authentication
+          description: Two-Factor Authentication provides another layer of security
+            to your account.
+          enable: Enable
+          disable: Disable
+        verification:
+          title: Verify Account
+          description: Help keep the bad guys out of your account by using both your
+            password and your phone
+          go: Submit
+          verified: Verified
+        cancel_subscription:
+          title: Cancel subscription
+          description: Cancel your subscription from Cointrade. You must have zero balance in 
+            all your accounts to cancel subscription
+          cancel: Cancel
+          not_permitted: Balance not zero
+          canceled: Canceled
+        asset_passwords:
+          title: Asset password
+          description: The asset password will be needed when you withdraw your money.
+            It is strongly recommended that you do not use the same password as your
+            account password!
+          go: Set
+        passwords:
+          title: Password
+          description: This password is required for login, please remember it.
+          go: Change Password
+          set: Set
+        api_tokens:
+          title: API Tokens
+          description: Create and manage your API tokens.
+          go: Set
+        weibo:
+          title: Connect to Weibo
+          description: After you connecting to Weibo, you can login via Weibo account.
+          bound_desc: This has been connected with %{nickname}.
+          bind: Connect
+          unbind: Disconnect
+        my_wallet:
+          title: Access my wallet
+    otps:
+      new:
+        step_1: Step 1
+        step_2: Step 2
+        step_3: Step 3
+        or: OR
+        download_app: Install Google Authenticator app on your smart phone and open it.
+        scan_qr_code: Scan the QR code below
+        enter_passphrase: Manually enter the following key into the app
+        enter_passcode: Enter and submit the passcode generated by the Google Authenticator app.
+    shared:
+      market:
+        chart:
+         title: Charts
+      balances:
+        add_value: Click here to fill out the Order.
+        clickOff: One-click trading is OFF
+        locked: Frozen
+        balance: Balance
+        available: Available
+        in_orders: In Orders
+        best_ask: Best Ask
+        best_bid: Best Bid
+        title: "%{icon} %{c} Account"
+        brl_format: '0.00'
+        btc_format: '0.00000000'
+        bch_format: '0.00000000'
+        btg_format: '0.00000000'
+        dash_format: '0.00000000'
+        eth_format: '0.00000000'
+        zec_format: '0.00000000'
+        dgb_format: '0.00000000'
+        xrp_format: '0.00000000'
+        smart_format: '0.00000000'
+        iota_format: '0.00000000'
+        ltc_format: '0.00000000'
+        zcr_format: '0.00000000'
+        tusd_format: '0.00000000'
+        xem_format: '0.00000000'
+        rbtc_format: '0.00000000'
+        rif_format: '0.00000000'
+        xar_format: '0.00000000'
+        total: Total
+  guides:
+    private:
+      settings:
+        panel: Settings
+        index:
+          intro: Admin and revise your profile.
+      api_tokens:
+        panel: API Tokens
+        index:
+          title: My Tokens
+          intro: A list of all your API tokens. An empty 'IP Whitelist' means any
+            ip is allowed to use the token.
+        new:
+          title: Create API Token
+        create:
+          title: Create API Token
+        edit:
+          title: Edit API Token
+        update:
+          title: Edit API Token
+      tickets:
+        panel: Tickets
+      id_documents:
+        panel: Real-name Authentication
+        new:
+          title: Submit real-name authentication information
+          intro: In line with the national laws , identity verification is required.
+            please verify your account to proceed.
+    panels:
+      balance: Account
+    verify:
+      google_auths:
+        panel: Two-Factor Authentication
+        edit:
+          title: Disable Two-Factor Authentication
+          intro: If you have a new phone, you can disable Two-Factor Authentication in the old phone, and enable Two-Factor Authentication  with the new one.
+      sms_auths:
+        panel: Verify Phone Number
+    reset_passwords:
+      panel: Password
+      new:
+        title: Reset Password
+        intro: Please enter your e-mail address which is verified by your  account,
+          enter verification code to submit,and login your mailbox, follow the prompts
+          to reset your password.
+      create:
+        title: Reset password
+        intro: Please enter your e-mail address which is verified by your  account,
+          enter verification code to submit,and login your mailbox, follow the prompts
+          to reset your password.
+      edit:
+        title: Set Password
+      update:
+        title: Set Password
+    remembers:
+      panel: Client ID
+      new:
+        title: Remember ID
+        intro: Please enter your e-mail to receive the system access ID.
+    sessions:
+      panel: Login
+      new:
+        title: Login my account
+        intro: Login Cointrade now for you to exchange.
+      failure:
+        title: Login my account
+        intro: Login Cointrade now for you to exchange.
+    identities:
+      panel: Create Account
+      new:
+        title: Create My Account
+        intro: This will be your only ID on Cointrade which is necessary for your exchange
+          , deposit and withdrawal . please fill it out carefully.
+      edit:
+        panel: My Account
+        title: Reset Password
+    two_factors:
+      panel: Two Factor Authenticator
+  simple_form:
+    placeholders:
+      deposit:
+        bank:
+          amount: Minimum amount 100
+      session:
+        email: E-mail Address
+        client_uuid: Client ID
+        password: Password
+        only_num : Only numbers.
+      identity:
+        email: Example：xiaobai@example.com
+        client_uuid: Client ID
+        password: Please set your login password
+        password_confirmation: Confirm your password
+        edit:
+          password: Please set your account password!
+      document:
+        key: Document link URL key
+        title: Document Title
+      order_bid:
+        origin_volume: Buy Volume
+        sum: Sum
+      order_ask:
+        origin_volume: Sell Volume
+        sum: Total Turnover
+      reset_password:
+        email: For example：xiaobai@example.com
+        client_uuid: Client ID
+        password: Please set your login password!
+      remember_id:
+        email: For example：xiaobai@example.com
+        client_uuid: For example：010101
+        password: Please set your login password!
+      withdraw:
+        bank:
+          sum: Minimum amount 100
+        satoshi:
+          sum: Minimum amount 0.001
+          fund_extra: Enter a label for this address (optional)
+    hints:
+      deposit:
+        bank:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+          member_name: "<span class='text-danger'>Recharge bank account name must
+            match the name with your real name authentication</span>"
+          sn: "<span class='text-danger'>Please copy the SN in your bank transfer's
+            message, otherwise we can not process your order quickly.</span>"
+      two_factor:
+        otp_secret: We recommend that you back up QR code image or ciphertext to avoid
+          that you accidental loss of the phone for the inconvenience.
+        otp: Your validator will re-generate a new password every thirty seconds,
+          please input timely.
+      identity:
+        password: Set a password which has at least 6 characters and it's better to
+          contain uppercase and lowercase letters and numbers.
+      reset_password:
+        password: Set a password which has at least 6 characters and it's better to
+          contain uppercase and lowercase letters and numbers.
+      id_document:
+        name: Please fill in the name which is consistent with your Credentials.
+        id_bill_file: Upload a scanned bill file to approve your registration. Use jpg, pdf, png or 
+          gif file formats with 3MB maximum size. 
+        id_document_file: Upload a scanned personal credential to approve your registration. 
+          Use jpg, pdf, png or gif file formats with 3MB maximum size.        
+      withdraw:
+        bank:
+          member_name: "<span class='text-danger'>Withdraw bank account name must
+            match your name used for real-name authentication</span>"
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+          fund_extra: If your bank is no longer in the list, please contact customer
+            service
+        satoshi:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+    creating: Creating...
+    updating: Updating...
+    buttons:
+      or: Or
+      cancel: Cancel
+    'yes': 'Yes'
+    'no': 'No'
+    required:
+      text: required
+      mark: "*"
+    error_notification:
+      default_message: 'Please review the problems below:'
+    labels:
+      defaults:
+        title: Title
+      google_auth:
+        uri: QR code
+        otp_secret: Ciphertext
+        otp: Password on the authenticator
+      fund_source:
+        label: Label
+        address: Address
+        category: Category
+      session:
+        email: Sign In E-mail
+        client_uuid: Client ID
+        place_holder_client_uuid: Only numbers
+        place_holder_password: Password
+        only_num : Only numbers
+        password: Sign In Password
+        captcha: Captcha
+      identity:
+        email: Sign In E-mail
+        client_uuid: Client ID
+        old_password: Original password
+        password: New Password
+        password_confirmation: Confirm new password
+      reset_password:
+        password: New Password
+      ticket:
+        content: More detail
+      withdraw:
+        bank:
+          fund_extra: Bank
+          sum: Amount
+          account_balance: Account Balance
+          member_name: Account Holder Name
+        satoshi:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+          
+        bches:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        btcs:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        btgs:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        dashes:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        dgbs:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        eths:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        smarts:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        xrps:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        zecs:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        iotas:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        ltcs:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        zcrs:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        tusds:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        xems:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        rbtcs:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        rifs:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        xars:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+  admin:
+    slips:
+      update_succ: System slip method updated with success
+    deposits:
+      banks:
+        index:
+          oneday: Requests in the last 24 hours
+          available: All Pending Requests
+        show:
+          alert: Recharge cannot be located.
+          notice: The recharge have been successful.
+          deposit: Deposit Request
+          accept: Accept
+          target_deposit: Wire Transfer
+          confirm: Confirm recharge?
+        update:
+          blank_txid: TxID can't be blank
+      satoshis:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      btcs:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+          
+      btgs:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      dashes:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      dgbs:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      eths:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      smarts:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      xrps:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      zecs:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      bches:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      iotas:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      ltcs:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      zcrs:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      tusds:
+        update:
+          notice: The deposit was successful.
+      xems:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      rbtcs:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      rifs:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      xars:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+          
+    tickets:
+      view: View
+      close: Close Ticket
+      comments_count: Comments Count
+      replies: Replies
+      open_tickets: Open Tickets
+      closed_tickets: Closed Tickets
+    members:
+      index:
+        search: Search
+        members: Members
+        email: Email
+        client_uuid: Client ID
+        name: Name
+        phone: Phone Number
+        wallet_address: Wallet Address
+      show:
+        member_title: User Information
+        actions_title: Action
+        accounts_title: Account Information
+        account_versions_title: Records
+    dashboard:
+      index:
+        accounts_title: Account Summary
+        daemons_title: System Summary
+    documents:
+      index:
+        new: New Document
+    statistic:
+      filter: Filter
+      summary: Summary
+      click-to-expand: Expand
+      members:
+        show:
+          table: Results
+      orders:
+        show:
+          avg: Average
+          sum: Order Volume
+          sum_strike: By Volume
+          count: Count
+      trades:
+        show:
+          count: Transactions
+          volume: Volume
+          amount: Total Amount
+          min_price: Minimum Price
+          max_price: Maximum Price
+          avg_price: Average Price
+          amount_fee: Transaction Fee
+          volume_fee: Total Fee
+      deposits:
+        show:
+          count: Total
+          amount: Total Amount
+      withdraws:
+        show:
+          count: Total
+          amount: Total Amount
+          fee: Fee
+    withdraws:
+      banks:
+        index:
+          one: Pending withdrawal Orders
+          all: All withdrawals
+          empty: No Data
+        show:
+          process: Process
+          succeed: Succeed
+          reject: Reject
+          succeed_confirm: Confirm Process?
+          reject_confirm: Confirm Reject?
+          withdraw: Withdraw
+          empty: No Data
+      bches:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      btcs:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      btgs:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      dashes:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      dgbs:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      eths:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      smarts:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      xrps:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      zecs:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      iotas:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      ltcs:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      zcrs:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      tusds:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      xems:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      rbtcs:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      rifs:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      xars:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+          
+      satoshis:
+        index:
+          one: Pending withdrawals
+          all: All withdrawals
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+  deposits/satoshi:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  doorkeeper:
+    scopes:
+      profile: Read your basic profile (e.g. name, email) and account balances
+      history: Read your trade history
+      trade: Submit and cancel orders
+    authorizations:
+      new:
+        title: Cointrade Application Authorization
+        authorize_html: Authorize <strong class='text-info'>%{name}</strong> to use
+          your account?
+        scopes: 'This application will be able to:'
+        authorize: Authorize
+        deny: Deny
+    errors:
+      messages:
+        invalid_request: The request is missing a required parameter, includes an
+          unsupported parameter value, or is otherwise malformed.
+        invalid_redirect_uri: The redirect uri included is not valid.
+        unauthorized_client: The client is not authorized to perform this request
+          using this method.
+        access_denied: The resource owner or authorization server denied the request.
+        invalid_scope: The requested scope is invalid, unknown, or malformed.
+        server_error: The authorization server encountered an unexpected condition
+          which prevented it from fulfilling the request.
+        temporarily_unavailable: The authorization server is currently unable to handle
+          the request due to a temporary overloading or maintenance of the server.
+        credential_flow_not_configured: Resource Owner Password Credentials flow failed
+          due to Doorkeeper.configure.resource_owner_from_credentials being unconfigured.
+        resource_owner_authenticator_not_configured: Resource Owner find failed due
+          to Doorkeeper.configure.resource_owner_authenticator being unconfiged.
+        unsupported_response_type: The authorization server does not support this
+          response type.
+        invalid_client: Client authentication failed due to unknown client, no client
+          authentication included, or unsupported authentication method.
+        invalid_grant: The provided authorization grant is invalid, expired, revoked,
+          does not match the redirection URI used in the authorization request, or
+          was issued to another client.
+        unsupported_grant_type: The authorization grant type is not supported by the
+          authorization server.
+        invalid_resource_owner: The provided resource owner credentials are not valid,
+          or resource owner cannot be found
+        invalid_token:
+          revoked: The access token was revoked
+          expired: The access token expired
+          unknown: The access token is invalid
+    flash:
+      applications:
+        create:
+          notice: Application created.
+        destroy:
+          notice: Application deleted.
+        update:
+          notice: Application updated.
+      authorized_applications:
+        destroy:
+          notice: Application revoked.
+  easy_table:
+    satoshi:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
+    bank:
+      sn: SN
+      amount: Amount
+      created_at: At
+      fund_source: Fund Source
+      memo: Memo
+      member_name: Member
+      state_and_actions: State/Action
+      currency_obj_key_text: Currency
+  enumerize:
+    account_version:
+      reason:
+        fix: FIX
+        unknown: UNKNOWN
+        strike_add: TRADE PLUS
+        strike_sub: TRADE SUB
+        strike_fee: TRADE FEE
+        strike_unlock: TRADE UNLOCK
+        order_cancel: ORDER CANCEL
+        order_submit: ORDER SUBMIT
+        deposit: DEPOSIT
+        withdraw: WITHDRAW
+        withdraw_lock: WITHDRAW LOCK
+        withdraw_unlock: WITHDRAW UNLOCK
+    state:
+      done: Done
+      wait: Wait
+      cancel: Cancel
+    currency:
+      brl: BRL
+      btc: BTC
+      bch: BCH
+      btg: BTG
+      dash: DASH
+      eth: ETH
+      zec: ZEC
+      dgb: DGB
+      xrp: XRP
+      smart: Smart
+      iota: IOTA
+      ltc: LTC
+      zcr: ZCR
+      tusd: TUSD
+      xem: XEM
+      rbtc: RBTC
+      rif: RIF
+      xar: XAR
+    order:
+      state:
+        done: DONE
+        wait: WAIT
+        cancel: CANCEL
+    deposit:
+      aasm_state:
+        submitted: Submitted
+        submitting: Submitting
+        accepted: Accepted
+        cancelled: Canceled
+        rejected: Rejected
+        checked: Checked
+        warning: Warning
+    withdraw:
+      state:
+        submitting: Submitting
+        submitted: Submitted
+        rejected: Rejected
+        accepted: Accepted
+        suspect: Suspect
+        processing: Processing
+        done: Done
+        canceled: Canceled
+    fund_source:
+      category:
+        satoshi: Bitcoin
+        bank: Bank
+    id_document:
+      id_document_type:
+        id_card: ID Card
+        passport: Passport
+        driver_license: Driver's License
+      id_bill_type:
+        bank_statement: Bank Statement
+        tax_bill: Tax Bill
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: Last &raquo;
+      previous: "&lsaquo; Prev"
+      next: Next &rsaquo;
+      truncate: "..."
+
+  mailer:
+    warning: If this was not done by you, please contact our service team immediately at e-mail:<a href='mailto:%{contact_mail}'> suporte@cointrade.com.br</a>
+    request_id: As requested, follow your ID number
+    congratulation: Congratulations!
+    acess_plataform: Access the platform
+    dear_user: Hello!
+    client_uuid: "ID: "
+    signature: Thanks,<br/>The Cointrade Team
+    please_contact: If it's not you, please <a href='mailto:%{contact_mail}'>contact us</a> ASAP.
+    footer: This is an automatically generated email, please do not reply, if you have any question, please <a href="mailto:%{contact_mail}">contact us</a>.
+  comment_mailer:
+    admin_notification:
+      subject: "[Cointrade] User reply a ticket"
+      notification_content: User %{email} reply a ticket, please follow the link below to see the detail
+    user_notification:
+      subject: "[Cointrade] Your ticket got a new reply"
+      notification_content: 'Your ticket got a new reply, please follow the link below to see the detail:'
+  deposit_mailer:
+    accepted:
+      subject: "[Cointrade] Your deposit has been credited into your account"
+      content: Your %{currency} deposit has been credited into your account.
+      tef: TEF (Transfer between Itaú accounts)
+      ted: TED (Electronic Transfer Available)
+      dia: DIA (Cash deposit identified at the agency)
+      available: Credit available on account
+      accepted: Your deposit request for number %{id} has been made available successfully.
+      amount: "Deposit Amount: %{symbol} %{amount}"
+      destiny: Destination Purse
+      bank: Bank
+      agency: Agency
+      account: Account
+    created:
+      subject: "[Cointrade] Your money transfer order has been created"
+      content_header: " You have created an Order of Deposit- %{type_transfer_description}</br>"
+      content_tef: "     <div style=\"margin-top:-80px;padding-top:15px;padding-bottom:15px;padding-left:32px;padding-right:35px; color:white; background-color:#EA5E6E;\">
+
+                              <div>
+                               <table width=\"100%\" >
+                                <tbody>
+                                   <tr align=\"center\">
+                                       <td style=\"padding:10px 10px 10px 10px; display:flex; justify-content: center; align-items:center;\">
+                                           <img  src=\"cid:attention_icon.png\" >
+                                       </td>
+                                        <td align=\"left\">
+                                        DEPOSIT AMOUNT: R$ %{valor_deposito}<br>
+                                       </td>
+                                   </tr>
+                                   </tbody>
+                               </table>
+
+                              </div>
+
+                          </div>
+                           <br>
+                           <div style=\" font-weight:bold; color:grey\">
+                            Bank details for transfer:<br>
+                            Bank: 341 - Itaú<br>
+                            Agency: 7307<br>
+                            Account: 08782-0<br>
+                            COINBR SERVICOS DIGITAIS LTDA<br>
+                            CNPJ: 11.768.654/0001-86</br>
+                          </div>
+                            <br>
+                             <b>Date: %{date_create}</b><br>
+                             <b>Time: %{time_created}</b><br>
+                           <br>
+                              <br>"
+      content_ted: " <div style=\"margin-top:-80px;padding-top:15px;padding-bottom:15px;padding-left:32px;padding-right:35px; color:white; background-color:#EA5E6E;\">
+
+                            <span style=\"font-size:20px;padding-left:32px;padding-right:35px;\">
+                              DEPOSIT AMOUNT:<span style='font-size:30px;'>R$ %{valor_deposito}</span></span><br><br>
+                              <table width=\"100%\" >
+                                   <tbody>
+                                   <tr align=\"center\">
+                                       <td style=\"display:flex; justify-content: center; align-items:center;\">
+                                           <img  style=\"padding-left:-10px\" src=\"cid:attention_icon.png\" >
+                                       </td>
+                                       <td>
+                                         <span><span style=\"font-weight:bold;color:#FFFFFF;\">*ATTENTION: Make the deposit according to the exact amount above.</span><br>
+                                           <br>
+
+                                           <span style=\"font-size:20px;padding-right:35px\">Due date: %{expire} <span>
+                                           </span>
+                                       </td>
+                                   </tr>
+                                   </tbody>
+                               </table>
+
+                            </div>
+
+                            <br>
+                           <div style=\"font-weight:bold; color:grey\">
+                           Bank details for transfer:<br>
+                           Bank: 341 - Itaú<br>
+                           Agency: 7307<br>
+                           Account: 08782-0<br>
+                           COINBR SERVICOS DIGITAIS LTDA<br>
+                           CNPJ: 11.768.654/0001-86
+
+                           </div>
+
+                           <br>
+                            <b>Date: %{date_create}</b><br>
+                            <b>Time: %{time_created}</b><br>
+
+                           "
+      content_footer_tef: "<div style=\" font-weight:bold; color:grey; font-size:13px\">* IMPORTANT: The values for minimum transfer of R$ 25.00 (twenty five reais).
+                          Transfers effected that are less than R$ 25.00 (twenty five reais) will not be compensated, and will be returned upon payment of a fee of R $ 20.00 (twenty reais).
+                            <span style=\"color:#EA5E6E;\">The BRL deposit amounts (in Reais) made across our platform end with 08 cents to enable the automatic verification process,
+                          guarantee that the amount deposited includes the 08 cents required for it to be correctly identified.
+                          Confirmation of the deposit may take up to 3 business days, however, the current average time is up to 3 hours. </span></div>"
+
+      content_footer_ted: "<div style=\" font-weight:bold; color:grey; font-size:13px\">* IMPORTANT: The values for minimum transfer of R $ 25.00 (twenty five reais)<br>
+                            Transfers effected that are less than R$ 25.00 (twenty five reais) will not be compensated, and will be returned upon payment of a fee of R $ 20.00 (twenty reais).<br>
+                             <br>
+                             <br>
+                             <span style=\"color:#EA5E6E;\">
+                            *BRL deposit amounts (in Reais) made across our platform end with 08 cents to enable the automatic verification process,
+                            guarantee that the amount deposited includes the 08 cents required for it to be correctly identified.<br>
+                            Confirmation of the deposit may take up to 3 business days, however, the current average time is up to 6 hours. <br>
+                            Withdrawals and deposits will only be validated between 09:00a.m. and 4:30p.m. Brazilian time. Any deposit after this time, will generate a fine of $ 20.00 for the chargeback.<br>
+                            From the transfer of international banks that have not been successfully completed, please forward emails to financeiro@cointrade.cx</span></div>"
+  member_mailer:
+    notify_signin:
+      subject: "[Cointrade] You have just signed in"
+      just_signed_in: You have just signed in.
+      date: Date
+      time: Time
+      browser: Browser
+      address: IP Address
+      last: Last Access
+      withdraw1: Um saque de
+      withdraw2: foi solicitado.
+      adm: Administrator
+      user: User
+      create: Created at
+
+      value: Amount
+      day: of the day
+      update: Updated at
+      status: Status
+      ipAdr: IP Address
+    google_auth_activated:
+      subject: "[Cointrade] Google authenticator activated"
+      google_auth_activated: You have activated google authenticator successfully
+    google_auth_deactivated:
+      subject: "[Cointrade] Google authenticator deactivated"
+      google_auth_deactivated: You have deactivated google authenticator successfully
+      tip: For your security, it is extremely necessary to keep your account protected with the authenticator.
+    sms_auth_activated:
+      subject: "[Cointrade] SMS authenticator activated"
+      sms_auth_activated: You have activated SMS authenticator successfully
+    sms_auth_deactivated:
+      subject: "[Cointrade] SMS authenticator deactivated"
+      sms_auth_deactivated: You have deactivated SMS authenticator successfully
+    reset_password_done:
+      subject: "[Cointrade] Your password changed"
+      congratulations: Congratulations!
+      successful: Your password has been changed successfully.
+    phone_number_verified:
+      subject: "[Cointrade] Your phone number verified"
+      verified: 'Your phone number verified: %{phone_number}'
+  system_mailer:
+    daily_stats:
+      member_stats: Member Stats
+      signup: Signup
+      activation: Activation
+      asset_stats: Assets Changes
+      trade_stats: Trades Changes
+      asset_value_change_total: Digital Assets Changes Total
+      trades_change_total: Trades Changes Total
+  ticket_mailer:
+    admin_notification:
+      subject: "[Cointrade] User created a new ticket"
+      admin_notification_content: User %{email} created a new ticket, please follow the link below to see the detail
+    author_notification:
+      subject: "[Cointrade] Thank you for submit ticket"
+      thanks_for_submit_ticket: Thank you for submit ticket to us, we will get back to you as soon as possible.
+  token_mailer:
+    activation:
+      subject: "[Cointrade] Account Activation"
+      click_to_verify: 'Thank you for joining Cointrade. We are very happy to have you with us.'
+      unable_to_click: Copy and open the link in your browser if you are unable to click and visit it.
+      link_expire: The link expires in 30 minutes.
+      info: This is your user ID to be able to log in to the platform.
+      validate1: VALID YOUR EMAIL
+      validate: This is an automatically generated email, please do not reply. If you have any questions, please contact us through this link <a href='mailto:%{contact_mail}'> suporte@cointrade.com.br </a>
+    reset_password:
+      subject: "[Cointrade] Please Reset Your Password"
+      hi: Hi,
+      follow_the_link: 'Please follow this link to reset your password within 30 minutes:'
+      requested: You requested a password change.
+    remember_id:
+      subject: "[Cointrade] Remember my ID"
+      follow_the_link: 'Please follow this link to signin:'
+  withdraw_mailer:
+    submitted:
+      subject: "[Cointrade] Your withdraw state update"
+      content: The request of your %{currency} withdrawal has been successfully submitted, We will process it as soon as possible. Please be patient with us. Contact us if you have any questions.
+      request: You requested a draw.
+    processing:
+      subject: "[Cointrade] Your withdraw state update"
+      content: The request of your %{currency} withdrawal is in process. Please be patient with us. Contact us if you have any questions.
+    done:
+      subject: "[Cointrade] Your withdraw state update"
+      content: The request of your %{currency} withdrawal is complete. Please check it out. Contact us if you have any questions.
+      aproved: Get approved!
+      amount: "Amount of service: %{symbol} %{amount}"
+      amount_crypto: "Value withdraw: %{amount} %{currency}"
+    withdraw_state:
+      subject: "[Cointrade] Your withdraw state update"
+      your_state: 'Your withdrawal state: '
+
+  'true': true
+  'false': false
+  view_on_github: View on Github
+  slogan: An trade platform for crypto-currency exchange.
+  tags:
+    vip: VIP
+    hero: Hero Member
+    admin: Admin
+  trade:
+    markets: Markets
+    yours: Yours
+    realtime_price:
+      title: Realtime Price
+    account_balance:
+      title: Balance
+  gon:
+    ask: Ask
+    bid: Bid
+    brand: Cointrade Exchange
+    notification:
+      title: Cointrade Exchange
+      enabled: Notification enabled.
+      new_trade: "%{kind} order#%{id} executed at %{price} %{quote_unit} for %{volume} %{base_unit}。"
+  back: Back
+  invalid_password: Invalid password
+  all: All
+  date:
+    formats:
+      date-short: "%m-%d"
+      short: "%m-%d %H:%M"
+      default: "%m/%d/%Y %H:%M"
+      day_names: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+      month_abbr: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+      abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
+  time:
+    formats:
+      date-short: "%m-%d"
+      short: "%m-%d %H:%M"
+      default: "%m/%d/%Y %H:%M"
+  sms:
+    verification_code: 'Your phone number verification code is: %{code}.'
+    password_changed: Hi %{email}, you password has been changed successfully.
+    deposit_done: Hi %{email}, the request of your deposit is complete.
+    withdraw_done: Hi %{email}, the request of your withdrawal is complete.
+  header:
+    home: Home
+    dashboard: Dashboard
+    admin: Admin Panel
+    market: Markets
+    markets_overview: Markets Overview
+    settings: Profile
+    signin: Sign In
+    signout: Exit
+    signup: Sign Up
+    login_via_weibo: Login via Weibo
+    funds: Funds
+    getstart: Get Start
+    assets: Solvency
+    history: History
+    order_history: Order History
+    trade_history: Trade History
+    account_history: Account History
+    my_order_history: My Orders
+    my_trade_history: My Trades
+    payment_history: Payments History
+    my_profile: My Profile
+    tickets: Tickets
+    account_balance: Total Assets
+    account_summary: Account Summary
+    back: Back
+    total: Total
+    deposit: Deposit
+    withdraw: Withdraw
+    reports: Reports
+    support: Support
+    trading: Trading
+    markets: Markets
+    config_icon: <i class="fas fa-cog"></i>
+    admin_icon: <i class="fas fa-user-lock"></i>
+
+  admin_header:
+    deposits: Deposits
+    withdraws: Withdraws
+    statistics: Data Statistics
+    id_documents: Verify Account
+  footer:
+    about: About
+    privacy: Privacy
+    contact: Contact Us
+    price: Price
+    liability_proof: liability proof
+    maintained: Maintained by
+    team: Cointrade Team
+    partner: with the help of our partners
+    main_page: Our main page
+    term_fee: Our terms and fees
+    bitcoin: What is Bitcoin?
+    statistics: Data Statistics
+    use: Terms of Use
+    faq: FAQ
+    help: Help
+    link_help: https://cointrade.zendesk.com/hc/en-us/requests/new
+    link_help_en: https://cointrade.zendesk.com/hc/en-us/requests/new
+  actions:
+    go: Go
+    submit: Submit
+    deposit: Deposit
+    select: Please Select
+    unlock: Unlock
+    confirm: Confirm
+    back: Back
+    block: view in block
+    destroy: Delete
+    destroy_confirm: Are you sure you want to delete this?
+    detail: Detail
+    publish: Publish
+    edit: Edit
+    preview: Preview
+    close: Close
+    cancel: Cancel
+    view: View
+    member: Member
+    transact: Transact
+    reject: Reject
+    clipboard:
+      click: Click to copy
+      done: Copied!
+  chart:
+    open: Open
+    high: High
+    low: Low
+    close: Close
+    price: Price
+    volume: Volume
+    candlestick: 'Candlestick'
+    line: 'Line'
+    minute: m
+    hour: Hour
+    day: Day
+    week: Week
+    month: Month
+    year: Year
+    zoom: Zoom
+    ask: ASK
+    bid: BID
+    depth: Depth
+    depth_title: Market Depth
+  'yes': 'Yes'
+  'no': 'No'
+  simple_captcha:
+    label: Refresh page to get new captcha.
+    placeholder: type characters in image
+  helpers:
+    action:
+      view: View
+      customer_service: contact us
+    submit:
+      order_ask:
+        create: ASK
+      order_bid:
+        create: BID
+      document:
+        create: Create Document
+        update: Update Document
+        destroy: Destroy Document
+      member:
+        update: Open Account
+      identity:
+        save: Sign in
+        create: Sign up
+        destroy: Sign out
+        verify: Verify
+        update: Change
+      two_factor:
+        create: Verify
+        update: Activiate
+      reset_two_factor:
+        create: Reset Two-Factor Authentication
+      reset_password:
+        update: Reset Sign in Password
+        create: Reset Sign in Password
+      remember:
+        create: Remember ID
+      fund_source:
+        create: Save
+      deposit:
+        create: Deposit
+      id_document:
+        create: Submit
+      withdraw:
+        create: Submit
+      ticket:
+        create: Submit
+  activations:
+    new:
+      notice: An email has been sent to your mailbox, please check it for verification as soon as possible. If you do not received it , please click "send it again" button.
+      verified: Your email adress has been verified successfully.
+      login_required: login required!
+      tip: Activation link was sent to %{email}
+      spam: Please check your spam folder for the activation link.
+      session_expire: Session expired, please login again to continue.
+    edit:
+      notice: Account activated successfully!
+      alert: Activation link is expired or invalid.
+  authentications:
+    emails:
+      new:
+        title: Setup Email
+        setup_email: Please setup your email address.
+        warning: Please check your inbox after saving the email address.
+        email_address: Email Address
+        client_uuid: Client ID
+        save: Save
+    weibo:
+      destroy:
+        last_auth_alert: You couldn't delete the last authentication
+        unbind_success: Unbind from the Weibo
+    identities:
+      new:
+        title: Setup The Password
+        save: Save
+      create:
+        success: Setup password successfully
+  forum:
+    index:
+      notice:
+        display_name: Please set your display name for the forum.
+  identities:
+    new:
+      title: SIGN UP
+      signin: Sign In
+      password: Please enter a password at least 6 characters and it's better to contain uppercase and lowercase letters and numbers.
+      email-hint: For your security, we recommend using an email for the exclusive use of this platform.
+    update:
+      auth-error: The original password you entered is incorrect, please re-enter.
+      auth-same: The new password you entered is the same as the old password, please
+        re-enter.
+      notice: Account password updated successfully.
+  layouts:
+    admin:
+      menus:
+        sections:
+          members: Members
+          deposits: Deposits
+          sites_statistics: Analytics
+          operating: Operations
+        items:
+          operating:
+            proofs: Proof
+            deposits: Deposits
+            documents: Documents
+            withdraws: Withdraws
+            tickets: Tickets
+          deposits:
+            currency: Deposit
+    application:
+      close: Close
+    meta:
+      page_title: Cointrade - The Best Cryptocurrency Exchange
+      page_description: Cointrade - The Best Cryptocurrency Exchange
+      page_keywords: Cointrade,Exchange,Cryptocurrency
+  members:
+    edit:
+      name: Please fill out the application.
+  reset_passwords:
+    create:
+      success: E-mail to reset your password with a introduction has been sent to your mailbox. Failure to receive e-mail, go to "junk mail " firstly,or send the request again.
+    edit:
+      password: Please enter a password at least 6 characters and it's better to contain uppercase and lowercase letters and numbers.
+      invalid: Invalid request
+      submit: Reset Login Password
+      alert: Invalid reset password link.
+    update:
+      success: Login password has been reset, please keep your new password.
+      invalid: Invalid request
+  remembers:
+    create:
+      success: E-mail to remember your client ID has been sent to your mailbox. Failure to receive e-mail, go to "junk mail " firstly, or send the request again.
+  sessions:
+    new:
+      reset_password: Forgot Password?
+      remember: Forgot client ID?
+    new_with_two_factor_auth:
+      title: 2 Step Verification
+      reset_two_factor: Lost 2-step-verification device
+    delete_with_two_factor_auth:
+      title: Disable 2-Factor Authentication
+    create_with_two_factor_auth:
+      session_expired: Session expired. Try again.
+    create:
+      error: Please select Captcha Authentication.
+      accept_terms: Please accept the terms and conditions of use.
+    failure:
+      account_locked: Too many failed login attempts. To ensure the safety of your
+        account, we have locked your account. To unlock, reset your password by clicking
+        on "Forgot Password".
+      error: Wrong customer ID or password,please try again.
+      error_pilot: Pilot Login Not Allowed
+  shared:
+    admin:
+      member:
+        member_info: Member Info
+        deactive_sms_two_factor: SMS TFA
+        deactive_app_two_factor: Google TFA
+        inactive: Inactive
+        deactive: Deactive
+        are_you_sure: Are you sure deactive two factor authentication?
+      account:
+        account_info: Account Info
+        payment_address: Deposit Address
+      txout_info:
+        tx: Transaction info
+    alert:
+      modern: In order not to affect trading experience, please use a more popular
+        browser transaction, we recommend you <a target='_blank' href='https://www.google.com/#q=google+chrome'>Google
+        Chrome</a>。
+      pusher_unavailable: The network connection is temporarily unavailable... <a
+        href='#' class='alert-link'>Please refresh</a>.
+    header:
+      balance: Balance
+    header_account_balance:
+      locked: Locked
+    market:
+      ticker:
+        title: Tickers
+        ask_price: Ask
+        bid_price: Bid
+        high_price: High
+        low_price: Low
+        volume: Volume
+        latest_price: Last
+        24h_tooltip: If no existent transaction for the given currency is found, the base value will be the latest transacted one
+      chart:
+        title: Graphic
+      buy_sell:
+        beta: Beta functionality, it may <br>present itself a little unstable
+        information: This Total value is <br>calculated from the best order <br>available in our <br>Order Book and may vary.
+      beta_crypo:
+        text: "New asset available being able<br>to present instabilities"
+    frame:
+      deposit_now: Deposit Now
+  two_factors:
+    index:
+      verify: Verify
+    update:
+      alert: Two factor verification code error, please re-enter.
+    auth:
+      please_active_two_factor: Please set mobile number or google authenticator first.
+      submit: Submit
+      otp_placeholder: 6-digit password
+      google_app: Google Authenticator
+      sms: SMS Verification Messages
+      send_code: Send Code
+      send_code_alt: Resend in COUNT seconds
+      hints:
+        app: Google Authenticator will re-generate a new password every thirty seconds,
+          please input timely.
+        sms: We'll send a text message to you phone with verify code.
+  verify:
+    google_auths:
+      edit:
+        submit: Disable
+        warning: 'Tip: If you have lost your Two-Factor Authentication by some reason
+          and can''t login your Cointrade account, please contact our online customer
+          service.'
+      show:
+        step-1: Step 1
+        step-2: Step 2
+        step-3: Step 3
+        or: OR
+        download-app: Install Google Authenticator app on your smart phone and open
+          it.
+        guide-link: "<a href='https://support.google.com/accounts/answer/1066447'
+          target='_blank'>Installation Instructions</a>。"
+        scan-qr-code: Scan the following QR code with Google Authenticator APP，or
+          add cipher text to the validator manually.
+        enter-passcode: Fill in the dynamic password  displayed by your phone to activate Two-Factor Authentication.
+        submit: Enable
+        ios: Iphone iOS
+        android: Android
+        blackbery: Blackberry
+        notice:
+          already_activated: The Google Authenticator has already been set.
+          not_activated_yet: The Google Authenticator hasn't been set yet.
+      update:
+        alert: Password for authentication is incorrect, please re-enter.
+        notice: Two-Factor Authentication has been successfully Enabled.
+        sms_two_factor_error: SMS Verification code is incorrect, please re-enter.
+      destroy:
+        alert: Password for authentication is incorrect, please re-enter.
+        notice: Two-Factor Authentication has been successfully Disabled.
+    sms_auths:
+      show:
+        title: Verify Phone Number
+        description: Providing a phone number will make your account more secure. you
+          can quickly reset your password and your account operations will be notified.
+        warning: it will not be able to retrieve your account's password if not set
+          the phone number.
+        phone_number: Phone number
+        send_code: Send Code
+        send_code_alt: Resend in COUNT seconds
+        input_otp: Enter the 6-digit code we sent to you
+        submit: Save
+        notice:
+          send_code_success: Send verify code success
+          otp_success: Verify Code success.
+          already_activated: You phone number has been activated.
+        alert:
+          phone_number_error: phone number error
+  withdraw_channel:
+    bank:
+      key: Bank Transfer
+      title: Bank Transfer
+      intro: Bank transfer deposits, Recommend for large recharge
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+    btc:
+      key: Withdraw Bitcoin
+      title: Withdraw from Bitcoin
+      intro: Withdraw Bitcoin to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    bch:
+      key: Withdraw BCH
+      title: Withdraw from Bitcoin Cash
+      intro: Withdraw Bitcoin to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    btg:
+      key: Withdraw BTG
+      title: Withdraw from Bitcoin Gold
+      intro: Withdraw Bitcoin to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    dash:
+      key: Withdraw DASH
+      title: Withdraw from DASH
+      intro: Withdraw DASH to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    eth:
+      key: Withdraw Ethereum
+      title: Withdraw from Ethereum
+      intro: Withdraw Ethereum to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    zec:
+      key: Withdraw Zcash
+      title: Withdraw from Zcash
+      intro: Withdraw Zcash to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    dgb:
+      key: Withdraw Digibyte
+      title: Withdraw from Digibyte
+      intro: Withdraw Digibyte to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    xrp:
+      key: Withdraw Ripple
+      title: Withdraw from Ripple
+      intro: Withdraw Ripple to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    smart:
+      key: Withdraw SmartCash
+      title: Withdraw from SmartCash
+      intro: Withdraw SmartCash to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    iota:
+      key: Withdraw IOTA
+      title: Withdraw from IOTA
+      intro: Withdraw IOTA to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    ltc:
+      key: Withdraw LTC
+      title: Withdraw from LTC
+      intro: Withdraw LTC to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    zcr:
+      key: Withdraw ZCR
+      title: Withdraw from ZCR
+      intro: Withdraw ZCR to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    tusd:
+      key: Withdraw TUSD
+      title: Withdraw from TUSD
+      intro: Withdraw TUSD to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    xem:
+      key: Withdraw XEM
+      title: Withdraw from XEM
+      intro: Withdraw IOTA to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    rbtc:
+      key: Withdraw RBTC
+      title: Withdraw from RBTC
+      intro: Withdraw LTC to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    rif:
+      key: Withdraw RIF
+      title: Withdraw from RIF
+      intro: Withdraw ZCR to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    xar:
+      key: Withdraw XAR
+      title: Withdraw from XAR
+      intro: Withdraw XAR to Cointrade wallet
+      latency: 1 confirmation
+      transfer: Manual
+      go: Withdraw
+    satoshi:
+      key: Blockchain
+      title: Bitcoin Blockchain
+      intro: Withdraw Bitcoin to your own Bitcoin wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+  withdraws:
+    invalid_address: is not valid. You can not withdraw to this address.
+  withdraws/bank:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: Processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Canceld
+      failed: Failed
+  withdraws/satoshi:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed

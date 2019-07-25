@@ -1,0 +1,125 @@
+body, button, input, select, textarea {
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  overflow-x: hidden;
+}
+
+
+.trading-container-top{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+
+.user-wrapper {
+  max-width: 1450px;
+  margin: 30px auto 0px auto;
+}
+
+#settings-menu {
+  float: left;
+  width: 18%;
+  min-width: 180px;
+}
+
+#settings-menu a > span {
+  padding-left: 10px;
+  font-weight: 200;
+}
+
+#settings .tab-content {
+  float: right;
+  width: 80%;
+}
+
+#settings .user-container {
+  margin-top: 0px;
+  border-top: none;
+  background: none;
+  padding: 0px;
+}
+.user-container {
+  background: #29363e;
+  padding: 30px;
+  margin-top: 15px;
+  border-top: 1px solid #a1b5c1;
+  color: #a1b5c1;
+}
+
+.settings-panel {
+  display: table;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background: #29363e;
+  padding: 25px 25px;
+}
+
+#content {
+  border-left: 1px solid $content-split;
+  padding-top: 15px;
+}
+
+.list-group {
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+a.list-group-item:hover, a.list-group-item:focus, a.list-group-item.active {
+  color: #b4cad6!important;
+  text-decoration: none;
+  background-color: #29363e!important;
+  border: 1px solid #a1b5c1!important;
+}
+.list-group-item:first-child, .list-group-item:last-child {
+  border-radius: 0px;
+  border-radius: 0px;
+}
+
+#kline_chart {
+  .panel-body { padding: 0; }
+}
+
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: .75rem;
+}
+
+.input_small {
+  max-width: 100%;
+}
+
+a.open_calendar{
+  color: $a-fa-calendar-color;
+}
+a.open_calendar:hover{
+  color: $a-fa-calendar-hover;
+}
+
+.open_calendar {
+  margin-left: 6px;
+}
+
+.btn-export{
+  /* background-color: #6a79a4; light*/
+  background-color: #c65d3a;
+  border: none;
+  border-radius: 7px;
+  padding: 7px 10px;
+  min-height: 37px;
+  color: white;
+  margin: 0 6px 10px 6px;
+  box-shadow: 2px 2px 4px rgba(20, 13, 13, 0.31);
+  display: inline-block;
+}
+
+#captcha{
+  color: #0b0e10;
+
+}

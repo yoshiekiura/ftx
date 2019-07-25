@@ -1,0 +1,313 @@
+<div ng-if="currentAction == 'deposits'" id="fiat" ng-class="{ 'in active': curr == 'brl'}" class="user-container tab-pane">
+  <ng-include src="'/templates/funds/_flash.html'"></ng-include>
+        <div class="container-sm">
+          <div class="form-group col-sm-12">
+            <label><%= t('js.fund_sources.region') %></label>
+            <select disabled class="form-control" id="deposit-country">
+              <option><%= t('js.fund_sources.select_region') %></option>
+              <option selected><%= t('js.fund_sources.brasil') %></option>
+              <option><%= t('js.fund_sources.another') %></option>
+            </select>
+          </div>
+          <div class="clearfix"></div>
+
+          <div id="brazil-form" style="display:block;">
+            <div ng-controller="TabsController as tabsCtrl" class="transactions-types-select">
+              <p><%= t('js.fund_sources.select_type') %></p>
+
+              <div class="ttsdiv active">
+                <a id="show-dep-tranfer" ng-click="showTransferForm();showBtnSubmit();" class="circle-icon circle-icon-transfer" ><i class="fas fa-exchange-alt"></i>
+                </a><br>
+                <%= t('js.fund_sources.bank_transfer') %>
+              </div>
+              <div class="ttsdiv">
+<!--                <a id="show-dep-boleto" ng-click="showSlipForm()" class="circle-icon circle-icon-boleto" ><i class="fa fa-file"></i>
+                </a><br>
+                <%#= t('js.fund_sources.bank_slip') %>-->
+              </div>
+
+
+            </div><!--select-->
+          </div>
+      </div>
+      <div class="clearfix"></div>
+
+      <form id="deposit-transfer" ng-show="dpTransfer.show" name="deposit_form" class="form transfer-form"
+            ng-controller="DepositsController as depositsCtrl"
+            ng-submit="depositsCtrl.createDeposit(currency)" ng-init="depositsCtrl.changeFieldsFundSources()" data-currency="brl">
+        <div class="col-sm-6">
+
+          <div class="dep-instructions content">
+            <h3><%= t('js.funds.deposit_brl.title_transfer') %></h3>
+            <h4><%= t('js.funds.deposit_brl.desc') %></h4>
+            <ul>
+                <li><%= t('js.funds.deposit_brl.title') %>
+                  <ul>
+                    <li><%= t('js.funds.deposit_brl.desc_item_1') %></li>
+                    <li><%= t('js.funds.deposit_brl.desc_item_2') %></li>
+                    <li><%= t('js.funds.deposit_brl.desc_item_3') %></li>
+                    <li><%= t('js.funds.deposit_brl.desc_item_4') %></li>
+                  </ul>
+                </li>
+              <li><%= t('js.funds.deposit_brl.title2') %>
+                <ul>
+                  <li><%= t('js.funds.deposit_brl.desc_item_5') %></li>
+                  <li><%= t('js.funds.deposit_brl.desc_item_6') %></li>
+                  <li><%= t('js.funds.deposit_brl.desc_item_7') %></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="invalid-feedback"><%= t('js.funds.deposit_brl.attention') %></div>
+            <div class="invalid-feedback"><%= t('js.funds.deposit_brl.desc_item_8') %></div>
+            <div style="color:yellow"><%= t('js.funds.deposit_brl.attention2') %></div>
+          </div>
+
+          <div class="form-group col-sm-8">
+            <label><%= t('js.fund_sources.value') %></label>
+            <div class="input-group">
+              <my-number></my-number>
+
+              <span class="input-group-addon">BRL</span>
+            </div>
+
+          </div>
+          <div class="form-group col-sm-4">
+            <label class="string">&nbsp;</label>
+            <input class="form-control" style="color:yellow" readonly value="+0,08"/>
+          </div>
+
+        </div>
+
+
+        <div class="col-sm-6">
+          <br>
+            <div class="form-group col-sm-12">
+              <label><u><strong><a href="javascript:;" ng-click="openFundSourceManagerPanel()">{{
+                "funds.deposit_brl.manage" | t }}</a></strong></u></label>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div style="display: block;" class="transfer-type-content">
+              
+              <div class="form-group col-sm-6" ng-if="fund_sources().length">
+                <label>{{"fund_sources.select_account" | t }}</label>
+                <select ng-change="changeFieldsFundSources()" id="fund_source" class="select required form-control" name="fund_source"
+                        ng-model="selected_fund_source_id"
+                        ng-model-options="{ getterSetter: true }"
+                        ng-options="fs.id as fs.label for fs in fund_sources()"
+                        required>
+                </select>
+                <small ng-bind="type_transfer" class="form-text text-muted"></small>
+              </div>
+              <div class="form-group col-sm-6">
+                <label>{{"fund_sources.bank" | t }}</label>
+                <input type="text" readonly ng-model="bank_code" class="form-control" id="bank-code">
+              </div>
+              <div class="clearfix"></div>
+
+              <div class="form-group col-sm-6">
+                <label><%= t('js.fund_sources.label_agency') %></label>
+                <input type="text" readonly ng-model="agency" class="form-control" id="bank-branch">
+              </div>
+              <div class="form-group col-sm-6">
+                <label>{{"fund_sources.account" | t }}</label>
+                <input type="text" readonly ng-model="bank_account" class="form-control" id="bank-account" >
+              </div>
+              <div class="clearfix"></div>
+
+              <div class="form-group col-sm-6">
+                <label><%= t('js.fund_sources.digit') %></label>
+                <input type="text" readonly ng-model="bank_account_dig" class="form-control" id="digit">
+              </div>
+              <div class="form-group col-sm-6">
+                <label>{{"fund_sources.cpf" | t }}</label>
+                <input type="text" readonly ng-model="cpf_cnpj" class="form-control" id="cpfcnpj">
+              </div>
+            </div>
+
+
+        </div>
+
+              <div class="container-sm" >
+
+                <div  id="div_normal_time" class="form-group col-sm-12 form-submit">
+                   <button   class="btn btn-block btn-lg btn-dark" type="submit">{{'submit' | t}}</button>
+                </div>
+                <div  id="div_unormal_time" class="form-group col-sm-12 form-submit">
+                  <div>
+                   <button style="font-size:10px;" disabled  ng-if="bank_code != 'Itaú Unibanco S.A.'" class="btn btn-block btn-lg btn-dark" >{{"fund_sources.msg_time_close" | t }}</button>
+                  </div>
+                  <div>
+                    <button  ng-if="bank_code === 'Itaú Unibanco S.A.'" class="btn btn-block btn-lg btn-dark" type="submit">{{'submit' | t}}</button>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="clearfix"></div>
+
+
+      </form>
+
+
+
+        <form id="deposit_slip" ng-show="dpSlip.show" name="deposit_form_slip" class="form transfer-form"
+              ng-controller="DepositBankSlipController as dbsCtrl"
+              ng-submit="dbsCtrl.createDeposit(currency)"
+              novalidate data-currency="brl">
+          <div class="col-sm-6">
+          <div class="dep-instructions content">
+            <h3> <%= t('js.funds.deposit_brl.title_slip') %></h3>
+            <h4> <%= t('js.funds.deposit_brl.observations_slip') %>: </h4>
+            <ul>
+              <li><%= t('js.funds.deposit_brl.desc_on_slip.desc_item_1') %></li>
+              <li><%= t('js.funds.deposit_brl.desc_on_slip.desc_item_2') %></li>
+              <li><%= t('js.funds.deposit_brl.desc_on_slip.desc_item_3') %></li>
+            </ul>
+          </div>
+
+          <br>
+          <div class="form-group col-sm-12">
+
+            <label class="string required" for="dbsCtrl.deposit.amount">{{'payment_slip.amount' | t}}</label>
+            <div class="input-group">
+            <input class="string required form-control"
+                   id="deposit.amount"
+                   ng-model="deposit.amount"
+                   mask='R$ 9?9?9?9?9?9?9?9?9?9?9?9?9?9,99'
+                   ng-change="calculate_tax();"
+                   placeholder="{{'payment_slip.label_amount' | t}}" required/>
+              <span class="input-group-addon">BRL</span>
+            </div>
+          </div>
+            <div class="form-group col-sm-6">
+              <label class="string">{{'payment_slip.tax' | t}}</label>
+              <input class="form-control" id="deposit_slip.tax" ng-model="deposit_slip.tax" readonly placeholder="0.0%"/>
+            </div>
+            <div class="form-group col-sm-6">
+              <label class="string">{{'payment_slip.amount_total' | t}}</label>
+              <input class="form-control" id="deposit_slip.amount_sum" ng-model="amount_sum" placeholder="{{'payment_slip.label_amount' | t}}" readonly />
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-6">
+          <br>
+            <div class="form-group col-sm-6">
+            <label class="string required" for="dbsCtrl.deposit_slip.person_name">{{'payment_slip.label_name' | t}}</label>
+            <input class="string required form-control" id="deposit_slip.person_name" ng-model="deposit_slip.person_name"
+                   placeholder="{{'payment_slip.label_name' | t}}" required/>
+            </div>
+
+            <div class="form-group col-sm-6">
+              <label>{{'payment_slip.label_email' | t}}</label>
+              <input readonly class="form-control" id="email_user" value="{{email}}">
+            </div>
+
+            <div class="form-group col-sm-6">
+              <label class="string required" for="dbsCtrl.deposit_slip.phone">{{'payment_slip.label_phone' | t}}</label>
+              <input class=" form-control"
+                     id="deposit_slip.phone"
+                     name="dbsCtrl.deposit_slip.phone"
+                     ng-model="deposit_slip.phone"
+                     mask='(99) 9?9999-9999'
+                     placeholder="{{'payment_slip.label_phone' | t}}" required/>
+            </div>
+
+            <div class="form-group col-sm-6">
+
+              <label class="string required" for="dbsCtrl.deposit_slip.person_doc">{{'payment_slip.label_cpfcnpj' | t}}</label>
+              <input class="string required form-control"
+                     id="deposit_slip.person_doc"
+                     name="dbsCtrl.deposit_slip.person_doc"
+                     ng-model="deposit_slip.person_doc"
+                     placeholder="{{'payment_slip.label_cpfcnpj' | t}}" required  maxlength="18" />
+            </div>
+
+            <div class="form-group col-sm-6">
+
+              <label class="string required" for="dbsCtrl.deposit_slip.postal_code">{{'payment_slip.label_cep' | t}}</label>
+              <input class=" form-control"
+                     id="deposit_slip.postal_code"
+                     ng-model="deposit_slip.postal_code"
+                     mask='99999-999'
+                     ng-change="fill_by_postal_code();"
+                     placeholder="{{'payment_slip.label_cep' | t}}" required/>
+            </div>
+            <div class="form-group col-sm-6">
+              <label class="string required" for="deposit_slip.address_name">{{'payment_slip.label_address' | t}}</label>
+              <input class="string required form-control"
+                     id="dbsCtrl.deposit_slip.address_name"
+                     name="dbsCtrl.deposit_slip.address_name"
+                     ng-model="deposit_slip.address_name" required
+                     placeholder="{{'payment_slip.label_address' | t}}"/>
+            </div>
+            <div class="form-group col-sm-6">
+              <label class="string required" for="dbsCtrl.deposit_slip.address_number">{{'payment_slip.label_number' | t}}</label>
+              <input class=" form-control"
+                     id="deposit_slip.address_number"
+                     name="dbsCtrl.deposit_slip.address_number"
+                     ng-model="deposit_slip.address_number"
+                     placeholder="{{'payment_slip.label_number' | t}}" required/>
+            </div>
+            <div class="form-group col-sm-6">
+
+              <label class="string required" for="dbsCtrl.deposit_slip.address_complement">{{'payment_slip.label_complement' | t}}</label>
+              <input class=" form-control"
+                     id="deposit_slip.address_complement"
+                     name="dbsCtrl.deposit_slip.address_complement"
+                     ng-model="deposit_slip.address_complement"
+                     placeholder="{{'payment_slip.label_complement' | t}}" required/>
+            </div>
+            <div class="form-group col-sm-6">
+              <label class="string required" for="dbsCtrl.deposit_slip.state">{{'payment_slip.label_uf' | t}}</label>
+              <input class=" form-control"
+                     id="deposit_slip.state"
+                     name="dbsCtrl.deposit_slip.state"
+                     ng-model="deposit_slip.state"
+                     placeholder="{{'payment_slip.label_uf' | t}}" required/>
+            </div>
+            <div class="form-group col-sm-6">
+              <label class="string required" for="dbsCtrl.deposit_slip.city">{{'payment_slip.label_city' | t}}</label>
+              <input class=" form-control"
+                     id="deposit_slip.city"
+                     name="dbsCtrl.deposit_slip.city"
+                     ng-model="deposit_slip.city"
+                     placeholder="{{'payment_slip.label_city' | t}}" required/>
+            </div>
+
+            <div class="clearfix"></div>
+
+          </div>
+
+          <div class="container-sm">
+            <div class="form-group col-sm-12 form-submit">
+              <button class="btn btn-block btn-lg btn-dark" type="submit">{{'payment_slip.btn_generete_slip' | t}}</button>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+
+      </form>
+
+</div>
+
+
+  <script type="text/javascript" charset="utf-8">
+
+      $(window).load(function(){
+          if(new Date().toLocaleTimeString("pt-BR") <= "16:30:00"){
+              $("#div_normal_time").show();
+              $("#div_unormal_time").hide();
+          }else{
+              $("#div_unormal_time").show();
+              $("#div_normal_time").hide();
+          }
+
+      });
+  </script>
+
+
+

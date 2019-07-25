@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="funds">
+<head>
+  <%- stylesheet = "application" %>
+  <%- stylesheet_user = "user" %>
+
+  <link href="/favicon.ico" rel="shortcut icon"></link>
+  <%= include_gon %>
+  <%= stylesheet_link_tag stylesheet, media: "all" %>
+  <%= stylesheet_link_tag stylesheet_user, media: "all" %>
+  <%= javascript_include_tag "locales/#{I18n.locale}" %>
+  <%= javascript_include_tag "funds" %>
+  <%= yield(:scripts) if content_for?(:scripts) %>
+  <%= render 'shared/html5' %>
+  <%= render 'shared/meta' %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body id="<%= body_id %>" data-lang="<%= "#{locale_name}" %>">
+
+<%= render 'shared/alert' %>
+<div class="container-fluid">
+  <%- if content_for?(:header) %>
+    <%= yield(:header) %>
+  <%- else %>
+    <%= render 'shared/header_funds' %>
+    <%= render 'shared/flash' %>
+  <%- end %>
+
+
+  <%= yield %>
+
+  <%- if content_for?(:footer) %>
+    <%= yield(:footer) %>
+  <%- else %>
+    <%= render 'shared/footer' %>
+  <%- end %>
+
+</div>
+
+
+
+</body>
+</html>
+
+

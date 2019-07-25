@@ -1,0 +1,16 @@
+<p style="color:#078ABA; font-size:15px; margin-top:-25px;">
+  <%= t('mailer.client_uuid') %> <%= @client_uuid %>
+</p>
+
+<p style="color:#078aba;font-size:30px; line-height: 100%; margin-top:25px; font-weight: 500">
+  <%= t('mailer.request_id') %>
+</p>
+
+<p style="color:#078ABA; font-size:30px; font-weight: 500">
+  <%= t('mailer.client_uuid') %> <%= @client_uuid %>
+</p>
+
+<p style="margin-bottom:90px; font-weight: 500; color:#5F5F5F;">
+  <%= t('mailer.acess_plataform') %><br/>
+  <%= link_to @token_url, @token_url%>
+</p>

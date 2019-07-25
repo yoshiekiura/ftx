@@ -1,0 +1,23 @@
+- id: btcbrl
+  code: 2
+  name: BTC/BRL      # default name
+  base_unit: btc
+  quote_unit: brl
+  bid: {fee: 0, currency: brl, fixed: 2}
+  ask: {fee: 0, currency: btc, fixed: 4}
+- id: bchbrl
+  code: 3
+  name: BCH/BRL      # default name
+  base_unit: bch
+  quote_unit: brl
+  bid: {fee: 0.0026, currency: brl, fixed: 2}
+  ask: {fee: 0.0031, currency: bch, fixed: 4}
+  sort_order: 2
+- id: btgbrl
+  code: 4
+  name: BTG/BRL      # default name
+  base_unit: btg
+  quote_unit: brl
+  bid: {fee: 0.0027, currency: brl, fixed: 2}
+  ask: {fee: 0.0032, currency: btg, fixed: 4}
+  sort_order: 3

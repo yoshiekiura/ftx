@@ -1,0 +1,653 @@
+.user-wrapper {
+    padding-top: 3%;
+    max-width: 1950px;
+    margin: 30px auto 0px auto;
+}
+
+.user-container {
+    background: #29363e;
+    padding: 30px;
+    margin-top: 15px;
+    border-top: 1px solid #a1b5c1;
+    color: #a1b5c1;
+}
+
+.container-sm {
+    max-width: 500px;
+    margin: auto;
+}
+
+.container-sm-accounts {
+  max-width: 650px;
+  margin: auto;
+}
+
+/*pillls*/
+
+.user-wrapper .nav-pills>li.active>a, 
+.user-wrapper .nav-pills>li.active>a:hover, 
+.user-wrapper .nav-pills>li.active>a:focus {
+    color: #ddd;
+    background-color: #b97a45;
+}
+
+.user-wrapper .nav>li>a:hover, 
+.user-wrapper .nav>li>a:focus {
+    background: none;
+}
+
+/*circle icons*/
+
+    .ttsdiv {
+        display: inline-block;
+        margin: 5px 10px;
+        text-align: center;
+        position: relative;
+    }
+
+    .ttsdiv.active {
+        color:#b4cad6;
+    }
+
+    .circle-icon {
+        display: inline-block;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding-top: 12px;
+        cursor: pointer;
+        line-height: 25px;
+        color: #fff!important;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .circle-icon-cash {
+        background: #57a554;
+    }
+
+    .circle-icon-transfer {
+        background: #5e5a88;
+    }
+
+    .circle-icon-boleto {
+        background: #b7982a;
+    }
+
+
+
+/*Filter Area*/
+
+.filter-area .filter-row {
+    margin-bottom: 20px;
+}
+
+.filter-area .filter-row .form-group {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+.filter-area .filter-row .form-group:first-child .form-control {
+    min-width: 150px;
+}
+
+
+
+/*forms*/
+
+.invalid-feedback {
+    padding-top: 3PX;
+}
+
+.input-group-addon i {
+    color: #a1b5c1;
+}
+
+.form-control {
+    background: transparent;
+    color: #a1b5c1;
+    border-color: #a1b5c1;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background: transparent;
+  color: #a1b5c1;
+  border-color: #a1b5c1;
+}
+
+.highlight{
+    display: inline-block;
+    border: 1px solid white;
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 7px;
+    font-size: 12px;
+}
+.highlight span{
+    font-size: 14px;
+}
+.highlight-blue{
+    border-color:rgb(116, 116, 209);
+}
+.highlight-green{
+    border-color:rgb(68, 192, 72);
+}
+.highlight-red{
+    border-color:rgb(189, 40, 40);
+}
+.indicator{
+    width: 13px;
+    height: 13px;
+    background-color: grey;
+    display: inline-block;
+    margin-right: 3px;
+    border-radius: 50%;
+}
+.indicator-sell{
+    background-color: rgb(196, 34, 34);
+}
+.indicator-buy{
+    background-color: rgb(15, 167, 23);
+}
+.form-check{
+    display: inline-block;
+    margin-right: 5px;
+    color: rgb(201, 199, 199);
+}
+.form-check label{
+    vertical-align: middle;
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.form-control::placeholder {
+    color:#a1b5c1;
+}
+
+.input-group .input-group-addon {
+    background: transparent;
+    color:#a1b5c1;
+    border-top: 1px solid #a1b5c1;
+    border-right: 1px solid #a1b5c1;
+    border-bottom: 1px solid #a1b5c1;
+
+}
+
+
+.form-group.submit-gp {
+    margin-top: 20px;
+}
+
+/*tables*/
+
+.user-wrapper td,
+.user-wrapper th {
+    color: #a1b5c1;
+}
+
+.user-wrapper .table>thead>tr>th {
+    border-bottom: 1px solid #a1b5c1;
+}
+
+.user-wrapper .table>thead>tr>th, 
+.user-wrapper .table>tbody>tr>th, 
+.user-wrapper .table>tfoot>tr>th, 
+.user-wrapper .table>thead>tr>td, 
+.user-wrapper .table>tbody>tr>td, 
+.user-wrapper .table>tfoot>tr>td {
+    border-top: 1px solid #a1b5c1;
+}
+
+.user-wrapper td {
+    color: #a1b5c1;
+}
+
+.user-wrapper .table>thead>tr>th, 
+.user-wrapper .table>tbody>tr>th, 
+.user-wrapper .table>tfoot>tr>th {
+    font-size: 13px;
+}
+
+.table-area {
+    margin-top: 30px;
+}
+
+.user-wrapper #footer {
+    max-width: 1450px;
+    margin: auto;
+}
+
+.table th .sort {
+    position: relative;
+    left: 0px;
+    top: 3px;
+}
+
+.table th .sort i.active {
+    color:rgb(55, 171, 206);
+}
+
+.table th .sort i {
+    position: absolute;
+}
+
+/*DEPOSITS WITHDRAWALS */
+
+    .transactions-types-select {
+        text-align: center;
+    }
+
+
+
+
+    /*Crypto*/
+
+    .panel-title>a {
+        text-decoration: none;
+    }
+
+    .panel-group .panel {
+        background: #2e3c44;
+    }
+
+    .panel-default {
+        border: transparent;
+        color: #a1b5c1;
+    }
+
+    .panel-default>.panel-heading {
+        color: #a1b5c1;
+        background-color: #38424a;
+        border-color: #ddd;
+        padding: 20px 10px;
+    }
+
+    .panel-title a {
+        font-size: 16px;
+    }
+
+    .panel-coin {
+        float: left;
+    }
+
+    .panel-qty {
+        text-align: right;
+        float: right;
+    }
+
+    .panel-body .deposit-info {
+        margin-top:20px;
+    }
+
+    .rotate-icon i {
+        transform: rotate(180deg);
+    }
+
+  
+
+    /*Fiat*/
+
+    .dep-instructions, .with-instructions {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .dep-instructions label {
+        color: #45a7b9;
+
+    }
+
+    #brazil-form,
+    #other-form {
+        display: none;
+    }
+
+    .bank-info-section {
+
+        border: 1px solid #a1b5c1;
+        padding: 20px;
+    }
+
+    .wire-calculator {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .dataline {
+        border-bottom: 1px solid #a1b5c1;
+        padding-top: 10px;
+    }
+
+    .dataline:last-child {
+        border-bottom: none;
+    }
+
+    .dataline .cal-right {
+        float: right;
+    }
+
+
+    #deposit-boleto {
+        display: none;
+    }
+
+    .transfer-type-content {
+        display: none;
+    }
+
+
+    /*History*/
+
+    table .txid {
+        max-width: 150px;
+        word-break: break-all;
+    }
+
+    table .txid a {
+        /* word-break: break-all; */
+    }
+    .status_circle{
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        margin-left: 6px;
+        border:3px solid rgb(189, 186, 186);
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+    .confirmations{
+        border-color: rgb(211, 176, 38);
+        animation: processing_animate 6s infinite;
+    }
+    @keyframes processing_animate{
+        0% {
+            border-color: rgb(211, 176, 38);
+        }
+   
+        40% {
+            border-color: rgb(189, 178, 133);
+        } 
+        90% {
+            border-color: rgb(221, 184, 35);
+        }     
+        100% {
+            border-color: rgb(211, 176, 38);
+          }
+      }
+
+/*WITHDRAWALS*/
+
+    .col-sm-6.col-mod {
+        width: 47%;
+    }
+
+    #am-to-eq {
+        float: left;
+        padding-top: 34px;
+    }
+
+    .withdraw-instructions {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+   
+/*MARKETS*/
+
+.market-table th,
+.market-table td {
+    text-align: center;
+}
+
+
+.stats-info {
+    font-size: 15px;
+    margin-right: 20px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.market-table tr.bought td {
+    background: #24b7405e !important;
+}
+
+.market-table tr.sold td {
+    background: #ce4f3d4f !important;
+}
+
+/*SETTINGS*/
+
+.userid {
+    color: #a1b5c1;
+    padding-left: 2px;
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+
+.user-flag {
+    background: #ff7900;
+    color: #fff;
+    padding: 5px 10px;
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+/*nav*/
+
+
+
+
+#settings-menu {
+    float: left;
+    width: 18%;
+    min-width: 180px;
+}
+
+#settings-menu a > span {
+    padding-left: 10px;
+}
+
+
+.list-group-item:first-child,
+.list-group-item:last-child
+ {
+    border-radius: 0px;
+    border-radius: 0px;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 15px 15px;
+    margin-bottom: -1px;
+    background-color: #29363e;
+    border: 1px solid #a1b5c1;
+}
+
+a.list-group-item {
+    color: #a1b5c1;
+}
+
+a.list-group-item:hover, a.list-group-item:focus, a.list-group-item.active
+{
+    color: #b4cad6!important;
+    text-decoration: none;
+    background-color: #29363e!important;
+    border: 1px solid #a1b5c1!important;
+}
+
+#settings .tab-content {
+    float: right;
+    width: 80%;
+}
+
+#settings .user-container {
+    margin-top: 0px;
+    border-top: none;
+    background: none;
+    padding: 0px;
+}
+
+
+.settings-panel {
+    display: table;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #29363e;
+    padding: 25px 25px;
+}
+
+.settings-panel h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    margin-top: 0px;
+}
+
+.settings-panel h3 {
+    font-size: 18px;
+    color: #6abda0;
+}
+
+.sp-content {
+    display: table-cell;
+}
+
+.sp-action {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.sp-action a {
+    max-width: 280px;
+    float: right;
+}
+
+#theme-switch .slider {
+    background:#72828a;
+}
+
+
+#theme-switch input:checked + .slider {
+    background: #88c8d6;
+}
+
+/*settings table */
+
+#settings .table i {
+    cursor: pointer;
+}
+
+#settings .table i.fa-pencil-alt {
+    padding-right: 10px;
+}
+
+
+@media screen and (max-width:992px){
+
+    #settings-menu {
+        width: auto;
+        min-width: auto;
+        float: none;
+    }
+
+    #settings .tab-content {
+        float: none;
+        width: 100%;
+    }
+
+
+    #settings .list-group-item {
+        display: inline-block;
+        min-width: 50px;
+        text-align: center;
+    }
+
+    .sp-action, .sp-content {
+        display: block;
+        padding: 10px 0px;
+    }
+
+}
+
+@media screen and (max-width:767px){
+
+    .user-container {
+        padding: 30px 10px;
+    }
+
+    .filter-area .row {
+        margin-bottom: 0px;
+    }
+
+    .filter-area .filter-row .form-group {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .address {
+        font-size: 12px;
+    }
+
+    /*WITHDRAWALS*/
+
+    .col-sm-6.col-mod {
+        width: 100%;
+    }
+
+    #am-to-eq {
+        text-align: center;
+        margin: auto;
+        float: none;
+        width: 100%;
+        padding-top: 0px;
+    }
+
+    /*Markets*/
+
+    .stats {
+        margin: auto!important;
+        text-align: center;
+    }
+
+    .stats-info {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .mkt-select {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.container-amount-show{
+  width: 40%;
+}
+
+.inside-amount-show{
+  margin-top: 25px;
+}
+
+.inside-amount-show hr{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 0;
+  border-top: 1px solid #526571;
+}
+
+.text-tip{
+  font-size:0.7em;
+}
+
+.text-value{
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-text-tip{
+  line-height:95%;
+}

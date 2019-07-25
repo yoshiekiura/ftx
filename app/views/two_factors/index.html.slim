@@ -1,0 +1,25 @@
+= simple_form_for @two_factor, url: two_factor_path(@two_factor.class.to_s.demodulize.downcase) do |f|
+  #settings.user-wrapper
+    = render partial: "private/settings/settings_menu"
+    .tab-content
+      .user-container
+        .settings-panel
+          .sp-content
+            .container-sm
+              h2
+                = t('sessions.new_with_two_factor_auth.title')
+              .form-group
+                = two_factor_tag(current_user)
+                span.invalid-feedback
+                  - if flash[:alert]
+                    = flash[:alert]
+              .form-group align="center"
+                - if @locked
+                  = recaptcha_tags
+              .clearfix
+              .form-group.submit-gp
+                .buttons.center
+                  = link_to t('actions.cancel'), settings_path, {:class => "btn btn-lg btn-pair btn-red"}
+                  = f.button :submit, t('.verify'), class: "btn btn-lg btn-pair btn-green"
+
+    .clearfix

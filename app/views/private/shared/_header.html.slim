@@ -1,0 +1,31 @@
+.top-bar
+  .nav.main-nav.col-xs-12
+    .logo
+      a.desktop-md href='#{root_path}'
+        img src='#{image_path 'logo.png'}'
+      a.mobile.mobile-md href='#{root_path}'
+        img src='#{image_path 'cointrade-symbol.png'}'
+
+    #menu.main-nav-links
+      = link_to(t('header.trading'), market_v2_path(current_market.id)) if current_user
+      = link_to(t('header.reports'), order_history_v2_path, controllers: ['reports']) if current_user
+      / =  link_to(t('header.markets_overview'), market_overview_path) if current_user
+      - if locale_name == 'pt-br'
+        a href=t('footer.link_help') target="_blank"
+          = t('header.support')
+      - else
+        a href=t('footer.link_help_en') target="_blank"
+          = t('header.support')
+
+  .nav.sec-nav.col-xs-12
+    a href=funds_path
+      i.fa.fa-money
+      = t('header.funds')
+    / a href=funds_path
+    /   i.fa.fa-minus-circle
+    /   = t('header.withdraw')
+    a href=settings_path
+      i.fa.fa-cog
+    a href=signout_path
+      i.fa.fa-sign-out
+  .clearfix

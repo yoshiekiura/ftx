@@ -1,0 +1,66 @@
+
+<h3 ng-bind="'fund_sources.manage_bank_account' | t"></h3>
+<h5 class="text-danger" ng-bind="'fund_sources.manage_bank_account_alert_withdraw' | t" ng-if="!verifyUrl()"></h5>
+<h5 class="text-danger" ng-bind="'fund_sources.manage_bank_account_alert_deposit' | t" ng-if="verifyUrl()"></h5>
+<table class="table table-condensed ">
+  <thead>
+  <tr>
+    <th ng-bind="'fund_sources.bank' | t"></th>
+    <th ng-bind="'fund_sources.cpf' | t"></th>
+    <th ng-bind="'fund_sources.agency' | t"></th>
+    <th ng-bind="'fund_sources.account' | t"></th>
+    <th></th>
+    <th ng-bind="'fund_sources.digit' | t"></th>
+    <th class="text-center" ng-bind="'fund_sources.default' | t"></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="fs in fund_sources()">
+    <td style="width: 30%" ng-bind=" 'banks.' + fs.extra | t" ></td>
+    <td style="width: 25%" ng-bind="fs.cpf"></td>
+    <td style="width: 15%" ng-bind="fs.agency"></td>
+    <td style="width: 18%" ng-bind="fs.account"></td>
+    <td></td>
+    <td style="width: 7%" ng-bind="fs.accountDigit"></td>
+    <td align="center">
+      <input type="radio" value="fs" ng-checked="fs == defaultFundSource()" ng-click="makeDefault(fs)">
+    </td>
+    <td class="col-xs-2" align="center">
+      <a href="javascript:;" ng-click="remove(fs)"><i class="fa fa-trash-alt">&nbsp;</i></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding-left: 0px">
+      <select class="form-control" style="padding: 0px"
+              ng-options="bank.code as ('banks.' + bank.code | t) for bank in banks"
+              ng-init="extra = banks[0].code"
+              ng-model="extra">
+      </select>
+    </td>
+    <td style="width: 20%; padding-left: 0px">
+      <input class="string form-control" allow-only-numbers type="text" style="padding-left: 4px" placeholder="{{'fund_sources.cpf' | t}}" maxlength="18" ng-model="cpf" ng-init="cpf = ''"/>
+    </td>
+    <td style="width: 15%; padding-left: 0px">
+      <input class="string form-control" allow-only-numbers type="text" style="padding-left: 4px" placeholder="{{'fund_sources.agency' | t}}" ng-model="agency" ng-init="agency = ''"/>
+    </td>
+    <td style="width: 18%; padding-left: 0px">
+      <input class="string form-control" allow-only-numbers type="text" style="padding-left: 4px" placeholder="{{'fund_sources.account' | t}}" ng-model="account" ng-init="account = ''"/>
+    </td>
+    <td>*</td>
+    <td style="width: 7%; padding-left: 0px">
+      <input class="string form-control" allow-only-numbers type="text" style="padding-left: 4px;padding-right: 4px" placeholder="{{'fund_sources.digit' | t}}" ng-model="dig" ng-init="dig = ''" id="digito"/>
+    </td>
+    <td>
+    </td>
+    <td>
+      <button class="form-control" id="button-add-adress" type="submit" ng-click="addAdressBank()" ng-bind="'fund_sources.add' | t"></button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<div style="margin-top: -20px;">
+  <h6 ng-bind="'fund_sources.manage_bank_account_info' | t" ></h6>
+  <h6 style="margin-top: -8px;" ng-bind="'fund_sources.manage_bank_account_required' | t" ></h6>
+</div>
+

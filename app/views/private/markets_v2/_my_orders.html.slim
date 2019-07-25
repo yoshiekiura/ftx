@@ -1,0 +1,33 @@
+#orders.feature
+  .feature-header.split
+    .feature-title
+      div data-toggle="collapse" data-target="#tb-orders"
+        i.fas.fa-chevron-up.mobile.mobile-smd
+        |&nbsp;
+        i.far.fa-list-alt
+        |&nbsp;
+        = t('private.markets.global.global_orders_title').upcase
+      span.allSwitch = t('all').upcase
+      span.pairSwitch
+    .header-pill
+      a.active.all-orders-view href='#&' = t('all')
+      a.bid href='#&' = t('shared.market.ticker.bid_price')
+      a.ask href='#&' = t('shared.market.ticker.ask_price')
+      = link_to(t('header.history'), order_history_v2_path, controllers: ['reports']) if current_user
+    .clearfix
+
+  #tb-orders.feature-table.feature-container.collapse.in
+    .tb-orders-header.columns.feature-subheader
+      .column.th
+        i.far.fa-plus-square style="visibility: hidden;"
+      .column.th = t('private.markets.my_orders.pair').upcase
+      .column.th = t('private.markets.my_orders.amount').upcase
+      .column.th = t('private.markets.my_orders.price').mb_chars.upcase
+      .column.th = t('private.markets.my_orders.time').mb_chars.upcase
+      .column.th = t('private.markets.my_orders.action').mb_chars.upcase
+
+    .all-orders{style="table-row-group"}
+
+    .ask-orders{style="display:none;table-row-group"}
+
+    .bid-orders{style="display:none;table-row-group"}

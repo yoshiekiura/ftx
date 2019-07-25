@@ -1,0 +1,20 @@
+
+
+common: &default_settings
+  # Required license key associated with your New Relic account.
+  license_key: ec5318c43626bbfe9029277f950974aebb8c7c9e
+
+  # Your application name. Renaming here affects where data displays in New
+  # Relic.  For more details, see https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/renaming-applications
+  app_name: Cointrade (Live)
+
+production:
+  <<: *default_settings
+  app_name: Cointrade (Live)
+  monitor_mode: true
+  #log_level: info
+  log_level: info
+  audit_log.enabled: true
+  agent_enabled: true
+  log_file_path: 'STDOUT'
+

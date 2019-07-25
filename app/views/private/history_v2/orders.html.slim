@@ -1,0 +1,39 @@
+- content_for :frame do
+  .user-wrapper
+    = render 'tabs', active: :order
+
+    = form_tag order_history_v2_path, method: :post do |f|
+      .tab-content
+        #orders.user-container.tab-pane.in.active
+          .filter-area
+            = render 'date_fields'
+            .filter-row
+              .form-inline
+                .form-group
+                  = select_tag :select_market, options_from_collection_for_select(Market.all, "code", "name", @select_market), {class: "form-control"}
+                .form-group
+                  = select_tag :select_side, options_for_select([\
+                      [t('private.history.filters.all'), nil], \
+                      [t('private.history.order.ask'), 'ask'], \
+                      [t('private.history.order.bid'), 'bid'], \
+                    ], @select_side), {class: "form-control"}
+                .form-group
+                  buttons
+                    = submit_tag t('private.history.filters.search') , {class: "btn btn-md btn-dark"}
+          .table-responsive.table-area
+            table.table
+              thead
+                tr
+                  th = t('private.history.orders.timestamp')
+                  th = t('private.history.orders.id')
+                  th = t('private.history.orders.market')
+                  th = t('private.history.orders.type')
+                  th = t('private.history.orders.state')
+                  th = t('private.history.orders.price')
+                  th = t('private.history.orders.volume')
+                  th = t('private.history.orders.average_price')
+                  th = t('private.history.orders.fullfilled_volume')
+                tbody#myorders.list
+                  = render partial: 'order', collection: @orders
+          nav.tar
+            = paginate @orders

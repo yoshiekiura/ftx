@@ -1,0 +1,7 @@
+.panel.panel-info
+  .panel-heading
+    span = t('.tx')
+  .panel-body
+    dl.dl-horizontal
+      - info.attributes.each do |key,value|
+        = item_for key, value, value

@@ -1,0 +1,6 @@
+peatio.deposit.coin
+peatio.deposit.coin.address
+peatio.matching
+peatio.order.processor
+peatio.orderbook.slave
+peatio.trade.new

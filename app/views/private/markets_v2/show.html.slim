@@ -1,0 +1,80 @@
+doctype html
+html lang="en"
+  head
+    link href="/favicon.ico" rel="shortcut icon"
+    = include_gon
+    = stylesheet_link_tag 'market', media: "all"
+    = javascript_include_tag "market"
+    = javascript_include_tag "locales/#{I18n.locale}"
+    = render 'shared/html5'
+    = render 'shared/meta'
+    = csrf_meta_tags
+
+  body id='#{body_id}' data-lang="#{locale_name}"
+    audio preload='preload' id='success-fx'
+      source src="/sounds/success.mp3"
+
+    audio preload='preload' id='warning-fx'
+      source src="/sounds/warning.mp3"
+
+    .container-fluid
+      = render partial: "shared/header"
+
+      .trading-container
+        / -if browser_detect()
+        /   .menssagem-browser style="margin-left:30%"
+        /     .browser-text
+        /       .text-right
+        /         = t('activerecord.browser_message.icon').html_safe
+        /       .text-left
+        /         = t('activerecord.browser_message.info')
+        /     .browser-icons align="center"
+        /       = t('activerecord.browser_message.info_browser')
+        /       .icon-cont
+        /         -if locale_name == 'pt-br'
+        /           a target="_blank" href="https://www.google.com/intl/pt-br_ALL/chrome/"
+        /             .icon-inside-right
+        /               img src="#{image_path 'chrome.svg'}"
+        /               br
+        /               | Chrome
+        /           a target="_blank" href="https://www.mozilla.org/pt-br/firefox/new/"
+        /             .icon-inside-left
+        /               img src="#{image_path 'mozilla.svg'}"
+        /               br
+        /               | Firefox
+        /         -else
+        /           a target="_blank" href="https://www.google.com/intl/en-us_ALL/chrome/"
+        /             .icon-inside-right
+        /               img src="#{image_path 'chrome.svg'}"
+        /               br
+        /               | Chrome
+        /           a target="_blank" href="https://www.mozilla.org/en-US/firefox/new/"
+        /             .icon-inside-left
+        /               img src="#{image_path 'mozilla.svg'}"
+        /               br
+        /               | Firefox
+        /
+        / - if mobile_device()
+        /   .menssagem-device style="width:98%; z-index: 100; margin-top:6%;"
+        /     .device-text
+        /       .device-text-right
+        /         = t('activerecord.browser_message.icon').html_safe
+        /       .device-text-left
+        /         = t('activerecord.divice_message.info').html_safe
+        /     .device-icons  align="center"
+        /       = t('activerecord.divice_message.info_device')
+        /       span style="font-size:4vw"
+        /         = t('activerecord.divice_message.icon').html_safe
+        /       = t('activerecord.divice_message.device')
+
+        = render partial: 'my_balance'
+        = render partial: 'tickers'
+        = render partial: 'graph'
+        = render partial: 'buy_form', locals: {market: @market, order: @order_bid, bid_order_type: "bid-market" }
+        = render partial: 'sell_form', locals: {market: @market, order: @order_ask, ask_order_type: "ask-market" }
+        = render partial: 'my_orders'
+        = render partial: 'order_book'
+        = render partial: 'trades'
+
+        = render partial: "shared/footer"
+

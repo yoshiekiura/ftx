@@ -1,0 +1,48 @@
+<div ng-if="currentAction == 'withdraws'" id="dep-history" ng-class="{ 'in active': curr == 'history'}" class="user-container tab-pane">
+  <div class="table-responsive table-area">
+    <table class="table" ng-controller="WithdrawHistoryController as wdCtrl">
+      <tr>
+        <th style="text-align: center">{{ "funds.withdraw_history.number" | t }}</th>
+        <th style="text-align: center">{{ "funds.withdraw_history.withdraw_time" | t }}</th>
+        <th style="text-align: center">{{ "funds.withdraw_history.coin" | t }}</th>
+        <th style="text-align: center">{{ "funds.withdraw_history.withdraw_amount" | t }}</th>
+        <th style="text-align: center"><i class="fas fa-info-circle info-tooltip"  data-html="true" style="margin-right: 15px;"
+                                          title="<div style='display:flex;'><div style='display:flex; align-items:center; font-size:15px; margin-right:10px;'><i class='fas fa-info-circle'></i></div>
+                                          <div style='font-size:8px; text-align: left;'>{{ 'funds.withdraw_history.fee_info' | t }}</div></div>"
+                                          data-placement="top"
+                                          onmouseenter="$(this).tooltip('show')"></i>{{ "funds.withdraw_history.fee" | t }}</th>
+        <th style="text-align: center">{{ "funds.withdraw_history.withdraw_account" | t }}</th>
+        <th style="text-align: center">{{ "funds.withdraw_history.validator" | t }}</th>
+        <th style="text-align: center">{{ "funds.withdraw_history.inserted_txid" | t }}</th>
+        <th>{{ "funds.withdraw_history.state_and_action" | t }}</th>
+      </tr>
+      <tr ng-repeat="withdraw in wdCtrl.withdraws | orderBy:predicate">
+        <td style="text-align: center">{{withdraw.id}}</td>
+        <td style="text-align: center">{{withdraw.created_at | date:'yyyy-MM-dd HH:mm'}}</td>
+        <td style="text-align: center">{{withdraw.currency | uppercase}}</td>
+        <td ng-if=" withdraw.currency == 'xrp'" style="text-align: center">
+          {{withdraw.amount | number: 6}}
+        </td>
+
+        <td ng-if=" withdraw.currency == 'brl'" style="text-align: center">{{withdraw.sum | number: 2}}</td>
+        <td ng-if=" withdraw.currency != 'brl' &&  withdraw.currency != 'xrp'" style="text-align: center">{{withdraw.amount | number: 8}}</td>
+        <td ng-if=" withdraw.currency != 'brl'" style="text-align: center">{{withdraw.fee }}</td>
+        <td ng-if=" withdraw.currency == 'brl'" style="text-align: center">{{withdraw.total | number: 2}}</td>
+        <td style="text-align: center"> {{withdraw.fund_extra}} @ {{withdraw.fund_uid}}</td>
+        <td align="center"><%= image_tag('stratum_insert_icon.svg', draggable: "true", id: "stratum_icon") %></td>
+        <td ng-if=" withdraw.currency == 'brl'" style="text-align: center">-</td>
+        <td ng-if=" withdraw.currency != 'brl'" style="text-align: center"><a href="#" ng-click="wdCtrl.explore(withdraw.txid, withdraw.currency)">{{withdraw.txid}}</a></td>
+        <td><i class="fas fa-info-circle {{withdraw.aasm_state}}"  data-html="true" style="margin-right: 15px;"
+                 title="<div style='display:flex;'><div style='display:flex; align-items:center; font-size:15px; margin-right:10px;'>{{ 'funds.withdraw_history.tooltip_status.' + withdraw.aasm_state + '.icon'| t }}</div><div>{{ 'funds.withdraw_history.tooltip_status.' + withdraw.aasm_state + '.text'| t }}</div></div>"
+                 data-placement="top"
+                 onmouseenter="$(this).tooltip('show')"></i>{{"funds.withdraw_history." + withdraw.aasm_state | t}}
+          <span ng-if="wdCtrl.canCancel(withdraw.aasm_state)">
+        </span>
+        </td>
+      </tr>
+      <tr ng-if="wdCtrl.noWithdraw()"><td colspan="7"><span class="help-block text-center">{{"funds.withdraw_history.no_data" | t}}</span></td></tr>
+    </table>
+
+  </div>
+
+</div><!--history-->

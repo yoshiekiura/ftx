@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'daemons/rails/config'
+
+config = Daemons::Rails::Config.for_controller(File.expand_path(__FILE__))
+
+config[:app_name] = 'peatio:amqp:deposit_withdraw_txid'
+config[:script]   = "#{File.expand_path('../amqp_daemon.rb', __FILE__)}"
+config[:ARGV]     = ARGV + %w(-- deposit_txid withdraw_txid)
+
+Daemons::Rails.run config[:script], config.to_hash
+
+
+#ENV["RAILS_ENV"] ||= "development"
+
+#root = File.expand_path(File.dirname(__FILE__))
+#root = File.dirname(root) until File.exists?(File.join(root, 'config'))
+#Dir.chdir(root)
+
+#require File.join(root, "config", "environment")
+
+=begin
+
+# SAVING LOG FILES TO REOPEN IN THE DAEMON
+@files_to_reopen = []
+ObjectSpace.each_object(File) do |file|
+  @files_to_reopen << file unless file.closed?
+end
+
+Daemons.run_proc('peatio:amqp:deposit_withdraw_txid') do
+  @files_to_reopen.each do |file|
+    file.reopen file.path, 'a+'
+    file.sync = true
+  end
+
+  config = Daemons::Rails::Config.for_controller(File.expand_path(__FILE__))
+
+  config[:app_name] = 'peatio:amqp:deposit_withdraw_txid'
+  config[:script]   = "#{File.expand_path('../amqp_daemon.rb', __FILE__)}"
+  config[:ARGV]     = ARGV + %w(-- deposit_txid withdraw_txid)
+  Daemons::Rails.run config[:script], config.to_hash
+
+
+end
+=end

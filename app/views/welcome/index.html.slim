@@ -1,0 +1,50 @@
+/! Global site tag (gtag.js) - Google Analytics
+script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-123605065-1"
+javascript:
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-123605065-1');
+
+-if locale_name == 'pt-br'
+  .label-entrance style="width:95%;"
+    .tag-label
+      = t('date.formats.month_abbr')[@mon - 1]
+      br 2019
+    .tag-title
+      = @lobby_message.title
+      br
+      label class="tag-version"
+        | Versão:
+        = @lobby_message.version
+
+  .body-entrance id="style-2" style="padding: 0px 10px 0px 50px;"
+    - @lobby_message.assets['messages'].each do |res|
+      .card-lobby align="left"
+        span class="title-card"
+          = res['title']
+        br
+        span class="body-card" style="color:#93a7b2"
+          = res['message']
+      br
+-else
+  .label-entrance style="width:95%;"
+    .tag-label
+      = t('date.formats.month_abbr')[@mon-1]
+      br 2019
+    .tag-title
+      = @lobby_message.title1
+      br
+      label class="tag-version"
+        | Version:
+        = @lobby_message.version
+
+  .body-entrance id="style-3" style="padding: 0px 10px 0px 50px;"
+    - @lobby_message.assets['messages'].each do |res|
+      .card-lobby align="left"
+        span class="title-card"
+          = res['title1']
+        br
+        span class="body-card" style="color:#93a7b2"
+          = res['message1']
+      br

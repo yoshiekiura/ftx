@@ -1,0 +1,32 @@
+.row
+  .col-xs-12
+    .panel.panel-primary
+      .panel-heading
+        span = t('.withdraw', sn: @iota.id)
+      .panel-body
+        = description_for :withdraw do
+          = item_for @iota, :id
+          = item_for @iota, :created_at
+          = item_for @iota, :aasm_state_text
+          hr.split
+          = item_for @iota.member, :name
+          = item_for @iota, :fund_extra
+          = item_for @iota, :fund_uid do
+            span = @iota.fund_uid.truncate(22)
+          = item_for @iota, :amount
+          hr.split
+          = item_for @iota, :remark
+          hr.split
+          ul.list-inline.pull-right
+            - if @iota.may_reject?
+              li
+              = link_to t('.reject'), url_for([:admin, @iota]), class: 'btn btn-danger', method: 'DELETE', confirm: t('.reject_confirm')
+            - if @iota.may_process?
+              li
+                = link_to t('.process'), url_for([:admin, @iota]), class: 'btn btn-primary', method: 'PATCH'
+
+  .col-xs-12
+    = render partial: 'shared/admin/member', locals: {member: @iota.member}
+    = render partial: 'shared/admin/account', locals: {account: @iota.account}
+    - if @iota.txout_info
+	  = render partial: 'shared/admin/txout_info', locals: {info: @iota.txout_info}

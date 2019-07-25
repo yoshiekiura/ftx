@@ -1,0 +1,151 @@
+- id: 1
+  key: real
+  code: brl
+  coin: false
+  precision: 2
+  quick_withdraw_max: 10
+  stratum_wallet_id: 0
+  maintenance: false
+
+- id: 2
+  key: btc
+  code: btc
+  coin: true
+  precision: 8
+  rpc: http://bitcoinrpc:5gKAgrJv8CQr2CGUhjVbBFLSj29HnE6YGXvfykHJzS3k@127.0.0.1:8332
+  blockchain: http://testnet.btclook.com/txn/#{txid}
+  address_url: https://blockchain.info/address/#{address}
+  quick_withdraw_max: 0.1
+  stratum_wallet_id: 0
+  maintenance: false
+
+- id: 3
+  key: bch
+  code: bch
+  symbol: "Ƀ"
+  coin: true
+  precision: 8
+  quick_withdraw_max: 10
+  stratum_wallet_id: 0
+  maintenance: false
+
+- id: 4
+  key: btg
+  code: btg
+  symbol: "Ƀ"
+  coin: true
+  quick_withdraw_max: 0
+  stratum_wallet_id: 0
+  maintenance: false
+
+- id: 5
+  key: dash
+  code: dash
+  symbol: "D"
+  coin: true
+  quick_withdraw_max: 1
+  stratum_wallet_id: 0
+  maintenance: false
+
+- id: 6
+  key: eth
+  code: eth
+  symbol: "Ξ"
+  coin: true
+  quick_withdraw_max: 1
+  stratum_wallet_id: 0
+  maintenance: false
+
+- id: 7
+  key: zec
+  code: zec
+  symbol: "Z"
+  coin: true
+  quick_withdraw_max: 1
+  stratum_wallet_id: 0
+  maintenance: false
+
+- id: 8
+  key: dgb
+  code: dgb
+  symbol: "D"
+  coin: true
+  quick_withdraw_max: 1
+  stratum_wallet_id: 0
+  maintenance: false
+
+- id: 9
+  key: xrp
+  code: xrp
+  symbol: "X"
+  precision: 6
+  coin: true
+  quick_withdraw_max: 1
+  stratum_wallet_id: 0
+  rpc: http://bitcoinrpc:5gKAgrJv8CQr2CGUhjVbBFLSj29HnE6YGXvfykHJzS3k@127.0.0.1:8332
+  blockchain: http://testnet.btclook.com/txn/#{txid}
+  address_url: https://blockchain.info/address/#{address}
+  maintenance: false
+
+- id: 10
+  key: smart
+  code: smart
+  symbol: "S"
+  coin: true
+  quick_withdraw_max: 1
+  stratum_wallet_id: 0
+  maintenance: false
+
+- id: 11
+  key: zcr
+  code: zcr
+  symbol: "Z"
+  coin: true
+  quick_withdraw_max: 1
+  stratum_wallet_id: 0
+  maintenance: false
+  
+- id: 12
+  key: tusd
+  code: tusd
+  symbol: "T"
+  coin: true
+  quick_withdraw_max: 1
+  stratum_wallet_id: 0
+  maintenance: false
+
+- id: 13
+  key: xem
+  code: xem
+  symbol: "X"
+  coin: true
+  quick_withdraw_max: 1
+  stratum_wallet_id: 0
+  maintenance: false
+
+- id: 14
+  key: rbtc
+  code: rbtc
+  symbol: "X"
+  coin: true
+  quick_withdraw_max: 1
+  stratum_wallet_id: 0
+  maintenance: false
+
+- id: 15
+  key: rif
+  code: rif
+  symbol: "X"
+  coin: true
+  quick_withdraw_max: 1
+  stratum_wallet_id: 0
+  maintenance: false
+
+- id: 16
+  key: xar
+  code: xar
+  symbol: "X"
+  coin: true
+  quick_withdraw_max: 1
+  stratum_wallet_id: 0
+  maintenance: false

@@ -1,0 +1,22 @@
+.col-xs-20
+  = close_open_toggle_link
+= link_to t('.new_ticket'), new_ticket_path, class: 'btn btn-primary btn-lg pull-right'
+br
+br
+br
+br
+
+ul.list-group
+  - @tickets.each do |t|
+    li class = (t.comments.unread_by(current_user).any? ? ["unread", "list-group-item"] : ["list-group-item"])
+      .row.row-middle
+        .col-xs-20
+          .row.row-middle
+            .col-xs-20
+              h4 = link_to t.title_for_display, ticket_path(t)
+          .row
+            .col-xs-16
+              p.text-info = t.content
+            .col-xs-8
+              i.fa.fa-clock-o.text-info
+              span.text-info = time_ago_in_words t.created_at

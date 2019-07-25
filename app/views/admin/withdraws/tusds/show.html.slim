@@ -1,0 +1,32 @@
+.row
+  .col-xs-12
+    .panel.panel-primary
+      .panel-heading
+        span = t('.withdraw', sn: @tusd.id)
+      .panel-body
+        = description_for :withdraw do
+          = item_for @tusd, :id
+          = item_for @tusd, :created_at
+          = item_for @tusd, :aasm_state_text
+          hr.split
+          = item_for @tusd.member, :name
+          = item_for @tusd, :fund_extra
+          = item_for @tusd, :fund_uid do
+            span = @tusd.fund_uid.truncate(22)
+          = item_for @tusd, :amount
+          hr.split
+          = item_for @tusd, :remark
+          hr.split
+          ul.list-inline.pull-right
+            - if @tusd.may_reject?
+              li
+              = link_to t('.reject'), url_for([:admin, @tusd]), class: 'btn btn-danger', method: 'DELETE', confirm: t('.reject_confirm')
+            - if @tusd.may_process?
+              li
+                = link_to t('.process'), url_for([:admin, @tusd]), class: 'btn btn-primary', method: 'PATCH'
+
+  .col-xs-12
+    = render partial: 'shared/admin/member', locals: {member: @tusd.member}
+    = render partial: 'shared/admin/account', locals: {account: @tusd.account}
+    - if @tusd.txout_info
+	  = render partial: 'shared/admin/txout_info', locals: {info: @tusd.txout_info}

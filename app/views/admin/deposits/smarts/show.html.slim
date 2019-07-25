@@ -1,0 +1,18 @@
+.row
+  .col-xs-12
+    .panel.panel-primary
+      .panel-heading
+        span = t('.deposit', sn: @smart.id)
+      .panel-body
+        = description_for :deposit do
+          = item_for @smart, :id
+          = item_for @smart, :created_at
+          = item_for @smart, :aasm_state_text
+          hr.split
+          = item_for @smart, :amount
+
+  .col-xs-12
+    = render partial: 'shared/admin/member', locals: {member: @smart.member}
+    = render partial: 'shared/admin/account', locals: {account: @smart.account}
+    - if @smart.txout_info
+	  = render partial: 'shared/admin/txout_info', locals: {info: @smart.txout_info}

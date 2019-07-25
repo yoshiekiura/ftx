@@ -1,0 +1,160 @@
+<div ng-if="currentAction == 'withdraws'" id="fiat" ng-class="{ 'in active': curr == 'brl'}" class="user-container tab-pane">
+  <ng-include src="'/templates/funds/_flash.html'"></ng-include>
+  <div class="container-sm">
+    <div class="form-group col-sm-12">
+      <label><%= t('js.fund_sources.region') %></label>
+      <select disabled class="form-control" id="deposit-country">
+        <option><%= t('js.fund_sources.select_region') %></option>
+        <option selected>Brasil</option>
+        <option><%= t('js.fund_sources.another') %></option>
+      </select>
+    </div>
+    </div>
+
+
+    <form id="brl_withdraws" name="withdraw_form" class="form transfer-form"
+
+          ng-controller="WithdrawsController as withdrawsCtrl" ng-init="changeToFiat();showBtnSubmit()" ng-submit="withdrawsCtrl.createWithdraw(currency)">
+
+
+      <div class="col-sm-6">
+
+        <div class="dep-instructions content">
+          <h3> <%= t('js.funds.withdraw_brl.title') %></h3>
+          <h4> <%= t('js.funds.withdraw_brl.desc') %></h4>
+          <ul>
+            <li><%= t('js.funds.withdraw_brl.intro') %></li>
+            <li class="invalid-feedback"><%= t('js.funds.withdraw_brl.intro_2') %></li>
+            <li class="invalid-feedback"><%= t('js.funds.withdraw_brl.intro_5') %></li>
+            <li class="invalid-feedback"><%= t('js.funds.withdraw_brl.intro_6') %></li>
+            <li class="invalid-feedback"><%= t('js.funds.withdraw_brl.intro_7') %></li>
+          </ul>
+        </div>
+        <br>
+        <div class="form-group" style="margin-top:6.5%">
+          <label><%= t('js.fund_sources.value') %></label>
+          <div class="input-group">
+            <input class="numeric decimal required form-control ng-pristine ng-touched"
+                   id="withdraw_sum" name="withdraw[sum]"
+                   mask='9?9?9?9?9?9?9?9?9?9?9?9?9?9,99'
+                   ng-model="withdrawsCtrl.withdraw.sum" required>
+
+            <span class="input-group-addon">BRL</span>
+          </div>
+
+          <div class="container-amount-show">
+            <div class="inside-amount-show">
+              <div class="text-value" style="color:white; margin-bottom:-3px">
+                <%= t('js.funds.withdraw_brl.balance') %> <span class="currency-balance" id="withdraw_balance" style="font-size:1.3em;">R$ {{balance | number:2 }}</span>
+              </div>
+              <hr>
+              <div class="div-text-tip">
+                <span class="text-tip"><%= t('js.funds.withdraw_brl.balance_tip') %></span>
+              </div>
+            </div>
+            <div class="inside-amount-show">
+              <div class="text-value">
+                <%= t('js.funds.withdraw_brl.locked') %> <span class="currency-balance" id="withdraw_balance">R$ {{locked | number:2 }}</span>
+              </div>
+              <hr>
+              <div class="div-text-tip">
+                <span class="text-tip"><%= t('js.funds.withdraw_brl.locked_tip') %></span>
+              </div>
+            </div>
+            <div class="inside-amount-show">
+              <div class="text-value">
+                <%= t('js.funds.withdraw_brl.total') %> <span class="currency-balance" id="withdraw_balance">R$ {{calculateTotal() | number:2 }}</span>
+              </div>
+              <hr>
+              <div class="div-text-tip">
+                <span class="text-tip"><%= t('js.funds.withdraw_brl.total_tip').html_safe %></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-sm-6">
+        <br><br>
+        <div class="form-group col-sm-12">
+          <label><u><strong><a href="javascript:;" ng-click="openFundSourceManagerPanelFiat()"><%= t('js.funds.deposit_brl.manage') %></a></strong></u></label>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div style="display: block;" class="transfer-type-content">
+
+          <div class="form-group col-sm-6" ng-if="fund_sources().length">
+            <label><%= t('js.fund_sources.select_account') %></label>
+            <select ng-change="changeFieldsFundSources()" id="fund_source" class="select required form-control" name="fund_source"
+                    ng-model="selected_fund_source_id"
+                    ng-model-options="{ getterSetter: true }"
+                    ng-options="fs.id as fs.label for fs in fund_sources()"
+                    required>
+            </select>
+            <small ng-bind="type_transfer" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group col-sm-6">
+            <label><%= t('js.fund_sources.bank') %></label>
+            <input type="text" readonly ng-model="bank_code" class="form-control" id="bank-code">
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="form-group col-sm-6">
+            <label><%= t('js.fund_sources.label_agency') %></label>
+            <input type="text" readonly ng-model="agency" class="form-control" id="bank-branch">
+          </div>
+          <div class="form-group col-sm-6">
+            <label><%= t('js.fund_sources.account') %></label>
+            <input type="text" readonly ng-model="bank_account" class="form-control" id="bank-account" >
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="form-group col-sm-6">
+            <label><%= t('js.fund_sources.digit') %></label>
+            <input type="text" readonly ng-model="bank_account_dig" class="form-control" id="digit">
+          </div>
+          <div class="form-group col-sm-6">
+            <label><%= t('js.fund_sources.cpf') %></label>
+            <input type="text" readonly ng-model="cpf_cnpj" class="form-control" id="cpfcnpj">
+          </div>
+          <div class="form-group col-sm-12">
+            <ng-include src="'/templates/funds/_two_factor_auth_withdraws.html'"></ng-include>
+          </div>
+        </div>
+
+        
+
+      </div>
+
+
+      <div class="container-sm"  >
+
+        <div  ng-if="normalTime" id="div_normal_time" class="form-group col-sm-12 form-submit">
+          <button   id="withdraw_submit" name="commit" class="btn btn-block btn-lg btn-dark" type="submit">{{'submit' | t}}</button>
+        </div>
+         <div  ng-if="unormalTime" id="div_unormal_time" class="form-group col-sm-12 form-submit">
+          <div>
+            <button style="font-size:10px;" disabled  ng-if="bank_code != 'Itaú Unibanco S.A.'" class="btn btn-block btn-lg btn-dark" >{{"fund_sources.msg_time_close" | t }}</button>
+          </div>
+          <div>
+            <button ng-if="bank_code === 'Itaú Unibanco S.A.'" id="withdraw_submit" name="commit" class="btn btn-block btn-lg btn-dark" type="submit">{{'submit' | t}}</button>
+
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="clearfix"></div>
+
+
+    </form>
+
+</div>
+
+
+

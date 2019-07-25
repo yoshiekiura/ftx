@@ -1,0 +1,32 @@
+.row
+  .col-xs-12
+    .panel.panel-primary
+      .panel-heading
+        span = t('.withdraw', sn: @btc.id)
+      .panel-body
+        = description_for :withdraw do
+          = item_for @btc, :id
+          = item_for @btc, :created_at
+          = item_for @btc, :aasm_state_text
+          hr.split
+          = item_for @btc.member, :name
+          = item_for @btc, :fund_extra
+          = item_for @btc, :fund_uid do
+            span = @btc.fund_uid.truncate(22)
+          = item_for @btc, :amount
+          hr.split
+          = item_for @btc, :remark
+          hr.split
+          ul.list-inline.pull-right
+            - if @btc.may_reject?
+              li
+              = link_to t('.reject'), url_for([:admin, @btc]), class: 'btn btn-danger', method: 'DELETE', confirm: t('.reject_confirm')
+            - if @btc.may_process?
+              li
+                = link_to t('.process'), url_for([:admin, @btc]), class: 'btn btn-primary', method: 'PATCH'
+
+  .col-xs-12
+    = render partial: 'shared/admin/member', locals: {member: @btc.member}
+    = render partial: 'shared/admin/account', locals: {account: @btc.account}
+    - if @btc.txout_info
+	  = render partial: 'shared/admin/txout_info', locals: {info: @btc.txout_info}
